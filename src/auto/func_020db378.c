@@ -8,5 +8,6 @@ extern M2C_UNK func_020db3c8;
 
 void func_020db378(void) {
     func_020dce78(0x80, func_020d6b1c(&func_020db3c8));
-    func_020dce78(0x1D, func_020d8798(&func_020db3c8, M2C_FIELD(&data_0210156c, u16 *, 6), M2C_FIELD(&data_0210156c, u16 *, 2), M2C_FIELD(&data_0210156c, u16 *, 0), (s32) M2C_FIELD(&data_0210156c, u16 *, 4)));
+    func_020dce78(0x1D, func_020d8798(&func_020db3c8, M2C_FIELD(&data_0210156c, u16 *, 6), M2C_FIELD(&data_0210156c, u16 *, 2),
+                                      M2C_FIELD(&data_0210156c, u16 *, 0), (s32) M2C_FIELD(&data_0210156c, u16 *, 4)));
 }

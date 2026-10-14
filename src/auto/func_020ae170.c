@@ -14,7 +14,7 @@ s32 func_020ae170(void) {
         func_020ad8b4();
         return 0;
     }
-    M2C_FIELD(&data_0210b320, s16 *, 8) = 0;
+    M2C_FIELD(&data_0210b320, s16 *, 8)   = 0;
     M2C_FIELD(&data_0210b320, s16 *, 0xE) = 1;
     return 1;
 }

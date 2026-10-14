@@ -11,8 +11,8 @@ s32 func_0205d66c(void *arg0, void *arg1) {
     if (var_r2 != 0) {
         M2C_FIELD(arg0, void **, 8) = arg1;
         M2C_FIELD(arg0, void **, 4) = arg1;
-        M2C_FIELD(arg1, s32 *, 4) = 0;
-        M2C_FIELD(arg1, s32 *, 8) = 0;
+        M2C_FIELD(arg1, s32 *, 4)   = 0;
+        M2C_FIELD(arg1, s32 *, 8)   = 0;
     }
     return var_r2;
 }

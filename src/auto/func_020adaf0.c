@@ -8,7 +8,7 @@ extern M2C_UNK data_0210b320;
 s32 func_020adaf0(void) {
     s32 temp_r0;
 
-    M2C_FIELD(&data_0210b320, s16 *, 2) = 0;
+    M2C_FIELD(&data_0210b320, s16 *, 2)   = 0;
     M2C_FIELD(&data_0210b320, s16 *, 0xC) = 0x65;
     func_020ad7a4(3);
     temp_r0 = func_020aeed0(1);

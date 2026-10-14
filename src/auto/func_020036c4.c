@@ -13,7 +13,7 @@ void *func_020036c4(void *arg0) {
     if (func_020b9304(M2C_FIELD(arg0, s32 *, 0x6E4)) != 0) {
         func_020b9068(M2C_FIELD(arg0, s32 *, 0x6E4));
     }
-    M2C_FIELD(data_027e0308, M2C_UNK (**)(void **, void *), 0xC)(&data_027e0308, arg0);
+    M2C_FIELD(data_027e0308, M2C_UNK(**)(void **, void *), 0xC)(&data_027e0308, arg0);
     func_0202beb0(arg0 + 0x5E0);
     func_0200c22c(arg0);
     func_0205e84c(arg0);

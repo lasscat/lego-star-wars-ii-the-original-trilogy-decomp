@@ -12,13 +12,13 @@ void func_020d229c(void *arg0) {
     s32 var_r0;
     void *var_r6;
 
-    var_r6 = arg0;
+    var_r6  = arg0;
     temp_r4 = M2C_FIELD(var_r6, volatile s32 *, 8);
     if (var_r6 == NULL) {
         return;
     }
 loop_3:
-    temp_r5 = func_020ce804();
+    temp_r5                                = func_020ce804();
     M2C_FIELD(var_r6, volatile s32 *, 0xC) = (s32) (M2C_FIELD(var_r6, volatile s32 *, 0xC) | 0x40);
     if (M2C_FIELD(var_r6, volatile s32 *, 0xC) & 4) {
         var_r0 = 1;

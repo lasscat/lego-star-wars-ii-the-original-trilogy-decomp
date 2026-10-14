@@ -18,7 +18,8 @@ void func_02077a88(s32 arg0) {
     var_r5 = 0;
     var_r6 = 0x28;
     do {
-        temp_r0 = func_02065be8(arg0 + 0xA0, var_r4, var_r6, 0x68, func_02066708(M2C_FIELD((arg0 + var_r5), s8 *, 0x145) + 0x268), 1);
+        temp_r0 = func_02065be8(arg0 + 0xA0, var_r4, var_r6, 0x68,
+                                func_02066708(M2C_FIELD((arg0 + var_r5), s8 *, 0x145) + 0x268), 1);
         var_r5 += 1;
         var_r4 = temp_r0;
         var_r6 += 0x23;

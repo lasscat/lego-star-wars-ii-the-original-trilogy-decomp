@@ -29,7 +29,7 @@ void func_0205d9a8(void *arg0, void *arg1, void *arg2) {
         } while (var_r0 != NULL);
     }
     M2C_FIELD(var_r4, void **, 0x10) = arg1;
-    M2C_FIELD(arg1, void **, 0x14) = var_r4;
-    M2C_FIELD(arg1, s32 *, 8) = 0;
-    M2C_FIELD(arg1, s32 *, 0xC) = 0;
+    M2C_FIELD(arg1, void **, 0x14)   = var_r4;
+    M2C_FIELD(arg1, s32 *, 8)        = 0;
+    M2C_FIELD(arg1, s32 *, 0xC)      = 0;
 }

@@ -19,10 +19,10 @@ void func_020cf0b8(s32 arg0, M2C_UNK arg1, u32 arg2, M2C_UNK (*arg3)(s32), s32 a
     do {
 
     } while (M2C_FIELD(&data_021157a8, volatile s32 *, 0) != 0);
-    M2C_FIELD(&data_021157a8, volatile s32 *, 0) = 1;
-    M2C_FIELD(&data_021157a8, volatile s32 *, 4) = arg0;
-    M2C_FIELD(&data_021157a8, M2C_UNK (**)(s32), 0x10) = arg3;
-    M2C_FIELD(&data_021157a8, volatile s32 *, 0x14) = arg4;
+    M2C_FIELD(&data_021157a8, volatile s32 *, 0)      = 1;
+    M2C_FIELD(&data_021157a8, volatile s32 *, 4)      = arg0;
+    M2C_FIELD(&data_021157a8, M2C_UNK(**)(s32), 0x10) = arg3;
+    M2C_FIELD(&data_021157a8, volatile s32 *, 0x14)   = arg4;
     func_020cef80(arg0, 0x38000000);
     func_020cf004(arg0, arg1, arg2, 0);
     func_020cee9c(arg0);

@@ -14,13 +14,13 @@ void *func_02012004(void *arg0) {
     void *var_r2_2;
 
     M2C_FIELD(arg0, M2C_UNK **, 0) = &data_020fcfb8;
-    temp_r1 = M2C_FIELD(arg0, void **, 0x1C4);
+    temp_r1                        = M2C_FIELD(arg0, void **, 0x1C4);
     if (temp_r1 != NULL) {
         M2C_FIELD(temp_r1, s32 *, 0x384) = (s32) (M2C_FIELD(temp_r1, s32 *, 0x384) | 0x80000000);
     }
     var_r1 = M2C_FIELD(arg0, void ***, 0x1D0);
     if (var_r1 != NULL) {
-        var_r2 = *var_r1;
+        var_r2  = *var_r1;
         temp_r0 = arg0 + 0x1D0;
         if (var_r2 != temp_r0) {
             do {
@@ -32,7 +32,7 @@ void *func_02012004(void *arg0) {
     }
     var_r1_2 = M2C_FIELD(arg0, void ***, 0x1C8);
     if (var_r1_2 != NULL) {
-        var_r2_2 = *var_r1_2;
+        var_r2_2  = *var_r1_2;
         temp_r0_2 = arg0 + 0x1C8;
         if (var_r2_2 != temp_r0_2) {
             do {

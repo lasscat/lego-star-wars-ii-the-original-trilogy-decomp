@@ -21,7 +21,9 @@ void func_02071184(void *arg0) {
         } else {
             func_0206574c(arg0 + 0x5C, 0, -2);
         }
-        var_r8 = func_02065be8(arg0 + 0x5C, var_r8, *((M2C_UNK *)((s8 *)&data_020edf54 + (var_r9 * 4))), *((M2C_UNK *)((s8 *)&data_020edf44 + (var_r9 * 4))), func_02066708(*((M2C_UNK *)((s8 *)&data_020edf34 + (var_r9 * 4)))), 0);
+        var_r8 = func_02065be8(arg0 + 0x5C, var_r8, *((M2C_UNK *) ((s8 *) &data_020edf54 + (var_r9 * 4))),
+                               *((M2C_UNK *) ((s8 *) &data_020edf44 + (var_r9 * 4))),
+                               func_02066708(*((M2C_UNK *) ((s8 *) &data_020edf34 + (var_r9 * 4)))), 0);
         var_r9 += 1;
     } while ((u32) var_r9 < 4U);
 }

@@ -24,7 +24,7 @@ void func_020aefc8(void *arg0) {
     temp_r3 = M2C_FIELD(arg0, u16 *, 8);
     if ((u32) M2C_FIELD(&data_0210b320, u16 *, 0xC) > (u32) temp_r2) {
         M2C_FIELD(&data_0210b320, u16 *, 0xC) = temp_r2;
-        M2C_FIELD(&data_0210b320, u16 *, 2) = temp_r3;
+        M2C_FIELD(&data_0210b320, u16 *, 2)   = temp_r3;
     }
     temp_r0 = func_020aeed0((u16) (temp_r3 + 1));
     if (temp_r0 == 0x18) {

@@ -12,7 +12,7 @@ void *func_02036a3c(void *arg0) {
 
     var_r1 = M2C_FIELD(arg0, void ***, 0x18);
     if (var_r1 != NULL) {
-        var_r2 = *var_r1;
+        var_r2  = *var_r1;
         temp_r0 = arg0 + 0x18;
         if (var_r2 != temp_r0) {
             do {
@@ -24,7 +24,7 @@ void *func_02036a3c(void *arg0) {
     }
     var_r1_2 = M2C_FIELD(arg0, void ***, 0x10);
     if (var_r1_2 != NULL) {
-        var_r2_2 = *var_r1_2;
+        var_r2_2  = *var_r1_2;
         temp_r0_2 = arg0 + 0x10;
         if (var_r2_2 != temp_r0_2) {
             do {

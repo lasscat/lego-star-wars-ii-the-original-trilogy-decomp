@@ -1,5 +1,5 @@
-#include "m2c.h"
 #include "engine.h"
+#include "m2c.h"
 
 void func_020ca218(M2C_UNK);
 void func_020cee9c(M2C_UNK);
@@ -13,5 +13,5 @@ void func_020cc5ec(void) {
     }
     func_020ca218(M2C_FIELD(&data_021153a0, s32 *, 0xC));
     M2C_FIELD(&data_021153a0, s32 *, 0xC) = 0;
-    M2C_FIELD(&data_021153a0, s32 *, 8) = 0;
+    M2C_FIELD(&data_021153a0, s32 *, 8)   = 0;
 }

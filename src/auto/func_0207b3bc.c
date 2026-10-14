@@ -13,7 +13,7 @@ void func_0207b3bc(void *arg0, M2C_UNK arg1) {
         return;
     }
     temp_r0 = M2C_FIELD(arg0, u8 *, 0x6C4);
-    var_r4 = 0;
+    var_r4  = 0;
     if (!(temp_r0 & 2)) {
         var_r4 = 1;
     }

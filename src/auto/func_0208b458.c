@@ -17,14 +17,14 @@ void func_0208b458(void *arg0, s32 arg1) {
     if (arg1 >= 0x15) {
         return;
     }
-    temp_r2 = M2C_FIELD(arg0, void **, 0x64);
+    temp_r2                      = M2C_FIELD(arg0, void **, 0x64);
     M2C_FIELD(temp_r2, s32 *, 8) = (s32) (M2C_FIELD(temp_r2, s32 *, 8) | 1);
-    temp_r4 = func_02053b14(arg0 + 8);
+    temp_r4                      = func_02053b14(arg0 + 8);
     func_020e0c54(sp0, &data_020ff458, func_0208c72c(&data_02104dc4, arg1));
     func_0208adb8(arg0, temp_r4 + 0x40A, sp0);
     if (func_0208c77c(&data_02104dc4, arg1) == 0) {
         return;
     }
-    temp_r1 = M2C_FIELD(arg0, void **, 0x68);
+    temp_r1                      = M2C_FIELD(arg0, void **, 0x68);
     M2C_FIELD(temp_r1, s32 *, 8) = (s32) (M2C_FIELD(temp_r1, s32 *, 8) | 1);
 }

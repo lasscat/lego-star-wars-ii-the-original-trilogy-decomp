@@ -9,7 +9,7 @@ extern M2C_UNK func_01ffc450;
 
 void func_020c5dfc(s32 *arg0, u32 arg1) {
     if ((arg1 < 0x100U) || (data_0210153c == -1)) {
-        func_01ffc45c(*arg0, ((s8 *)arg0 + 4), (arg1 >> 2) - 1);
+        func_01ffc45c(*arg0, ((s8 *) arg0 + 4), (arg1 >> 2) - 1);
         return;
     }
     func_01ffc3d8();

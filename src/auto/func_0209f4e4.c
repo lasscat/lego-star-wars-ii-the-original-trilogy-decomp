@@ -11,7 +11,7 @@ void *func_0209f4e4(void *arg0) {
     u32 temp_r1;
 
     M2C_FIELD(arg0, M2C_UNK **, 0) = &data_020ffbb8;
-    temp_r1 = (u32) (M2C_FIELD(arg0, u16 *, 0xB2) << 0x1F) >> 0x1F;
+    temp_r1                        = (u32) (M2C_FIELD(arg0, u16 *, 0xB2) << 0x1F) >> 0x1F;
     if (temp_r1 != 0) {
         func_0209f590(arg0, temp_r1);
     }

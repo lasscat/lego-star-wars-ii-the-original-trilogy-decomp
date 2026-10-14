@@ -8,7 +8,7 @@ void *func_020210d0(void *arg0) {
     void *temp_r1;
 
     M2C_FIELD(arg0, M2C_UNK **, 0) = &data_020fd670;
-    temp_r1 = M2C_FIELD(arg0, void **, 0x218);
+    temp_r1                        = M2C_FIELD(arg0, void **, 0x218);
     if (temp_r1 != NULL) {
         M2C_FIELD(temp_r1, s32 *, 0x384) = (s32) (M2C_FIELD(temp_r1, s32 *, 0x384) | 0x80000000);
     }

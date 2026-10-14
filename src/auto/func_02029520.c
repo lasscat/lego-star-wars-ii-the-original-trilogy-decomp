@@ -17,13 +17,13 @@ void *func_02029520(void *arg0) {
     M2C_FIELD(arg0, s32 *, 0x80) = 0;
     M2C_FIELD(arg0, s32 *, 0x84) = 0;
     M2C_FIELD(arg0, s32 *, 0x88) = 0;
-    M2C_FIELD(arg0, s8 *, 0x8C) = 0;
-    M2C_FIELD(arg0, s8 *, 0x8D) = 0;
-    M2C_FIELD(arg0, s8 *, 0x8E) = 0;
-    M2C_FIELD(arg0, s8 *, 0x8F) = 0;
-    M2C_FIELD(arg0, s8 *, 0x90) = 0;
-    M2C_FIELD(arg0, s8 *, 0x91) = 0;
-    M2C_FIELD(arg0, s8 *, 0x92) = 0;
-    M2C_FIELD(arg0, s8 *, 0x93) = 0;
+    M2C_FIELD(arg0, s8 *, 0x8C)  = 0;
+    M2C_FIELD(arg0, s8 *, 0x8D)  = 0;
+    M2C_FIELD(arg0, s8 *, 0x8E)  = 0;
+    M2C_FIELD(arg0, s8 *, 0x8F)  = 0;
+    M2C_FIELD(arg0, s8 *, 0x90)  = 0;
+    M2C_FIELD(arg0, s8 *, 0x91)  = 0;
+    M2C_FIELD(arg0, s8 *, 0x92)  = 0;
+    M2C_FIELD(arg0, s8 *, 0x93)  = 0;
     return arg0;
 }

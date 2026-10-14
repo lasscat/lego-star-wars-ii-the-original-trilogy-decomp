@@ -10,7 +10,8 @@ s32 func_020db318(void) {
     var_r0 = 0;
     var_r3 = 0;
     var_r2 = 0;
-    if ((M2C_FIELD(M2C_FIELD(&data_0211e400, void **, 8), u16 *, 0x528) == 1) && (M2C_FIELD(M2C_FIELD(&data_0211e400, void **, 8), u8 *, 0x50C) == 0)) {
+    if ((M2C_FIELD(M2C_FIELD(&data_0211e400, void **, 8), u16 *, 0x528) == 1) &&
+        (M2C_FIELD(M2C_FIELD(&data_0211e400, void **, 8), u8 *, 0x50C) == 0)) {
         var_r3 = 1;
     }
     if ((var_r3 != 0) && (M2C_FIELD(M2C_FIELD(&data_0211e400, void **, 8), u16 *, 0x526) == 0)) {

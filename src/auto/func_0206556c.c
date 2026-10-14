@@ -17,12 +17,12 @@ void func_0206556c(s32 arg0, s32 arg1) {
     if (M2C_FIELD(temp_r4, u16 *, 2) != 0) {
         return;
     }
-    M2C_FIELD(temp_r4, s16 *, 0xA) = 0;
-    M2C_FIELD(temp_r4, s16 *, 0xC) = 0;
-    M2C_FIELD(temp_r4, s8 *, 8) = 0;
-    M2C_FIELD(temp_r4, s8 *, 0xE) = 0;
+    M2C_FIELD(temp_r4, s16 *, 0xA)  = 0;
+    M2C_FIELD(temp_r4, s16 *, 0xC)  = 0;
+    M2C_FIELD(temp_r4, s8 *, 8)     = 0;
+    M2C_FIELD(temp_r4, s8 *, 0xE)   = 0;
     M2C_FIELD(temp_r4, s32 *, 0x10) = 0;
     M2C_FIELD(temp_r4, s32 *, 0x14) = 0;
     M2C_FIELD(temp_r4, s32 *, 0x18) = 0;
-    M2C_FIELD(temp_r4, s32 *, 4) = 0;
+    M2C_FIELD(temp_r4, s32 *, 4)    = 0;
 }

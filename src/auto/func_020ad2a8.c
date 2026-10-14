@@ -7,7 +7,7 @@ s32 func_020ad2a8(void *arg0, void *arg1) {
 
     var_r4 = 0;
     if (func_02073034() > 0) {
-loop_1:
+    loop_1:
         if (M2C_FIELD(arg1, s32 *, 4) != M2C_FIELD(arg0, s32 *, 4)) {
             return 0;
         }

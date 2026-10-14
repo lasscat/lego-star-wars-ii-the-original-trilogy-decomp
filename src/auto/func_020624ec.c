@@ -7,7 +7,7 @@ extern void *data_027e03a0;
 extern M2C_UNK data_027e0410;
 
 void func_020624ec(void *arg0) {
-    M2C_FIELD(data_027e03a0, M2C_UNK (**)(void **, void *), 0xC)(&data_027e03a0, arg0);
+    M2C_FIELD(data_027e03a0, M2C_UNK(**)(void **, void *), 0xC)(&data_027e03a0, arg0);
     func_02055854(&data_027e0410, arg0);
     data_021042c4 -= 1;
     if (M2C_FIELD(arg0, u16 *, 0xC) != 0xFFFF) {

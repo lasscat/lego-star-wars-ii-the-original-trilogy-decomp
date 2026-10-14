@@ -3,5 +3,5 @@
 extern M2C_UNK data_020ff674;
 
 u16 func_02094010(s32 arg0) {
-    return M2C_FIELD(*((M2C_UNK *)((s8 *)&data_020ff674 + (arg0 * 4))), u16 *, 0xE);
+    return M2C_FIELD(*((M2C_UNK *) ((s8 *) &data_020ff674 + (arg0 * 4))), u16 *, 0xE);
 }

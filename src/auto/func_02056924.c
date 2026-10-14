@@ -14,5 +14,6 @@ void func_02056924(M2C_UNK arg0, void *arg1) {
     if (M2C_FIELD(arg1, u8 *, 2) != M2C_FIELD(temp_r0, u16 *, 0x182)) {
         return;
     }
-    func_020675d8(M2C_FIELD(M2C_FIELD(M2C_FIELD(&data_0210930c, void **, 0x68), void **, 0x38C), s32 *, 4) + 0x28, M2C_FIELD(arg1, u8 *, 3));
+    func_020675d8(M2C_FIELD(M2C_FIELD(M2C_FIELD(&data_0210930c, void **, 0x68), void **, 0x38C), s32 *, 4) + 0x28,
+                  M2C_FIELD(arg1, u8 *, 3));
 }

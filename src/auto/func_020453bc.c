@@ -11,15 +11,15 @@ void *func_020453bc(void *arg0) {
     void *var_r2;
 
     M2C_FIELD(arg0, M2C_UNK **, 0) = &data_020fe2d0;
-    temp_r0 = M2C_FIELD(arg0, void **, 4);
-    temp_r1 = M2C_FIELD(temp_r0, u8 *, 0x6C4);
+    temp_r0                        = M2C_FIELD(arg0, void **, 4);
+    temp_r1                        = M2C_FIELD(temp_r0, u8 *, 0x6C4);
     if ((temp_r1 & 4) || (!(temp_r1 & 1) && !(temp_r1 & 2))) {
         func_0200c848(temp_r0, 5);
         func_0200c848(M2C_FIELD(arg0, void **, 4), 4);
     }
     var_r1 = M2C_FIELD(arg0, void ***, 0x14);
     if (var_r1 != NULL) {
-        var_r2 = *var_r1;
+        var_r2    = *var_r1;
         temp_r0_2 = arg0 + 0x14;
         if (var_r2 != temp_r0_2) {
             do {

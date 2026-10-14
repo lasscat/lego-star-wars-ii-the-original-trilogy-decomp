@@ -7,9 +7,11 @@ extern M2C_UNK data_0210930c;
 s32 func_0207f59c(void *arg0) {
     void *temp_r0;
 
-    temp_r0 = func_02067080(M2C_FIELD(M2C_FIELD(&data_0210930c, void **, 0x68), void **, 0x38C), M2C_FIELD(arg0, s32 *, 4), M2C_FIELD(arg0, s32 *, 8));
+    temp_r0 = func_02067080(M2C_FIELD(M2C_FIELD(&data_0210930c, void **, 0x68), void **, 0x38C), M2C_FIELD(arg0, s32 *, 4),
+                            M2C_FIELD(arg0, s32 *, 8));
     if ((temp_r0 != NULL) && (M2C_FIELD(arg0, u16 *, 0xC) == M2C_FIELD(temp_r0, u16 *, 0x182))) {
-        func_020675d8(M2C_FIELD(M2C_FIELD(M2C_FIELD(&data_0210930c, void **, 0x68), void **, 0x38C), s32 *, 4) + 0x28, M2C_FIELD(arg0, u16 *, 0xE));
+        func_020675d8(M2C_FIELD(M2C_FIELD(M2C_FIELD(&data_0210930c, void **, 0x68), void **, 0x38C), s32 *, 4) + 0x28,
+                      M2C_FIELD(arg0, u16 *, 0xE));
         return 1;
     }
     return 0;

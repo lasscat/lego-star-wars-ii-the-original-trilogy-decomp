@@ -1,5 +1,5 @@
-#include "m2c.h"
 #include "engine.h"
+#include "m2c.h"
 
 void func_020675d8(M2C_UNK, M2C_UNK);
 
@@ -12,5 +12,6 @@ void func_02016634(s32 arg0) {
     if (temp_r1 == 0) {
         return;
     }
-    func_020675d8(M2C_FIELD(M2C_FIELD(M2C_FIELD(&data_0210930c, void **, 0x68), void **, 0x38C), s32 *, 4) + 0x28, (s32) temp_r1);
+    func_020675d8(M2C_FIELD(M2C_FIELD(M2C_FIELD(&data_0210930c, void **, 0x68), void **, 0x38C), s32 *, 4) + 0x28,
+                  (s32) temp_r1);
 }

@@ -29,7 +29,7 @@ void func_02055d58(s32 arg0, s32 arg1, s32 arg2, s32 arg3, s32 arg4, s32 arg5) {
     if (var_r9 & 3) {
         temp_r4 = arg3 * 2;
         temp_r0 = func_0205e540(temp_r4, 3, 4);
-        var_r5 = temp_r0;
+        var_r5  = temp_r0;
         func_0205e6e0(temp_r0, var_r9, temp_r4);
         var_r9 = var_r5;
     }

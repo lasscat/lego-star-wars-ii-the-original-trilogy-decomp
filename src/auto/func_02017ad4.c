@@ -17,7 +17,7 @@ void *func_02017ad4(void *arg0) {
     func_02055210(&data_021094ac, arg0);
     var_r1 = M2C_FIELD(arg0, void ***, 0x54);
     if (var_r1 != NULL) {
-        var_r2 = *var_r1;
+        var_r2  = *var_r1;
         temp_r0 = arg0 + 0x54;
         if (var_r2 != temp_r0) {
             do {

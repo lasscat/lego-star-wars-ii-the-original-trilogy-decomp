@@ -15,7 +15,7 @@ void func_0201a8bc(void *arg0) {
         return;
     }
     M2C_FIELD(arg0, volatile s32 *, 0x10) = (s32) (M2C_FIELD(arg0, volatile s32 *, 0x10) & ~0x300);
-    temp_r5 = func_020608fc(arg0 + 0x10);
+    temp_r5                               = func_020608fc(arg0 + 0x10);
     func_0206090c(arg0 + 0x10, 0);
     if (data_027e02a8 & 0x200) {
         var_r1 = 0;

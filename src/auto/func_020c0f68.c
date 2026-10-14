@@ -13,7 +13,7 @@ void func_020c0f68(void) {
     }
     do {
         M2C_FIELD(var_r0, s32 *, 4) = var_r1;
-        var_r0 = M2C_FIELD(var_r0, void **, 0x6C);
+        var_r0                      = M2C_FIELD(var_r0, void **, 0x6C);
         var_r1 += 1;
     } while (var_r0 != NULL);
 }

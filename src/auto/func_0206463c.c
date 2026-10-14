@@ -17,7 +17,7 @@ u32 func_0206463c(u8 *arg0) {
     var_r0 = func_020d39f4(2);
     if (var_r0 == 0) {
         var_r0 = *arg0 | 2;
-        *arg0 = (u8) var_r0;
+        *arg0  = (u8) var_r0;
     }
     return var_r0;
 }

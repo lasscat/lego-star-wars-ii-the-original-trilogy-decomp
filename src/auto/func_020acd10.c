@@ -14,7 +14,7 @@ void *func_020acd10(void *arg0, void *arg1) {
     M2C_FIELD(arg0, u16 *, 0x3E) = (u16) M2C_FIELD(arg1, u16 *, 0x3E);
     M2C_FIELD(arg0, u16 *, 0x40) = (u16) M2C_FIELD(arg1, u16 *, 0x40);
     M2C_FIELD(arg0, u16 *, 0x42) = (u16) M2C_FIELD(arg1, u16 *, 0x42);
-    M2C_FIELD(arg0, u8 *, 0x44) = (u8) M2C_FIELD(arg1, u8 *, 0x44);
-    M2C_FIELD(arg0, u8 *, 0x45) = (u8) M2C_FIELD(arg1, u8 *, 0x45);
+    M2C_FIELD(arg0, u8 *, 0x44)  = (u8) M2C_FIELD(arg1, u8 *, 0x44);
+    M2C_FIELD(arg0, u8 *, 0x45)  = (u8) M2C_FIELD(arg1, u8 *, 0x45);
     return arg0;
 }

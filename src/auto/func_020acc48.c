@@ -11,6 +11,6 @@ void func_020acc48(void *arg0, void *arg1, void *arg2, void *arg3) {
     M2C_FIELD(arg0, u16 *, 0x3E) = (u16) M2C_FIELD(arg2, u16 *, 2);
     M2C_FIELD(arg0, u16 *, 0x40) = (u16) M2C_FIELD(arg2, u16 *, 4);
     M2C_FIELD(arg0, u16 *, 0x42) = (u16) M2C_FIELD(arg2, u16 *, 6);
-    M2C_FIELD(arg0, s8 *, 0x44) = 1;
-    M2C_FIELD(arg0, s8 *, 0x45) = 1;
+    M2C_FIELD(arg0, s8 *, 0x44)  = 1;
+    M2C_FIELD(arg0, s8 *, 0x45)  = 1;
 }

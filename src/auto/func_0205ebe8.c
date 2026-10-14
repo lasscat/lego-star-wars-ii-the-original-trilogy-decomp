@@ -10,9 +10,9 @@ void *func_0205ebe8(void *arg0) {
     M2C_FIELD(arg0, s32 *, 0x8C) = 0;
     M2C_FIELD(arg0, s32 *, 0xD4) = 0;
     M2C_FIELD(arg0, s32 *, 0xD8) = 0;
-    M2C_FIELD(arg0, s8 *, 0x90) = 0;
-    M2C_FIELD(arg0, s8 *, 0x91) = 0;
-    M2C_FIELD(arg0, s8 *, 0xDC) = 0;
-    M2C_FIELD(arg0, s8 *, 0xDD) = 0;
+    M2C_FIELD(arg0, s8 *, 0x90)  = 0;
+    M2C_FIELD(arg0, s8 *, 0x91)  = 0;
+    M2C_FIELD(arg0, s8 *, 0xDC)  = 0;
+    M2C_FIELD(arg0, s8 *, 0xDD)  = 0;
     return arg0;
 }

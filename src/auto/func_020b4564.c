@@ -15,7 +15,7 @@ void func_020b4564(s32 arg0) {
         } while (var_r4 < 3);
         return;
     }
-    temp_r1 = *((M2C_UNK *)((s8 *)&data_0210dafc + (arg0 * 4)));
+    temp_r1 = *((M2C_UNK *) ((s8 *) &data_0210dafc + (arg0 * 4)));
     if (temp_r1 != 0) {
         data_0210daf0 = temp_r1;
     }

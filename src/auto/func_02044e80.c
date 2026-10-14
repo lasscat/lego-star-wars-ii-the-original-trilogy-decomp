@@ -13,6 +13,6 @@ void func_02044e80(void *arg0) {
         func_02044ed0();
         return;
     }
-    temp_r1 = M2C_FIELD(arg0, void **, 4);
+    temp_r1                      = M2C_FIELD(arg0, void **, 4);
     M2C_FIELD(temp_r1, s32 *, 8) = (s32) (M2C_FIELD(temp_r1, s32 *, 8) | 0x200);
 }

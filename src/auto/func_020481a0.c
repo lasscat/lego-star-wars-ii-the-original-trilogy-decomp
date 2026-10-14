@@ -5,14 +5,14 @@ extern M2C_UNK data_020fe3a8;
 
 void func_020481a0(void *arg0, s32 arg1) {
     M2C_FIELD(arg0, M2C_UNK **, 0) = &data_020fdbc4;
-    M2C_FIELD(arg0, s32 *, 4) = arg1;
-    M2C_FIELD(arg0, s8 *, 0xC) = 0;
-    M2C_FIELD(arg0, s8 *, 0xD) = 0;
+    M2C_FIELD(arg0, s32 *, 4)      = arg1;
+    M2C_FIELD(arg0, s8 *, 0xC)     = 0;
+    M2C_FIELD(arg0, s8 *, 0xD)     = 0;
     M2C_FIELD(arg0, M2C_UNK **, 0) = &data_020fe3a8;
-    M2C_FIELD(arg0, s32 *, 0x10) = 0;
-    M2C_FIELD(arg0, s32 *, 0x14) = 0;
-    M2C_FIELD(arg0, s32 *, 0x18) = 0;
-    M2C_FIELD(arg0, s8 *, 0x1C) = 0;
-    M2C_FIELD(arg0, s32 *, 0x20) = 0;
-    M2C_FIELD(arg0, s32 *, 0x24) = 0;
+    M2C_FIELD(arg0, s32 *, 0x10)   = 0;
+    M2C_FIELD(arg0, s32 *, 0x14)   = 0;
+    M2C_FIELD(arg0, s32 *, 0x18)   = 0;
+    M2C_FIELD(arg0, s8 *, 0x1C)    = 0;
+    M2C_FIELD(arg0, s32 *, 0x20)   = 0;
+    M2C_FIELD(arg0, s32 *, 0x24)   = 0;
 }

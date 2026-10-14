@@ -12,6 +12,7 @@ void func_020bb180(void) {
     }
     func_020b9d94();
     func_020d0ce8(1);
-    func_020d05fc(M2C_FIELD(&data_0210e184, u16 *, 0x64), M2C_FIELD(&data_0210db84, u8 *, 0x666), M2C_FIELD(&data_0210db84, u8 *, 0x667), 0);
+    func_020d05fc(M2C_FIELD(&data_0210e184, u16 *, 0x64), M2C_FIELD(&data_0210db84, u8 *, 0x666),
+                  M2C_FIELD(&data_0210db84, u8 *, 0x667), 0);
     M2C_FIELD(&data_0210db84, s32 *, 0x9C) = (s32) (M2C_FIELD(&data_0210db84, s32 *, 0x9C) | 4);
 }

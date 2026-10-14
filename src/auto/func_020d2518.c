@@ -5,7 +5,7 @@ M2C_UNK func_020cf344(void *, M2C_UNK, M2C_UNK);    /* extern */
 void func_020d2518(void *arg0) {
     func_020cf344(arg0, 0, 0x5C);
     M2C_FIELD(arg0, s32 *, 0x10) = 0;
-    M2C_FIELD(arg0, s32 *, 0xC) = 0;
+    M2C_FIELD(arg0, s32 *, 0xC)  = 0;
     M2C_FIELD(arg0, s32 *, 0x18) = 0;
     M2C_FIELD(arg0, s32 *, 0x14) = 0;
 }

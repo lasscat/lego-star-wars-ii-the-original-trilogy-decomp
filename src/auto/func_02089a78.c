@@ -36,7 +36,8 @@ void func_02089a78(void *arg0) {
     var_r7 = 0;
     do {
         temp_r2 = arg0 + var_r7;
-        if (((M2C_FIELD(temp_r2, u8 *, 0x28B1) != 0) && (func_020867ec(&data_02104d90, var_r7) == 0)) || ((M2C_FIELD(temp_r2, u8 *, 0x28B1) == 0) && (func_020867ec(&data_02104d90, var_r7) != 0))) {
+        if (((M2C_FIELD(temp_r2, u8 *, 0x28B1) != 0) && (func_020867ec(&data_02104d90, var_r7) == 0)) ||
+            ((M2C_FIELD(temp_r2, u8 *, 0x28B1) == 0) && (func_020867ec(&data_02104d90, var_r7) != 0))) {
             func_02086810(&data_02104d90, var_r7, 0);
         }
         var_r7 += 1;

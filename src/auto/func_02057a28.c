@@ -15,8 +15,8 @@ void func_02057a28(void *arg0, void *arg1) {
     func_020a9920();
     M2C_FIELD(func_020aaeb4(), s32 *, 0x220) = 0;
     M2C_FIELD(func_020aaeb4(), s32 *, 0x21C) = 0;
-    temp_r6 = M2C_FIELD(arg1, u8 *, 2);
-    M2C_FIELD(func_020aaeb4(), u8 *, 0x241) = temp_r6;
+    temp_r6                                  = M2C_FIELD(arg1, u8 *, 2);
+    M2C_FIELD(func_020aaeb4(), u8 *, 0x241)  = temp_r6;
     func_020a0418(func_020aaeb4(), M2C_FIELD(M2C_FIELD(arg0, void **, 4), s32 *, 0x38) + (M2C_FIELD(arg1, u8 *, 3) * 8), 1);
     temp_r4 = M2C_FIELD(arg1, s16 *, 0);
     if ((s32) temp_r4 <= 0) {

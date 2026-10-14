@@ -15,7 +15,7 @@ void func_0205a060(void *arg0) {
     if (temp_r0 == 0) {
         return;
     }
-    temp_r0_2 = data_021012ec(temp_r0, 0, 0);
+    temp_r0_2                    = data_021012ec(temp_r0, 0, 0);
     M2C_FIELD(arg0, s32 *, 0x10) = temp_r0_2;
     if (temp_r0_2 == 0) {
         return;

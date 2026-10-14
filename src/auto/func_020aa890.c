@@ -13,7 +13,9 @@ void func_020aa890(void *arg0, void *arg1) {
 loop_2:
     temp_ip = M2C_FIELD(var_lr, void **, 0);
     if (temp_ip != NULL) {
-        if ((M2C_FIELD(arg1, s32 *, 0) == M2C_FIELD(temp_ip, s32 *, 4)) && (M2C_FIELD(arg1, s32 *, 4) == M2C_FIELD(temp_ip, s32 *, 8)) && (M2C_FIELD(arg1, s32 *, 8) == M2C_FIELD(temp_ip, s32 *, 0xC))) {
+        if ((M2C_FIELD(arg1, s32 *, 0) == M2C_FIELD(temp_ip, s32 *, 4)) &&
+            (M2C_FIELD(arg1, s32 *, 4) == M2C_FIELD(temp_ip, s32 *, 8)) &&
+            (M2C_FIELD(arg1, s32 *, 8) == M2C_FIELD(temp_ip, s32 *, 0xC))) {
             func_020aa7c0(arg0, temp_ip);
             return;
         }

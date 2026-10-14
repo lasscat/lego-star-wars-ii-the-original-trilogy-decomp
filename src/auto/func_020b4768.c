@@ -6,7 +6,7 @@ extern M2C_UNK data_0210dafc;
 void func_020b4768(s32 arg0, s8 arg1, s8 arg2, s8 arg3) {
     void *temp_ip;
 
-    temp_ip = *((M2C_UNK *)((s8 *)&data_0210dafc + (arg0 * 4)));
+    temp_ip = *((M2C_UNK *) ((s8 *) &data_0210dafc + (arg0 * 4)));
     if (temp_ip == NULL) {
         return;
     }

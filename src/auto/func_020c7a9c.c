@@ -1,5 +1,5 @@
-#include "m2c.h"
 #include "engine.h"
+#include "m2c.h"
 
 M2C_UNK func_020c6600(M2C_UNK, M2C_UNK);
 M2C_UNK func_020c6610(M2C_UNK, M2C_UNK);

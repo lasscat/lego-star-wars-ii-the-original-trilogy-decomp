@@ -9,7 +9,7 @@ s32 func_0202db24(s32 arg0, M2C_UNK arg1, M2C_UNK arg2) {
     s32 var_r4;
 
     temp_r0 = func_0205e80c(0x24, 1, 4);
-    var_r4 = temp_r0;
+    var_r4  = temp_r0;
     if (var_r4 != 0) {
         var_r4 = func_0203668c(temp_r0, arg0, arg1, arg2);
     }

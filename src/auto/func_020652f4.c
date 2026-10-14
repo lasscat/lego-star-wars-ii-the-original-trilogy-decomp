@@ -21,7 +21,8 @@ void func_020652f4(s32 arg0, void *arg1) {
         temp_r8 = temp_r7 >> 0xD;
         temp_r4 = M2C_FIELD(arg1, s32 *, 0x28);
         func_020c2ff4(0, temp_r8, arg1 + M2C_FIELD(arg1, s32 *, 0x24), temp_r5);
-        func_020c2ff4(0, ((u32) (0x1FFFF & (temp_r7 >> 0xD)) >> 1) + 0x20000 + ((u32) (temp_r8 & 0x40000) >> 2), arg1 + temp_r4, temp_r5 >> 1);
+        func_020c2ff4(0, ((u32) (0x1FFFF & (temp_r7 >> 0xD)) >> 1) + 0x20000 + ((u32) (temp_r8 & 0x40000) >> 2),
+                      arg1 + temp_r4, temp_r5 >> 1);
         M2C_FIELD(arg1, u16 *, 0x20) = (u16) (M2C_FIELD(arg1, u16 *, 0x20) | 1);
     }
     temp_r3_2 = M2C_FIELD(arg1, u16 *, 0x30) * 8;

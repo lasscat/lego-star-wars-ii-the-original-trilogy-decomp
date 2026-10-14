@@ -12,7 +12,8 @@ s32 func_020ae2f8(void) {
         return 1;
     }
     func_020ad7a4(4);
-    if (func_020d78c0(&func_020ae388, M2C_FIELD(&data_0210b320, s32 *, 0x38), (u16) M2C_FIELD(&data_0210b320, s32 *, 0x40), M2C_FIELD(&data_0210b320, s32 *, 0x24), (s32) (u16) M2C_FIELD(&data_0210b320, s32 *, 0x3C), 1) == 2) {
+    if (func_020d78c0(&func_020ae388, M2C_FIELD(&data_0210b320, s32 *, 0x38), (u16) M2C_FIELD(&data_0210b320, s32 *, 0x40),
+                      M2C_FIELD(&data_0210b320, s32 *, 0x24), (s32) (u16) M2C_FIELD(&data_0210b320, s32 *, 0x3C), 1) == 2) {
         return 1;
     }
     func_020ad8b4();

@@ -20,8 +20,8 @@ void func_0205d57c(void *arg0, void *arg1, void *arg2) {
             var_r0 = M2C_FIELD(var_r0, void **, 4);
         } while (var_r0 != NULL);
     }
-    M2C_FIELD(arg1, void **, 8) = var_r4;
-    M2C_FIELD(arg1, s32 *, 4) = 0;
+    M2C_FIELD(arg1, void **, 8)   = var_r4;
+    M2C_FIELD(arg1, s32 *, 4)     = 0;
     M2C_FIELD(var_r4, void **, 4) = arg1;
     if (var_r4 == M2C_FIELD(arg0, void **, 8)) {
         M2C_FIELD(arg0, void **, 8) = arg1;

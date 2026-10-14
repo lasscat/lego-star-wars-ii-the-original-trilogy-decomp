@@ -11,13 +11,13 @@ void *func_02041f78(void *arg0) {
     void *temp_r5;
     void *var_r2;
 
-    M2C_FIELD(arg0, M2C_UNK **, 0) = &data_020fe21c;
+    M2C_FIELD(arg0, M2C_UNK **, 0)                       = &data_020fe21c;
     M2C_FIELD(M2C_FIELD(arg0, void **, 4), s32 *, 0x690) = 0;
-    temp_r5 = M2C_FIELD(arg0, void **, 0x10);
+    temp_r5                                              = M2C_FIELD(arg0, void **, 0x10);
     if (temp_r5 != NULL) {
         var_r1 = M2C_FIELD(temp_r5, void ***, 0x28);
         if (var_r1 != NULL) {
-            var_r2 = *var_r1;
+            var_r2  = *var_r1;
             temp_r0 = temp_r5 + 0x28;
             if (var_r2 != temp_r0) {
                 do {

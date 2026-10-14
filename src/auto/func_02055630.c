@@ -3,7 +3,7 @@
 void func_02055630(void *arg0) {
     s32 temp_r2;
 
-    temp_r2 = M2C_FIELD(arg0, s32 *, 4) + 1;
+    temp_r2                   = M2C_FIELD(arg0, s32 *, 4) + 1;
     M2C_FIELD(arg0, s32 *, 4) = temp_r2;
     if (temp_r2 <= (s32) M2C_FIELD(arg0, s32 *, 0x10)) {
         return;

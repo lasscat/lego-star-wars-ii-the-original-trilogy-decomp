@@ -10,11 +10,11 @@ void func_020d43a4(void) {
     if (M2C_FIELD(&data_021174f4, u16 *, 0) != 0) {
         return;
     }
-    M2C_FIELD(&data_021174f4, u16 *, 0) = 1U;
-    M2C_FIELD(&data_021174f4, s32 *, 4) = 0;
-    M2C_FIELD(&data_021174f4, s32 *, 8) = 0;
+    M2C_FIELD(&data_021174f4, u16 *, 0)    = 1U;
+    M2C_FIELD(&data_021174f4, s32 *, 4)    = 0;
+    M2C_FIELD(&data_021174f4, s32 *, 8)    = 0;
     M2C_FIELD(&data_021174f4, s32 *, 0x20) = 0;
-    M2C_FIELD(&data_021174f4, s32 *, 0xC) = 0;
+    M2C_FIELD(&data_021174f4, s32 *, 0xC)  = 0;
     M2C_FIELD(&data_021174f4, s32 *, 0x10) = 0;
     func_020d1134();
     do {

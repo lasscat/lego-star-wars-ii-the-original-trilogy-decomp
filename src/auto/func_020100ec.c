@@ -19,13 +19,13 @@ void func_020100ec(void *arg0, void *arg1, s32 arg2) {
             var_r0 = func_0205c324();
         }
         M2C_FIELD(arg0, s32 *, 0x190) = var_r0;
-        func_02010a24(arg0, M2C_FIELD(*((M2C_UNK *)((s8 *)&data_020eb7b8 + (arg2 * 8))), u16 *, 4));
+        func_02010a24(arg0, M2C_FIELD(*((M2C_UNK *) ((s8 *) &data_020eb7b8 + (arg2 * 8))), u16 *, 4));
         if (M2C_FIELD(arg0, u16 *, 0xC) & 3) {
             func_0205c628(M2C_FIELD(arg0, s32 *, 0x190), 1);
         }
     }
-    temp_r2 = M2C_FIELD(arg0, void **, 0xDC);
-    temp_r2_2 = temp_r2 + M2C_FIELD((temp_r2 + M2C_FIELD(temp_r2, u16 *, 0xE)), s32 *, 0xC);
+    temp_r2                       = M2C_FIELD(arg0, void **, 0xDC);
+    temp_r2_2                     = temp_r2 + M2C_FIELD((temp_r2 + M2C_FIELD(temp_r2, u16 *, 0xE)), s32 *, 0xC);
     M2C_FIELD(arg0, s32 *, 0x1A4) = (s32) M2C_FIELD(temp_r2_2, s32 *, 0x38);
     M2C_FIELD(arg0, s16 *, 0x198) = (s16) M2C_FIELD(temp_r2_2, s16 *, 0x2C);
     M2C_FIELD(arg0, s16 *, 0x19A) = (s16) M2C_FIELD(temp_r2_2, s16 *, 0x2E);

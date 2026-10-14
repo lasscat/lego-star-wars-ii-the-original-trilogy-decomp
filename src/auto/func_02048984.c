@@ -9,7 +9,7 @@ void *func_02048984(void *arg0) {
     void *temp_r4;
 
     M2C_FIELD(arg0, M2C_UNK **, 0) = &data_020fe3cc;
-    temp_r4 = M2C_FIELD(arg0, void **, 0x34);
+    temp_r4                        = M2C_FIELD(arg0, void **, 0x34);
     if (temp_r4 != NULL) {
         func_0204a0c4(temp_r4);
         func_0205e84c(temp_r4);

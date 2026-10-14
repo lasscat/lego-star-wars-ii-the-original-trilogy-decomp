@@ -15,8 +15,8 @@ void *func_0202c710(M2C_UNK arg0, M2C_UNK arg1, void *arg2, s32 arg3) {
     }
     if ((M2C_FIELD(var_r2, s32 *, 0x10) == 0) && (M2C_FIELD(var_r2, s32 *, 8) == 0)) {
         temp_r0 = func_0202c7a4(arg0, arg1);
-        var_r2 = temp_r0;
-        var_ip = 1;
+        var_r2  = temp_r0;
+        var_ip  = 1;
         if (var_r2 == NULL) {
             return temp_r0;
         }

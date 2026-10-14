@@ -16,7 +16,9 @@ s32 func_020dc730(void) {
     func_020dcc94(0xA);
     if (M2C_FIELD(M2C_FIELD(&data_0211e400, void **, 0xC), s32 *, 0x1320) == 0) {
         do {
-            temp_r0 = func_020d7134(M2C_FIELD(&data_0211e400, s32 *, 4), M2C_FIELD(M2C_FIELD(&data_0211e400, void **, 8), s32 *, 0x508), M2C_FIELD(&data_0211e400, u16 *, 0));
+            temp_r0 = func_020d7134(M2C_FIELD(&data_0211e400, s32 *, 4),
+                                    M2C_FIELD(M2C_FIELD(&data_0211e400, void **, 8), s32 *, 0x508),
+                                    M2C_FIELD(&data_0211e400, u16 *, 0));
         } while (temp_r0 == 4);
         if (temp_r0 != 2) {
             return 8;

@@ -8,6 +8,6 @@ void func_02020e84(void *arg0) {
         return;
     }
     M2C_FIELD(arg0, s8 *, 0x1BC) = 7;
-    M2C_FIELD(arg0, s32 *, 8) = (s32) (M2C_FIELD(arg0, s32 *, 8) | 1);
+    M2C_FIELD(arg0, s32 *, 8)    = (s32) (M2C_FIELD(arg0, s32 *, 8) | 1);
     func_02001990(arg0, 1);
 }

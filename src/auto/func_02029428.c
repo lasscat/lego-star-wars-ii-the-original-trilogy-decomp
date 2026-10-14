@@ -12,7 +12,7 @@ void func_02029428(s32 arg0) {
         return;
     }
     temp_r0 = func_0205e80c(0x10, 1, 4);
-    var_r1 = temp_r0;
+    var_r1  = temp_r0;
     if (var_r1 != 0) {
         var_r1 = func_02037394(temp_r0, arg0, 0);
     }

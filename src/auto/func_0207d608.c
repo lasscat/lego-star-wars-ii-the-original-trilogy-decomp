@@ -11,8 +11,8 @@ extern M2C_UNK data_020eff10;
 void func_0207d608(void *arg0) {
     func_0205365c(M2C_FIELD(arg0, s32 *, 0x10), 0);
     M2C_FIELD(arg0, s32 *, 0x2C) = 0x8C;
-    M2C_FIELD(arg0, s8 *, 0x27) = 4;
-    M2C_FIELD(arg0, s8 *, 0x25) = 0;
+    M2C_FIELD(arg0, s8 *, 0x27)  = 4;
+    M2C_FIELD(arg0, s8 *, 0x25)  = 0;
     func_0206574c(M2C_FIELD(arg0, s32 *, 8), 6, -1);
     M2C_FIELD(arg0, s32 *, 0) = func_02093fd0(M2C_FIELD(arg0, s32 *, 4));
     func_0205e938(arg0 + 0x14, &data_020eff10, 0xC, 1);

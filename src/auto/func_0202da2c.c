@@ -9,7 +9,7 @@ s32 func_0202da2c(s32 arg0, s32 arg1, s32 arg2, M2C_UNK arg3, s32 arg4, s32 arg5
     s32 var_r7;
 
     temp_r0 = func_0205e80c(0x34, 1, 4);
-    var_r7 = temp_r0;
+    var_r7  = temp_r0;
     if (var_r7 != 0) {
         var_r7 = func_02033484(temp_r0, arg0, arg3, arg4, arg6, arg5, arg2, arg1, arg7, arg8);
     }

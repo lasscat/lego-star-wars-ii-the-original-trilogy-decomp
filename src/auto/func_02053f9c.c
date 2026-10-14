@@ -10,6 +10,6 @@ void func_02053f9c(void *arg0, s32 arg1) {
     } else {
         var_r1 = temp_r1 & ~0x40000000;
     }
-    M2C_FIELD(arg0, s32 *, 4) = var_r1;
+    M2C_FIELD(arg0, s32 *, 4)   = var_r1;
     M2C_FIELD(arg0, u8 *, 0x1C) = (u8) (M2C_FIELD(arg0, u8 *, 0x1C) | 1);
 }

@@ -9,7 +9,7 @@ s32 func_0202daac(s32 arg0, M2C_UNK arg1, M2C_UNK arg2, s32 arg3, s32 arg4, s32 
     s32 var_r7;
 
     temp_r0 = func_0205e80c(0x60, 1, 4);
-    var_r7 = temp_r0;
+    var_r7  = temp_r0;
     if (var_r7 != 0) {
         var_r7 = func_0203b698(temp_r0, arg0, arg1, arg2, arg3, arg4, arg5, arg6);
     }

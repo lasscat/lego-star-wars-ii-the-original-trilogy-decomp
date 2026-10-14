@@ -53,7 +53,7 @@ void func_020101e8(void *arg0, s32 arg1, s32 arg2) {
             M2C_FIELD(arg0, s32 *, 0x190) = 0;
         }
     }
-    func_020100ec(arg0, (M2C_UNK *)((s8 *)&data_020eb7b8 + (arg1 * 8)), arg1);
+    func_020100ec(arg0, (M2C_UNK *) ((s8 *) &data_020eb7b8 + (arg1 * 8)), arg1);
     if (arg2 == 0) {
         return;
     }

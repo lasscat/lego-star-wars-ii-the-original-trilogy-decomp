@@ -31,6 +31,6 @@ void func_0207fd14(void *arg0) {
     func_020b3ab0(&data_027e0bd0);
     func_02090ae8(&data_0210930c, 0xF, 1);
     func_02091310(&data_0210930c, 0);
-    func_02093690(&data_0210930c, *((M2C_UNK *)((s8 *)&data_02109358 + (M2C_FIELD(&data_021027f8, u8 *, 0x2A) * 4))));
+    func_02093690(&data_0210930c, *((M2C_UNK *) ((s8 *) &data_02109358 + (M2C_FIELD(&data_021027f8, u8 *, 0x2A) * 4))));
     M2C_FIELD(arg0, s8 *, 0x28) = 1;
 }

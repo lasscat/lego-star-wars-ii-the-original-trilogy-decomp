@@ -15,7 +15,7 @@ void func_02058fd0(M2C_UNK arg0, void *arg1) {
     temp_r4 = func_02067080(arg0, M2C_FIELD(arg1, u8 *, 2), M2C_FIELD(arg1, u8 *, 3));
     if ((temp_r5 != 0) && (temp_r4 != 0)) {
         temp_r0 = func_0205e80c(0x70, 1, 4);
-        var_r1 = temp_r0;
+        var_r1  = temp_r0;
         if (var_r1 != 0) {
             var_r1 = func_02038af0(temp_r0, temp_r5, temp_r4, M2C_FIELD(arg1, u8 *, 4));
         }

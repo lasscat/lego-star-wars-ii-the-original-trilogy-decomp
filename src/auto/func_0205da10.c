@@ -34,9 +34,9 @@ void func_0205da10(void *arg0, void *arg1) {
     }
     temp_r3 = M2C_FIELD(var_r4, void **, 0x10);
     if (temp_r3 != NULL) {
-        M2C_FIELD(temp_r3, void **, 0x14) = (void *) M2C_FIELD(var_r4, void **, 0x14);
-        M2C_FIELD(temp_r3, void **, 0xC) = (void *) M2C_FIELD(var_r4, void **, 0xC);
-        var_r5 = temp_r3;
+        M2C_FIELD(temp_r3, void **, 0x14)                     = (void *) M2C_FIELD(var_r4, void **, 0x14);
+        M2C_FIELD(temp_r3, void **, 0xC)                      = (void *) M2C_FIELD(var_r4, void **, 0xC);
+        var_r5                                                = temp_r3;
         M2C_FIELD(func_0205dcf8(arg0, var_r4, 1), void **, 8) = (void *) M2C_FIELD(var_r4, void **, 8);
     } else {
         var_r5 = M2C_FIELD(var_r4, void **, 0x14);
@@ -48,7 +48,7 @@ void func_0205da10(void *arg0, void *arg1) {
                 if (var_r1 != NULL) {
                     var_r1 -= 4;
                 }
-                var_r5 = var_r1;
+                var_r5                          = var_r1;
                 M2C_FIELD(var_r1, void **, 0xC) = (void *) M2C_FIELD(var_r4, void **, 0xC);
             } else {
                 var_r5 = M2C_FIELD(var_r4, void **, 0xC);
@@ -89,7 +89,7 @@ void func_0205da10(void *arg0, void *arg1) {
             }
             M2C_FIELD(var_r1_3, void **, 8) = var_r0_2;
         }
-        temp_r0 = M2C_FIELD(var_r4, void **, 0x10);
+        temp_r0  = M2C_FIELD(var_r4, void **, 0x10);
         var_r1_4 = var_r4;
         if ((temp_r0 != NULL) && (temp_r0 != var_r5)) {
             M2C_FIELD(temp_r0, void **, 0x14) = var_r5;

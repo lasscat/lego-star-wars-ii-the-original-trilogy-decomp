@@ -9,7 +9,7 @@ void func_020a3458(void *arg0, s8 arg1) {
     void *var_r1;
 
     M2C_FIELD(arg0, s8 *, 0x23F) = arg1;
-    var_r1 = M2C_FIELD(arg0, void **, 0x398);
+    var_r1                       = M2C_FIELD(arg0, void **, 0x398);
     if (var_r1 == NULL) {
         return;
     }

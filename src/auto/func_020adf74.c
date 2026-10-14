@@ -11,7 +11,7 @@ s32 func_020adf74(void) {
 
     M2C_FIELD(&data_0210b320, s32 *, 0x48) = 0x31;
     M2C_FIELD(&data_0210b320, s32 *, 0x30) = 0;
-    temp_r0 = func_020d70f4(&func_020adfdc);
+    temp_r0                                = func_020d70f4(&func_020adfdc);
     if (temp_r0 == 0) {
         return 1;
     }

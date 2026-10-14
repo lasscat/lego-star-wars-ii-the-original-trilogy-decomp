@@ -13,7 +13,7 @@ void func_020d32b0(void) {
     M2C_FIELD(&data_02117450, u16 *, 0) = 1U;
     func_020d1134();
     M2C_FIELD(&data_02117450, s16 *, 0x10) = 0;
-    M2C_FIELD(&data_02117450, s32 *, 4) = 0;
+    M2C_FIELD(&data_02117450, s32 *, 4)    = 0;
     M2C_FIELD(&data_02117450, s32 *, 0x14) = 0;
     M2C_FIELD(&data_02117450, s16 *, 0x36) = 0;
     M2C_FIELD(&data_02117450, s16 *, 0x34) = 0;
