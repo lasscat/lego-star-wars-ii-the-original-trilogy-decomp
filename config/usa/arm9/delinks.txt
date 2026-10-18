@@ -9976,3 +9976,39 @@ src/auto/func_0205d6a0.c:
 src/auto/func_02060c7c.c:
     complete
     .text       start:0x02060c7c end:0x02060cd0
+
+src/auto/func_02010c0c.c:
+    complete
+    .text       start:0x02010c0c end:0x02010c54
+
+src/auto/func_0202c5d8.c:
+    complete
+    .text       start:0x0202c5d8 end:0x0202c638
+
+src/auto/func_02036970.c:
+    complete
+    .text       start:0x02036970 end:0x020369d0
+
+src/auto/func_0204a880.c:
+    complete
+    .text       start:0x0204a880 end:0x0204a8d8
+
+src/auto/func_02053964.c:
+    complete
+    .text       start:0x02053964 end:0x020539c8
+
+src/auto/func_02086740.c:
+    complete
+    .text       start:0x02086740 end:0x020867a4
+
+src/auto/func_020948c0.c:
+    complete
+    .text       start:0x020948c0 end:0x020948f4
+
+src/auto/func_020948f4.c:
+    complete
+    .text       start:0x020948f4 end:0x02094930
+
+src/auto/func_02096adc.c:
+    complete
+    .text       start:0x02096adc end:0x02096b0c
