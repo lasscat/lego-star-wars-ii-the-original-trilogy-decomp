@@ -243,3 +243,4 @@ src/auto/func_02072e24.c 1.2/sp2p3
 src/auto/func_02006af8.c 1.2/sp2p3
 src/auto/func_0200b24c.c 1.2/sp2p3
 src/auto/func_02024550.c 1.2/sp2p3
+src/auto/func_02087088.c 1.2/sp2p3
