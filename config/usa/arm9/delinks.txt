@@ -10332,3 +10332,31 @@ src/auto/func_02027348.c:
 src/auto/func_02067f48.c:
     complete
     .text       start:0x02067f48 end:0x02067fa0
+
+src/auto/func_0202f97c.c:
+    complete
+    .text       start:0x0202f97c end:0x0202f9f4
+
+src/auto/func_0204c6b8.c:
+    complete
+    .text       start:0x0204c6b8 end:0x0204c6e8
+
+src/auto/func_02060a2c.c:
+    complete
+    .text       start:0x02060a2c end:0x02060a78
+
+src/auto/func_020632b4.c:
+    complete
+    .text       start:0x020632b4 end:0x02063324
+
+src/auto/func_02063610.c:
+    complete
+    .text       start:0x02063610 end:0x02063648
+
+src/auto/func_02063648.c:
+    complete
+    .text       start:0x02063648 end:0x02063680
+
+src/auto/func_0206acd8.c:
+    complete
+    .text       start:0x0206acd8 end:0x0206adbc
