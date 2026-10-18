@@ -8519,7 +8519,6 @@ src/auto/func_020ca300.c:
     .text       start:0x020ca300 end:0x020ca434
 
 src/auto/func_020ca454.c:
-    complete
     .text       start:0x020ca454 end:0x020ca4fc
 
 src/auto/func_020ca4fc.c:
