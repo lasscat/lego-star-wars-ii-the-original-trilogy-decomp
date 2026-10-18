@@ -235,3 +235,7 @@ src/auto/func_020e4560.c 2.0/sp1p5 -O4,p -lang c99 -ipa file -inline on,noauto
 src/auto/func_020e4a8c.c 2.0/sp1p5 -O4,p -lang c99 -ipa file -inline on,noauto
 src/auto/func_020e4bd8.c 2.0/sp1p5 -O4,p -lang c99 -ipa file -inline on,noauto
 src/auto/func_020bb74c.c 1.2/sp2p3
+src/auto/func_02006b24.c 2.0/sp1p5 -O4,s
+src/auto/func_0202cbf4.c 2.0/sp1p5 -flag no-opt_treetransformation
+src/auto/func_0202cc14.c 2.0/sp1p5 -flag no-opt_treetransformation
+src/auto/func_0206d314.c 2.0/sp1p5 -O1,p
