@@ -10500,3 +10500,23 @@ src/auto/func_02086e4c.c:
 src/auto/func_02007e40.c:
     complete
     .text       start:0x02007e40 end:0x02007eac
+
+src/auto/func_02054080.c:
+    complete
+    .text       start:0x02054080 end:0x020540b4
+
+src/auto/func_020b8f70.c:
+    complete
+    .text       start:0x020b8f70 end:0x020b8fa4
+
+src/auto/func_0203431c.c:
+    complete
+    .text       start:0x0203431c end:0x02034350
+
+src/auto/func_02059244.c:
+    complete
+    .text       start:0x02059244 end:0x0205927c
+
+src/auto/func_020594cc.c:
+    complete
+    .text       start:0x020594cc end:0x02059504
