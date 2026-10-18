@@ -4,5 +4,5 @@
 #include "m2c.h"
 
 void func_0209d050(s32 arg0, s32 arg1) {
-    *(u16 *)(arg0 + 0xFA + arg1 * 2) += 1;
+    *(u16 *) (arg0 + 0xFA + arg1 * 2) += 1;
 }

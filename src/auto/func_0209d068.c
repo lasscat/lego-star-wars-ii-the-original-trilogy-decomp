@@ -8,5 +8,5 @@ void func_0209d068(s32 arg0, const u8 *arg1) {
     if (i >= 4) {
         return;
     }
-    *(u16 *)(arg0 + 0xF2 + i * 2) += 1;
+    *(u16 *) (arg0 + 0xF2 + i * 2) += 1;
 }

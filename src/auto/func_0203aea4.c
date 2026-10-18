@@ -10,8 +10,8 @@ void func_0203aea4(void *arg0) {
     void *temp_r2;
 
     M2C_FIELD(arg0, s8 *, 0xD) = 0;
-    temp_r0 = M2C_FIELD(arg0, void **, 4);
-    temp_r2 = temp_r0 + 0x60;
+    temp_r0                    = M2C_FIELD(arg0, void **, 4);
+    temp_r2                    = temp_r0 + 0x60;
     if (temp_r2 == &data_020ff9b4) {
         return;
     }

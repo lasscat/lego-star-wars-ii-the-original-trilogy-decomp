@@ -10,8 +10,8 @@ void func_0204c120(void *arg0) {
     void *temp_r3;
 
     M2C_FIELD(arg0, s8 *, 0xD) = 0;
-    temp_r1 = M2C_FIELD(arg0, void **, 4);
-    temp_r3 = temp_r1 + 0x60;
+    temp_r1                    = M2C_FIELD(arg0, void **, 4);
+    temp_r3                    = temp_r1 + 0x60;
     if (temp_r3 != &data_020ff9b4) {
         M2C_FIELD(temp_r3, s32 *, 0) = (s32) M2C_FIELD(&data_020ff9b4, s32 *, 0);
         M2C_FIELD(temp_r3, s32 *, 4) = (s32) M2C_FIELD(&data_020ff9b4, s32 *, 4);

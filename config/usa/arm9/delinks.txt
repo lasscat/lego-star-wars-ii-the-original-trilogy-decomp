@@ -9904,3 +9904,43 @@ src/auto/func_02093c6c.c:
 src/auto/func_020b9360.c:
     complete
     .text       start:0x020b9360 end:0x020b938c
+
+src/auto/func_0201b44c.c:
+    complete
+    .text       start:0x0201b44c end:0x0201b48c
+
+src/auto/func_020c62dc.c:
+    complete
+    .text       start:0x020c62dc end:0x020c631c
+
+src/auto/func_020aca80.c:
+    complete
+    .text       start:0x020aca80 end:0x020acad0
+
+src/auto/func_02055ba4.c:
+    complete
+    .text       start:0x02055ba4 end:0x02055be8
+
+src/auto/func_020508b4.c:
+    complete
+    .text       start:0x020508b4 end:0x020508f8
+
+src/auto/func_020591b8.c:
+    complete
+    .text       start:0x020591b8 end:0x02059224
+
+src/auto/func_0209419c.c:
+    complete
+    .text       start:0x0209419c end:0x020941bc
+
+src/auto/func_0207c450.c:
+    complete
+    .text       start:0x0207c450 end:0x0207c478
+
+src/auto/func_0201c9e8.c:
+    complete
+    .text       start:0x0201c9e8 end:0x0201ca1c
+
+src/auto/func_0208d36c.c:
+    complete
+    .text       start:0x0208d36c end:0x0208d39c

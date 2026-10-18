@@ -8,7 +8,7 @@ void func_0205ccd4(void **arg0) {
     for (i = 0; i < 5; i++) {
         void *p = arg0[i];
         if (p != NULL) {
-            *(u8 *)((u8 *)p + 0x26) = 0;
+            *(u8 *) ((u8 *) p + 0x26) = 0;
         }
     }
 }

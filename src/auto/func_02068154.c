@@ -17,6 +17,7 @@ extern M2C_UNK data_020ee046;
 void func_02068154(void *arg0) {
     s32 temp_r3;
 
-    temp_r3                   = M2C_FIELD(arg0, u8 *, 0) * 0x1A;
-    M2C_FIELD(arg0, s32 *, 4) = func_02062ab4(*(u16 *) ((s8 *) &data_020ee044 + temp_r3), *(u16 *) ((s8 *) &data_020ee046 + temp_r3));
+    temp_r3 = M2C_FIELD(arg0, u8 *, 0) * 0x1A;
+    M2C_FIELD(arg0, s32 *, 4) =
+        func_02062ab4(*(u16 *) ((s8 *) &data_020ee044 + temp_r3), *(u16 *) ((s8 *) &data_020ee046 + temp_r3));
 }

@@ -22,7 +22,7 @@ s32 func_0203bc38(void *arg0) {
         M2C_FIELD(temp_r1_3, s32 *, 4) = (s32) M2C_FIELD(arg0, s32 *, 0x44);
         M2C_FIELD(temp_r1_3, s32 *, 8) = (s32) M2C_FIELD(arg0, s32 *, 0x48);
     }
-    temp_r1_4 = M2C_FIELD(arg0, s16 *, 0x32);
+    temp_r1_4                    = M2C_FIELD(arg0, s16 *, 0x32);
     M2C_FIELD(arg0, s16 *, 0x32) = (s16) (temp_r1_4 - 1);
     if ((s32) temp_r1_4 <= 0) {
         return 1;
