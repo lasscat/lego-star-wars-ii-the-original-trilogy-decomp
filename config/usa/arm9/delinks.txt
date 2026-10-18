@@ -10444,3 +10444,27 @@ src/auto/func_020c3400.c:
 src/auto/func_020d27ec.c:
     complete
     .text       start:0x020d27ec end:0x020d2870
+
+src/auto/func_02010954.c:
+    complete
+    .text       start:0x02010954 end:0x02010a24
+
+src/auto/func_0201214c.c:
+    complete
+    .text       start:0x0201214c end:0x020122bc
+
+src/auto/func_0201b07c.c:
+    complete
+    .text       start:0x0201b07c end:0x0201b1fc
+
+src/auto/func_02043118.c:
+    complete
+    .text       start:0x02043118 end:0x02043148
+
+src/auto/func_020ac828.c:
+    complete
+    .text       start:0x020ac828 end:0x020ac9ec
+
+src/auto/func_020263a8.c:
+    complete
+    .text       start:0x020263a8 end:0x020263f4
