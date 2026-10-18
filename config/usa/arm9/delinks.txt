@@ -10012,3 +10012,19 @@ src/auto/func_020948f4.c:
 src/auto/func_02096adc.c:
     complete
     .text       start:0x02096adc end:0x02096b0c
+
+src/auto/__FindExceptionTable.c:
+    complete
+    .text       start:0x020e4b88 end:0x020e4ba8
+
+src/auto/func_020ae578.c:
+    complete
+    .text       start:0x020ae578 end:0x020ae5a0
+
+src/auto/func_020adf4c.c:
+    complete
+    .text       start:0x020adf4c end:0x020adf74
+
+src/auto/func_0208afb0.c:
+    complete
+    .text       start:0x0208afb0 end:0x0208afd8
