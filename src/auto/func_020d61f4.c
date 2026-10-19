@@ -1,0 +1,127 @@
+#include "m2c.h"
+
+#define WM_FIFO_BUF_SIZE 256
+#define WM_ARM9WM_BUF_SIZE 512
+#define WM_ARM7WM_BUF_SIZE (256 + 512)
+#define WM_STATUS_BUF_SIZE 2048
+#define WM_NUM_OF_PORT 16
+#define WM_BUF_MSG_NUM 10
+#define WM_API_REQUEST_ACCEPTED 0x8000
+
+typedef int BOOL;
+typedef void (*WMCallbackFunc)(void *arg);
+
+typedef struct WMStatus {
+    u16 state;
+    u16 BusyApiid;
+    BOOL apiBusy;
+    u8 reserved0[0x7f8];
+} WMStatus;
+
+typedef struct WMArm7Buf {
+    WMStatus *status;
+    u8 reserved_a[4];
+    u32 *fifo7to9;
+    u8 reserved_b[0x2f4];
+} WMArm7Buf;
+
+typedef struct WMArm9Buf {
+    WMArm7Buf *WM7;
+    WMStatus *status;
+    u32 *indbuf;
+    u32 *fifo9to7;
+    u32 *fifo7to9;
+    u16 dmaNo;
+    u16 scanOnlyFlag;
+    WMCallbackFunc CallbackTable[44];
+    WMCallbackFunc indCallback;
+    WMCallbackFunc portCallbackTable[16];
+    void *portCallbackArgument[16];
+    u32 connectedAidBitmap;
+    u16 myAid;
+} WMArm9Buf;
+
+extern u16 data_02117e20;
+#define wmInitialized data_02117e20
+#define wm9buf (*(WMArm9Buf **) ((u8 *) &data_02117e20 + 4))
+
+extern int func_020d1134();
+extern int func_020d128c(int, int);
+extern void func_020cdd00(void *, u32);
+extern void func_020ceaa0(int, void *, int, u32);
+extern void func_020d6a58();
+extern void func_020d6b60(u16, int, int);
+extern void func_020cd8d8(void *, void *, int);
+extern void func_020cdd20(void *, int);
+extern void func_020cd900(void *, void *, int);
+extern void func_020d1240(int, void *);
+extern M2C_UNK data_02117e28;
+extern M2C_UNK data_02117e48;
+extern u32 data_02117ec0[][WM_FIFO_BUF_SIZE / 4];
+extern M2C_UNK func_020d66ac;
+
+#pragma push
+#pragma optimization_level 2
+#pragma opt_common_subs off
+s32 func_020d61f4(void *wmSysBuf, u16 dmaNo, u32 bufSize) {
+    if (wmInitialized) {
+        return 3;
+    }
+    wmInitialized = 1;
+    if (wmSysBuf == NULL) {
+        wmInitialized = 0;
+        return 6;
+    }
+    if (dmaNo > 3) {
+        wmInitialized = 0;
+        return 6;
+    }
+    if ((u32) wmSysBuf & 0x1F) {
+        wmInitialized = 0;
+        return 6;
+    }
+
+    func_020d1134();
+    if (!func_020d128c(0xA, 1)) {
+        wmInitialized = 0;
+        return 4;
+    }
+
+    func_020cdd00(wmSysBuf, bufSize);
+    func_020ceaa0(dmaNo, wmSysBuf, 0, bufSize);
+    wm9buf           = (WMArm9Buf *) wmSysBuf;
+    wm9buf->WM7      = (WMArm7Buf *) ((u32) wm9buf + WM_ARM9WM_BUF_SIZE);
+    wm9buf->status   = (WMStatus *) ((u32) (wm9buf->WM7) + WM_ARM7WM_BUF_SIZE);
+    wm9buf->fifo9to7 = (u32 *) ((u32) (wm9buf->status) + WM_STATUS_BUF_SIZE);
+    wm9buf->fifo7to9 = (u32 *) ((u32) (wm9buf->fifo9to7) + WM_FIFO_BUF_SIZE);
+
+    func_020d6a58();
+
+    wm9buf->dmaNo              = dmaNo;
+    wm9buf->connectedAidBitmap = 0;
+    wm9buf->myAid              = 0;
+
+    {
+        s32 i;
+
+        for (i = 0; i < WM_NUM_OF_PORT; i++) {
+            func_020d6b60((u16) i, 0, 0);
+        }
+    }
+
+    {
+        s32 i;
+
+        func_020cd8d8(&data_02117e28, &data_02117e48, WM_BUF_MSG_NUM);
+        for (i = 0; i < WM_BUF_MSG_NUM; i++) {
+            *((u16 *) (data_02117ec0[i])) = WM_API_REQUEST_ACCEPTED;
+            func_020cdd20(data_02117ec0[i], 2);
+            func_020cd900(&data_02117e28, data_02117ec0[i], 1);
+        }
+    }
+
+    func_020d1240(0xA, &func_020d66ac);
+
+    return 0;
+}
+#pragma pop
