@@ -262,3 +262,5 @@ src/auto/func_020cac20.c 1.2/sp2p3
 src/auto/func_0205e3f4.c 2.0/sp1p5 -O2,p
 src/auto/func_0207f6b8.c 2.0/sp1p2
 src/auto/func_0208d788.c 1.2/sp3
+
+src/auto/func_0203b470.c 2.0/sp1p5 -O2,p
