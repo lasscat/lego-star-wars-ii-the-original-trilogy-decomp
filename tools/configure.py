@@ -20,6 +20,8 @@ parser.add_argument('-w', type=str, default=DEFAULT_WIBO_PATH, dest="wine", requ
 parser.add_argument("--compiler", type=Path, required=False, help="Path to pre-installed compiler root directory (default: $MWCCARM, else tools/mwccarm)")
 parser.add_argument("--no-extract", action="store_true", help="Skip extract step")
 parser.add_argument("--dsd", type=Path, required=False, help="Path to pre-installed dsd CLI")
+parser.add_argument("--objdiff", type=Path, help="Path to pre-installed objdiff CLI")
+parser.add_argument("--sjiswrap", type=Path, help="Path to pre-installed sjiswrap executable")
 parser.add_argument('version', help='Game version')
 args = parser.parse_args()
 if args.dsd is None and (Path(__file__).resolve().parent.parent / "dsd-dsi.exe").exists():
@@ -31,7 +33,7 @@ reloc_fixes.apply(Path(__file__).resolve().parent.parent, args.version, quiet=Tr
 
 
 # Config
-GAME = "heroes_of_mana"
+GAME = "lego_star_wars_ii_the_original_trilogy"
 DSD_VERSION = 'v0.12.1'
 WIBO_VERSION = '0.6.16'
 SJISWRAP_VERSION = 'v1.2.2'
@@ -121,8 +123,8 @@ if platform is None:
 EXE = platform.exe
 WINE = args.wine if platform.system != "windows" else ""
 DSD = str(args.dsd or os.path.join('.', str(root_path / f"dsd{EXE}")))
-OBJDIFF = os.path.join('.', str(root_path / f"objdiff-cli{EXE}"))
-SJISWRAP = os.path.join('.', "sjiswrap.exe")
+OBJDIFF = str(args.objdiff or os.path.join('.', str(root_path / f"objdiff-cli{EXE}")))
+SJISWRAP = str(args.sjiswrap or os.path.join('.', "sjiswrap.exe"))
 CC = os.path.join('.', str(mwcc_path / "mwccarm.exe"))
 LD = os.path.join('.', str(mwcc_path / "mwldarm.exe"))
 PYTHON = sys.executable
@@ -289,7 +291,7 @@ def main():
         mwcc_implicit = [SJISWRAP]
         if platform.system != "windows":
             transform_dep = "tools/transform_dep.py"
-            mwcc_cmd += f" && $python {transform_dep} $basefile.d $basefile.d"
+            mwcc_cmd += f" && {PYTHON} {transform_dep} $basefile.d $basefile.d"
             mwcc_implicit.append(transform_dep)
             if WINE == DEFAULT_WIBO_PATH:
                 mwcc_implicit.append(WINE)
@@ -410,17 +412,18 @@ def add_download_tool_builds(n: ninja_syntax.Writer, project: Project):
         )
         n.newline()
 
-    downloads.append(OBJDIFF)
-    n.build(
-        rule="download_tool",
-        outputs=OBJDIFF,
-        variables={
-            "tool": "objdiff",
-            "tag": OBJDIFF_VERSION,
-            "path": OBJDIFF,
-        }
-    )
-    n.newline()
+    if args.objdiff is None:
+        downloads.append(OBJDIFF)
+        n.build(
+            rule="download_tool",
+            outputs=OBJDIFF,
+            variables={
+                "tool": "objdiff",
+                "tag": OBJDIFF_VERSION,
+                "path": OBJDIFF,
+            }
+        )
+        n.newline()
 
     if args.compiler is None:
         downloads.extend([CC, LD])
@@ -448,16 +451,17 @@ def add_download_tool_builds(n: ninja_syntax.Writer, project: Project):
         )
         n.newline()
 
-    downloads.append(SJISWRAP)
-    n.build(
-        rule="download_tool",
-        outputs=SJISWRAP,
-        variables={
-            "tool": "sjiswrap",
-            "tag": SJISWRAP_VERSION,
-            "path": SJISWRAP,
-        }
-    )
+    if args.sjiswrap is None:
+        downloads.append(SJISWRAP)
+        n.build(
+            rule="download_tool",
+            outputs=SJISWRAP,
+            variables={
+                "tool": "sjiswrap",
+                "tag": SJISWRAP_VERSION,
+                "path": SJISWRAP,
+            }
+        )
 
     n.build(
         inputs=downloads,
@@ -523,7 +527,7 @@ def add_mwld_and_rom_builds(n: ninja_syntax.Writer, project: Project):
     rom_file = project.build_rom()
     n.build(
         inputs=rom_config_file,
-        implicit=DSD,
+        implicit=[DSD, "tools/rom_build.py", "tools/banner_fix.py"],
         rule="rom_build",
         outputs=rom_file,
     )
