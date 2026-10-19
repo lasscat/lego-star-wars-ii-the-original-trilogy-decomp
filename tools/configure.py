@@ -32,16 +32,32 @@ import reloc_fixes  # per-game fix of false pointers: does nothing without confi
 reloc_fixes.apply(Path(__file__).resolve().parent.parent, args.version, quiet=True)
 
 
+# Per-game settings: game.toml at the project root (optional, never touched by the tool sync). Everything else is shared.
+_ROOT = Path(__file__).resolve().parent.parent
+try:
+    import tomllib
+    GAME_CFG = tomllib.loads((_ROOT / "game.toml").read_text(encoding="utf-8")) if (_ROOT / "game.toml").exists() else {}
+except Exception as e:  # a broken file must not silently change the compiler
+    raise SystemExit(f"game.toml unreadable: {e}")
+
+
+def _game_name() -> str:
+    """ROM base name, from <GAME>_<version>.sha1 (same rule as tools/project.py), else the folder name."""
+    for p in _ROOT.glob(f"*_{args.version}.sha1"):
+        return p.name[:-len(f"_{args.version}.sha1")]
+    return _ROOT.name.replace("-", "_")
+
+
 # Config
-GAME = "lego_star_wars_ii_the_original_trilogy"
+GAME = GAME_CFG.get("game") or _game_name()
 DSD_VERSION = 'v0.12.1'
 WIBO_VERSION = '0.6.16'
 SJISWRAP_VERSION = 'v1.2.2'
 OBJDIFF_VERSION = 'v3.8.2'
-MWCC_VERSION = "2.0/sp1p5"
-DECOMP_ME_COMPILER = "mwcc_30_131"
+MWCC_VERSION = GAME_CFG.get("mwcc_version", "2.0/sp1p5")
+DECOMP_ME_COMPILER = GAME_CFG.get("decomp_me_compiler", "mwcc_30_131")
 CC_FLAGS = " ".join([
-    "-O4,p",                # Optimize maximally for performance
+    GAME_CFG.get("opt", "-O4,p"),  # Optimization level (game.toml: opt)
     "-enum int",            # Use int-sized enums
     "-char signed",         # Char type is signed
     "-str noreuse",         # Equivalent strings are different objects
@@ -49,7 +65,7 @@ CC_FLAGS = " ".join([
     "-gccext,on",           # Enable GCC extensions
     "-fp soft",             # Compute float operations in software
     "-inline noauto",       # Inline only functions marked with 'inline'
-    "-lang=c",              # TODO: C++ games need -lang=c++
+    f"-lang={GAME_CFG.get('lang', 'c')}",  # game.toml: lang = "c" or "c++"
     "-Cpp_exceptions off",  # Disable C++ exceptions
     "-RTTI off",            # Disable runtime type information
     "-interworking",        # Enable ARM/Thumb interworking
@@ -58,6 +74,7 @@ CC_FLAGS = " ".join([
     "-gccinc",              # Interpret #include "..." and #include <...> equally
     "-nolink",              # Do not link
     "-msgstyle gcc",        # Use GCC-like messages (some IDEs will make file names clickable)
+    *GAME_CFG.get("extra_cc_flags", []),
 ])
 # Passed to all modules and final arm9.o link
 LD_FLAGS = " ".join([
