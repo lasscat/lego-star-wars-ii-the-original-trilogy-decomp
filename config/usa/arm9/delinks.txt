@@ -11958,3 +11958,51 @@ src/auto/func_02001070.c:
 src/auto/func_020a98e4.c:
     complete
     .text       start:0x020a98e4 end:0x020a98f8
+
+src/auto/func_020ce868.c:
+    complete
+    .text       start:0x020ce868 end:0x020ce878
+
+src/auto/func_020cf19c.c:
+    complete
+    .text       start:0x020cf19c end:0x020cf1b8
+
+src/auto/func_020cf1b8.c:
+    complete
+    .text       start:0x020cf1b8 end:0x020cf1d8
+
+src/auto/func_020cf1d8.c:
+    complete
+    .text       start:0x020cf1d8 end:0x020cf1f0
+
+src/auto/func_020cf1f0.c:
+    complete
+    .text       start:0x020cf1f0 end:0x020cf20c
+
+src/auto/func_020cf20c.c:
+    complete
+    .text       start:0x020cf20c end:0x020cf228
+
+src/auto/func_020cf228.c:
+    complete
+    .text       start:0x020cf228 end:0x020cf27c
+
+src/auto/func_020cf27c.c:
+    complete
+    .text       start:0x020cf27c end:0x020cf2bc
+
+src/auto/func_020cf2bc.c:
+    complete
+    .text       start:0x020cf2bc end:0x020cf2d8
+
+src/auto/func_020cf318.c:
+    complete
+    .text       start:0x020cf318 end:0x020cf344
+
+src/auto/func_020cf344.c:
+    complete
+    .text       start:0x020cf344 end:0x020cf3dc
+
+src/auto/func_020cf3dc.c:
+    complete
+    .text       start:0x020cf3dc end:0x020cf518
