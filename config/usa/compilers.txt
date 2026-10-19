@@ -285,3 +285,4 @@ src/auto/func_020cf2bc.c 2.0/sp1p5 -O4,p -lang c99 -ipa file -inline on,noauto
 src/auto/func_020cf318.c 2.0/sp1p5 -O4,p -lang c99 -ipa file -inline on,noauto
 src/auto/func_020cf344.c 2.0/sp1p5 -O4,p -lang c99 -ipa file -inline on,noauto
 src/auto/func_020cf3dc.c 2.0/sp1p5 -O4,p -lang c99 -ipa file -inline on,noauto
+src/auto/func_02000938.c 2.0/sp1p5 -O4,p -lang c99 -ipa file -inline on,noauto
