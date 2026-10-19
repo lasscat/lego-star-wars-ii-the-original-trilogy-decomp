@@ -1,7 +1,7 @@
 #include "engine.h"
 #include "m2c.h"
 
-void func_020c2738(M2C_UNK, M2C_UNK, M2C_UNK);
+void NNS_FndAllocFromExpHeapEx(M2C_UNK, M2C_UNK, M2C_UNK);
 void func_020c292c(M2C_UNK, M2C_UNK);
 
 extern M2C_UNK data_02102848;
@@ -17,5 +17,5 @@ void func_0205e560(s32 arg0, s32 arg1, s32 arg2) {
     if (data_027e02a4 != 0) {
         var_r5 = 0 - var_r5;
     }
-    func_020c2738(temp_r4, arg1, var_r5);
+    NNS_FndAllocFromExpHeapEx(temp_r4, arg1, var_r5);
 }

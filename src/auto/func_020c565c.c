@@ -1,6 +1,6 @@
 #include "m2c.h"
 
-M2C_UNK func_020c5dfc(void *, s32);                 /* extern */
+M2C_UNK NNS_G3dGeSendDL(void *, s32);                 /* extern */
 
 void func_020c565c(void *arg0) {
     s32 var_r1;
@@ -26,10 +26,10 @@ void func_020c565c(void *arg0) {
     }
     if (!(M2C_FIELD(arg0, s32 *, 8) & 0x100) && (var_r1 == 0)) {
         temp_r0 = M2C_FIELD(arg0, void **, 0);
-        func_020c5dfc(temp_r0 + (M2C_FIELD(temp_r0, u8 *, 1) | (M2C_FIELD(temp_r0, u8 *, 2) << 8) |
-                                 (M2C_FIELD(temp_r0, u8 *, 3) << 0x10) | (M2C_FIELD(temp_r0, u8 *, 4) << 0x18)),
-                      M2C_FIELD(temp_r0, u8 *, 5) | (M2C_FIELD(temp_r0, u8 *, 6) << 8) |
-                          (M2C_FIELD(temp_r0, u8 *, 7) << 0x10) | (M2C_FIELD(temp_r0, u8 *, 8) << 0x18));
+        NNS_G3dGeSendDL(temp_r0 + (M2C_FIELD(temp_r0, u8 *, 1) | (M2C_FIELD(temp_r0, u8 *, 2) << 8) |
+                                   (M2C_FIELD(temp_r0, u8 *, 3) << 0x10) | (M2C_FIELD(temp_r0, u8 *, 4) << 0x18)),
+                        M2C_FIELD(temp_r0, u8 *, 5) | (M2C_FIELD(temp_r0, u8 *, 6) << 8) |
+                            (M2C_FIELD(temp_r0, u8 *, 7) << 0x10) | (M2C_FIELD(temp_r0, u8 *, 8) << 0x18));
     }
     if (var_r4 == 3) {
         M2C_FIELD(arg0, s32 *, 8) = (s32) (M2C_FIELD(arg0, s32 *, 8) & ~0x40);

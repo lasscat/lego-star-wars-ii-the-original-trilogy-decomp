@@ -4,7 +4,7 @@ M2C_UNK func_020b3770(void *, u8);                  /* extern */
 M2C_UNK func_020b37c0(void *, u8);                  /* extern */
 M2C_UNK func_020b3998(void *, u8);                  /* extern */
 M2C_UNK func_020b90b0(M2C_UNK, u8, u8, u8);         /* extern */
-s32 func_020e2c20(M2C_UNK, u8);                     /* extern */
+s32 _s32_div_f(M2C_UNK, u8);                     /* extern */
 extern M2C_UNK data_02104364;
 extern s32 data_027e02a4;
 extern s32 data_027e02a8;
@@ -38,7 +38,7 @@ void func_020b352c(void *arg0) {
                                 M2C_FIELD(arg0, s32 *, 0xC) = 0;
                             } else {
                                 func_020b90b0(0, M2C_FIELD(&data_02104364, u8 *, 0xA), 0U, M2C_FIELD(arg0, u8 *, 0x14));
-                                M2C_FIELD(arg0, s32 *, 0xC) = func_020e2c20(0x5A, M2C_FIELD(arg0, u8 *, 0x14));
+                                M2C_FIELD(arg0, s32 *, 0xC) = _s32_div_f(0x5A, M2C_FIELD(arg0, u8 *, 0x14));
                             }
                         }
                         break;

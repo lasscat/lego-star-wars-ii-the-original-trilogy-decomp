@@ -2,7 +2,7 @@
 
 M2C_UNK func_0209f2cc(void *);                      /* extern */
 M2C_UNK func_0209f8d4(void *);                      /* extern */
-M2C_UNK func_020c3be0(void *, s32);                      /* extern */
+M2C_UNK NNS_G3dRenderObjRemoveAnmObj(void *, s32);                      /* extern */
 
 u32 func_0209f5d0(s8 *arg0) {
     s32 var_r5;
@@ -20,7 +20,7 @@ u32 func_0209f5d0(s8 *arg0) {
     do {
         slot = ((s32 *) (arg0 + 0x74))[var_r5 * 2];
         if (slot != 0) {
-            func_020c3be0(arg0 + 0x20, slot);
+            NNS_G3dRenderObjRemoveAnmObj(arg0 + 0x20, slot);
             func_0209f2cc(var_r6);
         }
         var_r5 += 1;

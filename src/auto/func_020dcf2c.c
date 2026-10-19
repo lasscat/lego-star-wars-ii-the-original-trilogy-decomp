@@ -8,8 +8,8 @@ typedef unsigned long long int u64;
 typedef signed long s32;
 typedef int BOOL;
 typedef u32 OSIntrMode;
-extern OSIntrMode func_020ce804(void);
-extern OSIntrMode func_020ce818(OSIntrMode state);
+extern OSIntrMode OS_DisableInterrupts(void);
+extern OSIntrMode OS_RestoreInterrupts(OSIntrMode state);
 typedef struct CPContext {
     u64 div_numer;
     u64 div_denom;
@@ -102,7 +102,7 @@ struct OSiAlarm {
     OSTick period;
     OSTick start;
 };
-extern void func_020cf3dc(const void *src, void *dest, u32 size);
+extern void MI_CpuCopy8(const void *src, void *dest, u32 size);
 enum {
     FS_ARCHIVE_NAME_LEN_MAX = 3
 };
@@ -290,7 +290,7 @@ typedef struct {
 extern BOOL func_020dcf2c(MBiCacheList *pl, u32 src, void *dst, u32 len);
 BOOL func_020dcf2c(MBiCacheList *pl, u32 src, void *dst, u32 len) {
     BOOL ret            = 0;
-    OSIntrMode bak_cpsr = func_020ce804();
+    OSIntrMode bak_cpsr = OS_DisableInterrupts();
 
     {
 
@@ -299,7 +299,7 @@ BOOL func_020dcf2c(MBiCacheList *pl, u32 src, void *dst, u32 len) {
             if (pi->state >= 2) {
                 const int ofs = (int) (src - pi->src);
                 if ((ofs >= 0) && (ofs + len <= pi->len)) {
-                    func_020cf3dc(pi->ptr + ofs, dst, len);
+                    MI_CpuCopy8(pi->ptr + ofs, dst, len);
                     pl->lifetime = 0;
                     ret          = 1;
                     break;
@@ -308,6 +308,6 @@ BOOL func_020dcf2c(MBiCacheList *pl, u32 src, void *dst, u32 len) {
         }
     }
 
-    (void) func_020ce818(bak_cpsr);
+    (void) OS_RestoreInterrupts(bak_cpsr);
     return ret;
 }

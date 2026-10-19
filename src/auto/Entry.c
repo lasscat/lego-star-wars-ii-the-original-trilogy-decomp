@@ -4,27 +4,27 @@
 extern void func_02000938();
 extern void func_02000950();
 extern void func_02000a0c();
-extern void func_02000a98();
+extern void init_cp15();
 extern void func_0200138c();
 extern void func_020e3010();
-extern void func_020e4534();
+extern void __call_static_initializers();
 extern char BuildInfo[];
-extern char data_027e0000[];
+extern char SDK_AUTOLOAD_DTCM_START[];
 extern char func_01ffd2c8[];
 extern char main[];
 // clang-format off
 asm void Entry(void) {
     mov ip, #0x4000000
     str ip, [ip, #0x208]
-    bl func_02000a98
+    bl init_cp15
     mov r0, #0x13
     msr cpsr_c, r0
-    ldr r0, =data_027e0000
+    ldr r0, =SDK_AUTOLOAD_DTCM_START
     add r0, r0, #0x3fc0
     mov sp, r0
     mov r0, #0x12
     msr cpsr_c, r0
-    ldr r0, =data_027e0000
+    ldr r0, =SDK_AUTOLOAD_DTCM_START
     add r0, r0, #0x3fc0
     sub r0, r0, #0x40
     sub sp, r0, #0x4
@@ -36,7 +36,7 @@ asm void Entry(void) {
     msr cpsr_fsxc, r0
     sub sp, r1, #0x4
     mov r0, #0x0
-    ldr r1, =data_027e0000
+    ldr r1, =SDK_AUTOLOAD_DTCM_START
     mov r2, #0x4000
     bl func_02000938
     mov r0, #0x0
@@ -72,14 +72,14 @@ L_020008c0:
     blt L_020008c0
     ldr r1, =0x27fff9c
     str r0, [r1, #0x0]
-    ldr r1, =data_027e0000
+    ldr r1, =SDK_AUTOLOAD_DTCM_START
     add r1, r1, #0x3fc0
     add r1, r1, #0x3c
     ldr r0, =func_01ffd2c8
     str r0, [r1, #0x0]
     bl func_020e3010
     bl func_0200138c
-    bl func_020e4534
+    bl __call_static_initializers
     ldr r1, =main
     ldr lr, =0xffff0000
     tst sp, #0x4

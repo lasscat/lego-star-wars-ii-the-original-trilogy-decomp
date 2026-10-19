@@ -1,9 +1,9 @@
 #include "m2c.h"
 
-s32 func_020d2374(void *, M2C_UNK);                 /* extern */
+s32 FSi_SendCommand(void *, M2C_UNK);                 /* extern */
 
 s32 func_020d2bc0(void *arg0) {
-    if (func_020d2374(arg0, 8) == 0) {
+    if (FSi_SendCommand(arg0, 8) == 0) {
         return 0;
     }
     M2C_FIELD(arg0, s32 *, 8)    = 0;

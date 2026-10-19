@@ -5,7 +5,7 @@ M2C_UNK func_020ad7a4();                     /* extern */
 M2C_UNK func_020ad8b4();                            /* extern */
 s32 func_020ae63c();                                /* extern */
 s32 func_020ae868();                                /* extern */
-M2C_UNK func_020cdd00();          /* extern */
+M2C_UNK DC_InvalidateRange();          /* extern */
 extern M2C_UNK data_021001b8;
 extern M2C_UNK data_021001f0;
 extern M2C_UNK data_02100208;
@@ -42,7 +42,7 @@ void func_020ae704(void *arg0) {
                 goto block_19;
             }
             func_020ad528(&data_0210021c);
-            func_020cdd00(&data_0210b460, 0xC0);
+            DC_InvalidateRange(&data_0210b460, 0xC0);
             if (M2C_FIELD(&data_0210b320, M2C_UNK(**)(M2C_UNK *), 0x34) != NULL) {
                 M2C_FIELD(&data_0210b320, M2C_UNK(**)(M2C_UNK *), 0x34)(&data_0210b460);
             }

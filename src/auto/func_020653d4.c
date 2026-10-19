@@ -1,18 +1,18 @@
 #include "m2c.h"
 
-extern void (*data_021012f0)(void *);
-extern void (*data_021012f8)(void *);
+extern void (*NNS_GfdDefaultFuncFreeTexVram)(void *);
+extern void (*NNS_GfdDefaultFuncFreePlttVram)(void *);
 
 s32 func_020653d4(void *arg0) {
     if (M2C_FIELD(arg0, u8 *, 0xC) & 1) {
         if (M2C_FIELD(arg0, void **, 0) != 0) {
-            data_021012f0(M2C_FIELD(arg0, void **, 0));
+            NNS_GfdDefaultFuncFreeTexVram(M2C_FIELD(arg0, void **, 0));
         }
         if (M2C_FIELD(arg0, void **, 4) != 0) {
-            data_021012f0(M2C_FIELD(arg0, void **, 4));
+            NNS_GfdDefaultFuncFreeTexVram(M2C_FIELD(arg0, void **, 4));
         }
         if (M2C_FIELD(arg0, void **, 8) != 0) {
-            data_021012f8(M2C_FIELD(arg0, void **, 8));
+            NNS_GfdDefaultFuncFreePlttVram(M2C_FIELD(arg0, void **, 8));
         }
         M2C_FIELD(arg0, s32 *, 0) = 0;
         M2C_FIELD(arg0, s32 *, 4) = 0;

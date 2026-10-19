@@ -1,8 +1,8 @@
 #include "m2c.h"
 
 M2C_UNK func_020b3c1c();                            /* extern */
-s32 func_020d094c(M2C_UNK);                         /* extern */
-M2C_UNK func_020d0b1c(M2C_UNK);                     /* extern */
+s32 SND_RecvCommandReply(M2C_UNK);                         /* extern */
+M2C_UNK SND_FlushCommand(M2C_UNK);                     /* extern */
 extern M2C_UNK data_0210db14;
 
 #define REG_IME (*(volatile u16 *) 0x04000208)
@@ -19,9 +19,9 @@ u32 func_020b94fc(void) {
     if (M2C_FIELD(&data_0210db14, u8 *, 0xB) != 0) {
         do {
 
-        } while (func_020d094c(0) != 0);
+        } while (SND_RecvCommandReply(0) != 0);
         func_020b3c1c();
-        func_020d0b1c(2);
+        SND_FlushCommand(2);
         M2C_FIELD(&data_0210db14, u8 *, 0xB) = 0U;
     }
     M2C_FIELD(&data_0210db14, u8 *, 0xA) = (u8) (M2C_FIELD(&data_0210db14, u8 *, 0xA) & ~0x80);

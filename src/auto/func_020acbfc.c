@@ -1,6 +1,6 @@
 #include "m2c.h"
 
-M2C_UNK func_01ffb57c(void *);
+M2C_UNK NNS_G3dDraw(void *);
 M2C_UNK func_020ab958(void *);
 M2C_UNK func_020c4234();
 
@@ -17,5 +17,5 @@ void func_020acbfc(void *arg0) {
         dst[0xB] = src[2];
         func_020ab958((char *) arg0 + 4);
     }
-    func_01ffb57c((char *) arg0 + 0x20);
+    NNS_G3dDraw((char *) arg0 + 0x20);
 }

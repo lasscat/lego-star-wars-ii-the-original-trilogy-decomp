@@ -4,7 +4,7 @@
 #include "m2c.h"
 
 s32 func_020e0db0(void *);                          /* extern */
-M2C_UNK func_020e0dcc(u8 *, void *);                /* extern */
+M2C_UNK strcpy(u8 *, void *);                /* extern */
 extern M2C_UNK data_021046fc;
 
 s32 func_02065798(s32 arg0, u8 *arg1, u8 *arg2) {
@@ -21,7 +21,7 @@ s32 func_02065798(s32 arg0, u8 *arg1, u8 *arg2) {
     if (var_r0 != 0) {
         do {
             if (var_r0 == 0x40) {
-                func_020e0dcc(var_r6, (s8 *) &data_021046fc + ((M2C_FIELD(var_r7, u8 *, 1) - 0x31) << 6));
+                strcpy(var_r6, (s8 *) &data_021046fc + ((M2C_FIELD(var_r7, u8 *, 1) - 0x31) << 6));
                 temp_r8 = (s8 *) &data_021046fc + ((M2C_FIELD(var_r7, u8 *, 1) - 0x31) << 6);
                 var_r5 += func_020e0db0(temp_r8);
                 var_r6 = &var_r6[func_020e0db0(temp_r8)];

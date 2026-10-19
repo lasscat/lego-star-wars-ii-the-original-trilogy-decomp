@@ -3,7 +3,7 @@
 M2C_UNK func_020ad528(M2C_UNK *);                   /* extern */
 M2C_UNK func_020ad7a4(M2C_UNK);                     /* extern */
 M2C_UNK func_020addf0(M2C_UNK);                     /* extern */
-s32 func_020d71c8(M2C_UNK *);                       /* extern */
+s32 WM_End(M2C_UNK *);                       /* extern */
 extern M2C_UNK data_02100094;
 extern M2C_UNK data_0210b320;
 extern M2C_UNK func_020aeea8;
@@ -14,7 +14,7 @@ s32 func_020add78(void) {
 
     func_020ad528(&data_02100094);
     func_020ad7a4(3);
-    temp_r0 = func_020d71c8(&func_020aeea8);
+    temp_r0 = WM_End(&func_020aeea8);
     if (temp_r0 == 0) {
         return 1;
     }

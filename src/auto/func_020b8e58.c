@@ -1,10 +1,10 @@
 #include "m2c.h"
 
 M2C_UNK func_020b3c1c();                            /* extern */
-s32 func_020d094c(M2C_UNK);                         /* extern */
-M2C_UNK func_020d0b1c(M2C_UNK);                     /* extern */
-M2C_UNK func_020d2f90(M2C_UNK *);                   /* extern */
-M2C_UNK func_020d2fe4(M2C_UNK *);                   /* extern */
+s32 SND_RecvCommandReply(M2C_UNK);                         /* extern */
+M2C_UNK SND_FlushCommand(M2C_UNK);                     /* extern */
+M2C_UNK CP_SaveContext(M2C_UNK *);                   /* extern */
+M2C_UNK CPi_RestoreContext(M2C_UNK *);                   /* extern */
 extern s32 data_0210daf0;
 extern M2C_UNK data_0210db14;
 
@@ -17,12 +17,12 @@ void func_020b8e58(void) {
         return;
     }
     temp_r5 = data_0210daf0;
-    func_020d2f90(sp0);
+    CP_SaveContext(sp0);
     do {
 
-    } while (func_020d094c(0) != 0);
+    } while (SND_RecvCommandReply(0) != 0);
     func_020b3c1c();
-    func_020d0b1c(2);
-    func_020d2fe4(sp0);
+    SND_FlushCommand(2);
+    CPi_RestoreContext(sp0);
     data_0210daf0 = temp_r5;
 }

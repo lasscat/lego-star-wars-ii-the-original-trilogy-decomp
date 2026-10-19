@@ -11,7 +11,7 @@ M2C_UNK func_02060694(void *);                      /* extern */
 M2C_UNK func_0208562c(M2C_UNK *);                   /* extern */
 M2C_UNK func_0208c628(M2C_UNK *);                   /* extern */
 M2C_UNK func_020b9204();                            /* extern */
-M2C_UNK func_020cef04(M2C_UNK);                     /* extern */
+M2C_UNK MI_StopDma(M2C_UNK);                     /* extern */
 extern M2C_UNK data_021019f4;
 extern M2C_UNK data_02101b78;
 extern M2C_UNK data_02101b98;
@@ -24,7 +24,7 @@ void func_020846c0(void *arg0) {
     void *var_r5;
 
     if (M2C_FIELD(arg0, u8 *, 0xEB9) != 0) {
-        func_020cef04(2);
+        MI_StopDma(2);
         M2C_FIELD(arg0, u8 *, 0xEB9) = 0U;
     }
     func_02060694(arg0 + 0x30);

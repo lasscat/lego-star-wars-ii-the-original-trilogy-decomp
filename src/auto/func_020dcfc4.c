@@ -233,9 +233,9 @@ typedef u32 OSIntrMode;
 
 extern OSIntrMode OS_EnableInterrupts(void);
 
-extern OSIntrMode func_020ce804(void);
+extern OSIntrMode OS_DisableInterrupts(void);
 
-extern OSIntrMode func_020ce818(OSIntrMode state);
+extern OSIntrMode OS_RestoreInterrupts(OSIntrMode state);
 
 extern OSIntrMode OS_EnableInterrupts_IrqAndFiq(void);
 
@@ -450,7 +450,7 @@ extern BOOL OS_IsThreadAvailable(void);
 
 extern void OS_CreateThread(OSThread *thread, void (*func)(void *), void *arg, void *stack, u32 stackSize, u32 prio);
 
-extern void func_020cd384(void);
+extern void OS_ExitThread(void);
 
 extern void OS_DestroyThread(OSThread *thread);
 
@@ -468,7 +468,7 @@ extern void OS_RescheduleThread(void);
 
 extern void OS_YieldThread(void);
 
-extern void func_020cd494(OSThreadQueue *queue);
+extern void OS_SleepThread(OSThreadQueue *queue);
 
 extern void OS_SleepThreadDirect(OSThread *thread, OSThreadQueue *queue);
 
@@ -488,9 +488,9 @@ extern void OS_SetThreadStackWarningOffset(OSThread *thread, u32 offset);
 
 extern OSStackStatus OS_GetStackStatus(const OSThread *thread);
 
-extern BOOL func_020cd664(OSThread *thread, u32 prio);
+extern BOOL OS_SetThreadPriority(OSThread *thread, u32 prio);
 
-extern u32 func_020cd70c(const OSThread *thread);
+extern u32 OS_GetThreadPriority(const OSThread *thread);
 
 extern void OS_Sleep(u32 msec);
 
@@ -8674,18 +8674,18 @@ void func_020dcfc4(void *arg) {
     for (;;) {
         MBiTaskInfo *trg = 0;
         {
-            OSIntrMode bak_cpsr = func_020ce804();
+            OSIntrMode bak_cpsr = OS_DisableInterrupts();
 
             while (!p->list) {
-                (void) func_020cd664(p->th, 0);
-                func_020cd494(0);
+                (void) OS_SetThreadPriority(p->th, 0);
+                OS_SleepThread(0);
             }
 
             trg     = p->list;
             p->list = p->list->next;
 
-            (void) func_020cd664(p->th, trg->priority);
-            (void) func_020ce818(bak_cpsr);
+            (void) OS_SetThreadPriority(p->th, trg->priority);
+            (void) OS_RestoreInterrupts(bak_cpsr);
         }
 
         if (trg->task) {
@@ -8693,10 +8693,10 @@ void func_020dcfc4(void *arg) {
         }
 
         {
-            OSIntrMode bak_cpsr   = func_020ce804();
+            OSIntrMode bak_cpsr   = OS_DisableInterrupts();
             MB_TASK_FUNC callback = trg->callback;
 
-            const u32 cur_priority = func_020cd70c(p->th);
+            const u32 cur_priority = OS_GetThreadPriority(p->th);
             u32 new_priority;
 
             if (!p->list) {
@@ -8708,7 +8708,7 @@ void func_020dcfc4(void *arg) {
             }
 
             if (new_priority != cur_priority) {
-                (void) func_020cd664(p->th, new_priority);
+                (void) OS_SetThreadPriority(p->th, new_priority);
             }
 
             trg->next = 0;
@@ -8722,12 +8722,12 @@ void func_020dcfc4(void *arg) {
                 break;
             }
 
-            (void) func_020ce818(bak_cpsr);
+            (void) OS_RestoreInterrupts(bak_cpsr);
         }
     }
 
     ((void) 0);
-    func_020cd384();
+    OS_ExitThread();
 
     return;
 }

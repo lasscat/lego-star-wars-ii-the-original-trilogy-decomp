@@ -1,7 +1,7 @@
 #include "m2c.h"
 
 M2C_UNK func_0205e624(s32, M2C_UNK, M2C_UNK);       /* extern */
-M2C_UNK func_020cdd40(void *, M2C_UNK);             /* extern */
+M2C_UNK DC_FlushRange(void *, M2C_UNK);             /* extern */
 
 void func_02084a70(void *arg0) {
     s32 var_r0;
@@ -29,5 +29,5 @@ void func_02084a70(void *arg0) {
         *((u16 *) ((u8 *) arg0 + 0xD38) + var_r3) = (u16) M2C_FIELD(arg0, u16 *, 0xDF6);
         var_r3 += 1;
     } while (var_r3 < 0xC0);
-    func_020cdd40(arg0 + 0xD38, 0x180);
+    DC_FlushRange(arg0 + 0xD38, 0x180);
 }
