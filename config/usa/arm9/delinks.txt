@@ -12010,3 +12010,23 @@ src/auto/func_020cf3dc.c:
 src/auto/func_02000938.c:
     complete
     .text       start:0x02000938 end:0x02000950
+
+src/auto/func_02033ad8.c:
+    complete
+    .text       start:0x02033ad8 end:0x02033b30
+
+src/auto/func_02083358.c:
+    complete
+    .text       start:0x02083358 end:0x020833b0
+
+src/auto/func_020bba04.c:
+    complete
+    .text       start:0x020bba04 end:0x020bba5c
+
+src/auto/func_02066ff0.c:
+    complete
+    .text       start:0x02066ff0 end:0x0206704c
+
+src/auto/func_020539c8.c:
+    complete
+    .text       start:0x020539c8 end:0x02053a28
