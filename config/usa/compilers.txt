@@ -251,3 +251,10 @@ src/auto/func_020abf4c.c 2.0/sp1p5 -O2,p
 src/auto/func_020c7b10.c 2.0/sp1p5 -O2,p
 src/auto/func_0204c5fc.c 2.0/sp1p5 -O2,p
 src/auto/func_0208b4f8.c 2.0/sp1p5 -O4,s
+
+src/auto/func_0200631c.c 2.0/sp1p5 -O2
+src/auto/func_0201c828.c 2.0/sp1p5 -O2
+src/auto/func_0205e144.c 2.0/sp1p5 -O2,p
+src/auto/func_020709d4.c 2.0/sp1p5 -O4,s
+src/auto/func_020ca988.c 1.2/sp2p3
+src/auto/func_020cac20.c 1.2/sp2p3
