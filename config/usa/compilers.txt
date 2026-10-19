@@ -250,3 +250,4 @@ src/auto/func_02093e68.c 2.0/sp1p5 -O1,p
 src/auto/func_020abf4c.c 2.0/sp1p5 -O2,p
 src/auto/func_020c7b10.c 2.0/sp1p5 -O2,p
 src/auto/func_0204c5fc.c 2.0/sp1p5 -O2,p
+src/auto/func_0208b4f8.c 2.0/sp1p5 -O4,s
