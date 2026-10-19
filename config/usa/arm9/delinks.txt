@@ -11844,3 +11844,11 @@ src/auto/func_0205d060.c:
 src/auto/func_020ab6dc.c:
     complete
     .text       start:0x020ab6dc end:0x020ab704
+
+src/auto/func_02042cdc.c:
+    complete
+    .text       start:0x02042cdc end:0x02042cfc
+
+src/auto/func_020ab6a0.c:
+    complete
+    .text       start:0x020ab6a0 end:0x020ab6c8
