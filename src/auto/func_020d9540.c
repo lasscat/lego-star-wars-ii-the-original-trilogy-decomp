@@ -317,7 +317,7 @@ typedef struct MBGameInfo {
     struct MBGameInfo *nextp;
 } MBGameInfo, MbGameInfo;
 extern const u16(*ctrdgi_fl_maxtime);
-extern int func_020da9e8(int body_len, u16 pollbmp, u32 *sendbuf);
+extern int MBi_BlockHeaderEnd(int body_len, u16 pollbmp, u32 *sendbuf);
 typedef struct {
     u8 type;
     u8 pad1[1];
@@ -328,7 +328,7 @@ typedef struct {
     u32 data_buf[15][((29) + 1) / sizeof(u32) + 1];
     u32 data_bmp[15];
 } MbRequestPieceBuf;
-extern u8 *func_020dd3ec(const MBCommParentBlockHeader *hdr, u8 *sendbuf);
+extern u8 *MBi_MakeParentSendBuffer(const MBCommParentBlockHeader *hdr, u8 *sendbuf);
 typedef struct MbDownloadFileInfoHeader {
     u32 arm9EntryAddr;
     u32 arm7EntryAddr;
@@ -424,13 +424,13 @@ typedef struct MB_CommPWork {
     u8 task_work[2 * 1024];
     MBiTaskInfo cur_task;
 } MB_CommPWork;
-extern MB_CommCommonWork *data_0211e40c;
+extern MB_CommCommonWork *mbc;
 extern int func_020d9540(u8 type, u16 pollbmp);
 int func_020d9540(u8 type, u16 pollbmp) {
     MBCommParentBlockHeader hd;
 
     hd.type = type;
 
-    (void) func_020dd3ec(&hd, (u8 *) ((MB_CommPWork *) data_0211e40c)->common.sendbuf);
-    return func_020da9e8((6), pollbmp, ((MB_CommPWork *) data_0211e40c)->common.sendbuf);
+    (void) MBi_MakeParentSendBuffer(&hd, (u8 *) ((MB_CommPWork *) mbc)->common.sendbuf);
+    return MBi_BlockHeaderEnd((6), pollbmp, ((MB_CommPWork *) mbc)->common.sendbuf);
 }

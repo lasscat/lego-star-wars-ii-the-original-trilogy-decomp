@@ -54,12 +54,12 @@ typedef struct WMScanParam {
     u8 bssid[6];
     u16 rsv[9];
 } WMScanParam, WMscanParam;
-extern u16 func_020d6e4c(void);
+extern u16 WM_GetAllowedChannel(void);
 extern const u16(*ctrdgi_fl_maxtime);
 BOOL func_020db2a8(WMscanParam *p) {
     u16 channel_bmp, channel, i;
 
-    channel_bmp = func_020d6e4c();
+    channel_bmp = WM_GetAllowedChannel();
 
     if (channel_bmp == 0) {
         ((void) 0);

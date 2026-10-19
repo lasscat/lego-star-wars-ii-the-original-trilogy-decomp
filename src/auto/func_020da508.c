@@ -4,7 +4,7 @@
 typedef unsigned char u8;
 typedef unsigned short int u16;
 typedef unsigned long u32;
-extern void func_020cf3dc(const void *src, void *dest, u32 size);
+extern void MI_CpuCopy8(const void *src, void *dest, u32 size);
 extern const u16(*ctrdgi_fl_maxtime);
 typedef struct {
     char title_name[12];
@@ -67,11 +67,11 @@ typedef struct {
     u32 auth_code[(136) / sizeof(u32)];
     u32 reserved[32 / sizeof(u32)];
 } MBDownloadFileInfo;
-extern const MbSegmentType data_020fca7c[(3)];
-extern const MbSegmentType data_020fca7c[(3)];
+extern const MbSegmentType MBi_defaultLoadSegList[(3)];
+extern const MbSegmentType MBi_defaultLoadSegList[(3)];
 extern void func_020da508(MbDownloadFileInfoHeader *mbdlFileInfop, const void *buf);
-extern void func_020da57c(const RomHeader *mbRomHeaderp, const MbSegmentType *loadSegListp, MbSegmentInfo *seg_infop,
-                          u32 *child_recv_buff_addr);
+extern void MBi_SetSegmentInfo(const RomHeader *mbRomHeaderp, const MbSegmentType *loadSegListp, MbSegmentInfo *seg_infop,
+                               u32 *child_recv_buff_addr);
 void func_020da508(MbDownloadFileInfoHeader *mbdlFileInfop, const void *buf) {
     const RomHeader *mbRomHeaderp;
     const MbSegmentType *loadSegListp;
@@ -86,21 +86,21 @@ void func_020da508(MbDownloadFileInfoHeader *mbdlFileInfop, const void *buf) {
     mbdlFileInfop->arm9EntryAddr = (u32) mbRomHeaderp->main_entry_address;
     mbdlFileInfop->arm7EntryAddr = (u32) mbRomHeaderp->sub_entry_address;
     seg_infop                    = (MbSegmentInfo *) (mbdlFileInfop + 1);
-    loadSegListp                 = data_020fca7c;
+    loadSegListp                 = MBi_defaultLoadSegList;
 
     ((void) 0);
 
     for (seg_num = 0; seg_num < (3); seg_num++) {
         ((void) 0);
-        func_020da57c(mbRomHeaderp, loadSegListp, seg_infop, &child_recv_buff_addr);
+        MBi_SetSegmentInfo(mbRomHeaderp, loadSegListp, seg_infop, &child_recv_buff_addr);
         seg_infop++;
         loadSegListp++;
     }
 
     {
         MBDownloadFileInfo *pMdfi = (MBDownloadFileInfo *) mbdlFileInfop;
-        func_020cf3dc(auth_code, &pMdfi->auth_code[0], (136));
+        MI_CpuCopy8(auth_code, &pMdfi->auth_code[0], (136));
     }
 }
-void func_020da57c(const RomHeader *mbRomHeaderp, const MbSegmentType *loadSegListp, MbSegmentInfo *seg_infop,
-                   u32 *child_recv_buff_addr);
+void MBi_SetSegmentInfo(const RomHeader *mbRomHeaderp, const MbSegmentType *loadSegListp, MbSegmentInfo *seg_infop,
+                        u32 *child_recv_buff_addr);

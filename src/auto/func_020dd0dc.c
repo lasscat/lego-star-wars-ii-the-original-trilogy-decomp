@@ -7,8 +7,8 @@ typedef unsigned long u32;
 typedef unsigned long long int u64;
 typedef signed long s32;
 typedef u32 OSIntrMode;
-extern OSIntrMode func_020ce804(void);
-extern OSIntrMode func_020ce818(OSIntrMode state);
+extern OSIntrMode OS_DisableInterrupts(void);
+extern OSIntrMode OS_RestoreInterrupts(OSIntrMode state);
 typedef struct CPContext {
     u64 div_numer;
     u64 div_denom;
@@ -82,8 +82,8 @@ struct _OSThread {
     void *userParameter;
     int systemErrno;
 };
-extern void func_020cd288(OSThread *thread, void (*func)(void *), void *arg, void *stack, u32 stackSize, u32 prio);
-extern void func_020cd54c(OSThread *thread);
+extern void OS_CreateThread(OSThread *thread, void (*func)(void *), void *arg, void *stack, u32 stackSize, u32 prio);
+extern void OS_WakeupThreadDirect(OSThread *thread);
 struct OSMutex {
     OSThreadQueue queue;
     OSThread *thread;
@@ -114,33 +114,33 @@ typedef struct MBiTaskInfo_tag {
     u32 param[4];
 } MBiTaskInfo;
 extern void func_020dd0dc(void *p_work, u32 size);
-extern void func_020dd178(MBiTaskInfo *pt);
+extern void MBi_InitTaskInfo(MBiTaskInfo *pt);
 typedef struct {
     OSThread th[1];
     MBiTaskInfo *volatile list;
     MBiTaskInfo end_task;
 } MBiTaskWork;
-extern MBiTaskWork *data_0211e440;
+extern MBiTaskWork *mbi_task_work;
 void func_020dcfc4(void *arg);
 void func_020dd0dc(void *p_work, u32 size) {
-    OSIntrMode bak_cpsr = func_020ce804();
+    OSIntrMode bak_cpsr = OS_DisableInterrupts();
 
-    if (!data_0211e440) {
+    if (!mbi_task_work) {
         MBiTaskWork *const p = (MBiTaskWork *) p_work;
 
         ((void) 0);
         ((void) 0);
 
-        data_0211e440 = p;
-        func_020dd178(&p->end_task);
+        mbi_task_work = p;
+        MBi_InitTaskInfo(&p->end_task);
 
         p->list = 0;
         size    = (u32) ((size - sizeof(MBiTaskWork)) & ~3);
 
-        func_020cd288(p->th, func_020dcfc4, p, (u8 *) (p + 1) + size, size, 0);
-        func_020cd54c(p->th);
+        OS_CreateThread(p->th, func_020dcfc4, p, (u8 *) (p + 1) + size, size, 0);
+        OS_WakeupThreadDirect(p->th);
     }
 
-    (void) func_020ce818(bak_cpsr);
+    (void) OS_RestoreInterrupts(bak_cpsr);
 }
-void func_020dd178(MBiTaskInfo *pt);
+void MBi_InitTaskInfo(MBiTaskInfo *pt);

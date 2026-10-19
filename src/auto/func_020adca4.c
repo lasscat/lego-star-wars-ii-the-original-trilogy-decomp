@@ -4,8 +4,8 @@
 #include "m2c.h"
 
 M2C_UNK func_020ad528(M2C_UNK *);                   /* extern */
-M2C_UNK func_020de858(void *, s32, M2C_UNK);        /* extern */
-s32 func_020de930(void *, s32, M2C_UNK);            /* extern */
+M2C_UNK memcpy(void *, s32, M2C_UNK);        /* extern */
+s32 memcmp(void *, s32, M2C_UNK);            /* extern */
 extern M2C_UNK data_02100030;
 extern M2C_UNK data_02100064;
 extern M2C_UNK data_0210bf40;
@@ -21,7 +21,7 @@ void func_020adca4(s32 arg0) {
     var_r7 = (s8 *) &data_0210bf40;
     var_r6 = 0;
 loop_1:
-    if ((func_020de930(var_r7 + 4, arg0 + 4, 0xC) == 0) && (M2C_FIELD(var_r7, s32 *, 0xC0) != 0)) {
+    if ((memcmp(var_r7 + 4, arg0 + 4, 0xC) == 0) && (M2C_FIELD(var_r7, s32 *, 0xC0) != 0)) {
         *((M2C_UNK *) ((s8 *) &data_0210c000 + (var_r6 * 0xC4))) = 0x5A;
         func_020ad528(&data_02100030);
         return;
@@ -34,7 +34,7 @@ loop_1:
     loop_6:
         if (M2C_FIELD(var_r1, s32 *, 0xC0) == 0) {
             temp_r5 = var_r2 * 0xC4;
-            func_020de858((M2C_UNK *) ((s8 *) &data_0210bf40 + temp_r5), arg0, 0xC0);
+            memcpy((M2C_UNK *) ((s8 *) &data_0210bf40 + temp_r5), arg0, 0xC0);
             *((M2C_UNK *) ((s8 *) &data_0210c000 + temp_r5)) = 0x5A;
         } else {
             var_r2 += 1;

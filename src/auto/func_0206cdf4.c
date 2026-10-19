@@ -1,7 +1,7 @@
 #include "m2c.h"
 
 s32 func_02053b14(s32);                             /* extern */
-M2C_UNK func_020cf318(void *, s32);                 /* extern */
+M2C_UNK MI_Copy64B(void *, s32);                 /* extern */
 
 void func_0206cdf4(void *arg0) {
     s32 var_r4;
@@ -15,7 +15,7 @@ void func_0206cdf4(void *arg0) {
     }
     var_r6 = arg0 + 0x80;
     do {
-        func_020cf318(var_r6, var_r4);
+        MI_Copy64B(var_r6, var_r4);
         var_r5 += 1;
         var_r4 += 0x40;
         var_r6 += 0x40;

@@ -5,9 +5,9 @@ typedef unsigned int u32;
 typedef unsigned short u16;
 typedef unsigned char u8;
 typedef int s32;
-extern void func_020cdd00(void *ptr, u32 size);
-extern void func_020cf1f0(const void *src, void *dest, u32 size);
-extern void func_020cf1d8(u32 value, void *dest, u32 size);
+extern void DC_InvalidateRange(void *ptr, u32 size);
+extern void MIi_CpuCopy32(const void *src, void *dest, u32 size);
+extern void MIi_CpuClear32(u32 value, void *dest, u32 size);
 typedef void (*UnkWmCallbackFunc)(void *arg);
 typedef struct UnkWmStatus {
     u16 state;
@@ -50,12 +50,12 @@ typedef struct UnkWmArm9Buf {
     u32 connectedAidBitmap;
     u16 myAid;
 } UnkWmArm9Buf;
-extern void func_020d6418(u32 id, UnkWmCallbackFunc callback);
-extern u32 func_020d6534(void *data, u32 length);
-extern UnkWmArm9Buf *func_020d65a4(void);
-extern u32 func_020d6618(s32 paramNum, ...);
-extern s32 func_020d6c38(void);
-extern s32 func_020d6ca4(void);
+extern void WMi_SetCallbackTable(u32 id, UnkWmCallbackFunc callback);
+extern u32 WMi_SendCommandDirect(void *data, u32 length);
+extern UnkWmArm9Buf *WMi_GetSystemWork(void);
+extern u32 WMi_CheckStateEx(s32 paramNum, ...);
+extern s32 WM_GetMPSendBufferSize(void);
+extern s32 WM_GetMPReceiveBufferSize(void);
 extern u32 func_020d76c0(UnkWmCallbackFunc callback, u16 *recvBuf, s32 recvBufSize, u16 *sendBuf, u16 sendBufSize,
                          void *tmpParam);
 typedef struct UnkWmMPTmpParam {
@@ -75,19 +75,19 @@ typedef struct UnkWmStartMPReq {
 } UnkWmStartMPReq;
 u32 func_020d76c0(UnkWmCallbackFunc callback, u16 *recvBuf, s32 recvBufSize, u16 *sendBuf, u16 sendBufSize, void *tmpParam) {
     UnkWmStartMPReq req;
-    UnkWmStatus *status = func_020d65a4()->status;
-    u32 result          = func_020d6618(2, 7, 8);
+    UnkWmStatus *status = WMi_GetSystemWork()->status;
+    u32 result          = WMi_CheckStateEx(2, 7, 8);
 
     if (result != 0) {
         return result;
     }
 
-    func_020cdd00(&status->unk_188, 2);
-    func_020cdd00(&status->unk_0c6, 2);
+    DC_InvalidateRange(&status->unk_188, 2);
+    DC_InvalidateRange(&status->unk_0c6, 2);
     if (status->unk_188 != 0 && status->unk_0c6 != 1) {
         return 3;
     }
-    func_020cdd00(&status->unk_00c, 4);
+    DC_InvalidateRange(&status->unk_00c, 4);
     if (status->unk_00c == 1) {
         return 3;
     }
@@ -97,25 +97,25 @@ u32 func_020d76c0(UnkWmCallbackFunc callback, u16 *recvBuf, s32 recvBufSize, u16
     if (sendBufSize & 0x1f) {
         return 6;
     }
-    func_020cdd00(&status->unk_09c, 2);
+    DC_InvalidateRange(&status->unk_09c, 2);
     if (status->unk_09c == 0) {
-        if (recvBufSize < func_020d6ca4()) {
+        if (recvBufSize < WM_GetMPReceiveBufferSize()) {
             return 6;
         }
-        if (sendBufSize < func_020d6c38()) {
+        if (sendBufSize < WM_GetMPSendBufferSize()) {
             return 6;
         }
     }
 
-    func_020d6418(14, callback);
-    func_020cf1d8(0, &req, sizeof(UnkWmStartMPReq));
+    WMi_SetCallbackTable(14, callback);
+    MIi_CpuClear32(0, &req, sizeof(UnkWmStartMPReq));
     req.apiid       = 14;
     req.recvBuf     = recvBuf;
     req.recvBufSize = (u32) recvBufSize >> 1;
     req.sendBuf     = sendBuf;
     req.sendBufSize = sendBufSize;
-    func_020cf1f0(tmpParam, &req.param, sizeof(UnkWmMPTmpParam));
-    result = func_020d6534(&req, sizeof(UnkWmStartMPReq));
+    MIi_CpuCopy32(tmpParam, &req.param, sizeof(UnkWmMPTmpParam));
+    result = WMi_SendCommandDirect(&req, sizeof(UnkWmStartMPReq));
     if (result != 0) {
         return result;
     }

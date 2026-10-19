@@ -4,7 +4,7 @@ s32 func_020ad310();                                /* extern */
 M2C_UNK func_020afd7c(void *, u16);                 /* extern */
 M2C_UNK func_020b01a8();                            /* extern */
 u32 func_020b01bc();                                /* extern */
-M2C_UNK func_020cea74();                            /* extern */
+M2C_UNK OS_Terminate();                            /* extern */
 extern M2C_UNK *data_0210b348;
 
 void func_02072444(void *arg0) {
@@ -25,7 +25,7 @@ void func_02072444(void *arg0) {
                 case 3:
                     return;
                 default:
-                    func_020cea74();
+                    OS_Terminate();
                     return;
             }
         case 2:

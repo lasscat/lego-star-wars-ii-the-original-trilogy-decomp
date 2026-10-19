@@ -1,7 +1,7 @@
 #include "m2c.h"
 
 void *func_020aaeb4();                              /* extern */
-extern M2C_UNK data_027e0c14;
+extern M2C_UNK NNS_G3dGlb;
 
 s32 func_0206af28(void *arg0) {
     s32 temp_r5;
@@ -22,7 +22,7 @@ s32 func_0206af28(void *arg0) {
     M2C_FIELD(temp_r0, s32 *, 0x1AC) = M2C_FIELD(temp_r0, s32 *, 0x1AC) | 4;
     M2C_FIELD(temp_r0, s32 *, 0x1AC) = M2C_FIELD(temp_r0, s32 *, 0x1AC) & ~1;
     M2C_FIELD(temp_r0, s32 *, 0x1AC) = M2C_FIELD(temp_r0, s32 *, 0x1AC) | 1;
-    return M2C_FIELD(&data_027e0c14, s32 *, 0xA0) =
+    return M2C_FIELD(&NNS_G3dGlb, s32 *, 0xA0) =
                (s32) (M2C_FIELD(arg0, s16 *, 0xA) | ((0xBF - M2C_FIELD(arg0, s16 *, 0x10)) << 8) |
                       (M2C_FIELD(arg0, s16 *, 0xE) << 0x10) | ((0xBF - M2C_FIELD(arg0, s16 *, 0xC)) << 0x18));
 }

@@ -1,6 +1,6 @@
 #include "m2c.h"
 s32 func_020c6458(void *, void *);
-M2C_UNK func_020cf19c(M2C_UNK, void *, s32);
+M2C_UNK MIi_CpuClear16(M2C_UNK, void *, s32);
 extern s32 data_0210130c;
 void func_020c78e4(void *arg0, void *arg1, void *arg2) {
     s32 temp_r0_2;
@@ -13,7 +13,7 @@ void func_020c78e4(void *arg0, void *arg1, void *arg2) {
     temp_r0                     = M2C_FIELD(arg2, u8 *, 0x18);
     M2C_FIELD(arg0, u8 *, 0x19) = temp_r0;
     M2C_FIELD(arg0, void **, 8) = arg1;
-    func_020cf19c(0, arg0 + 0x1A, M2C_FIELD(arg0, u8 *, 0x19) * 2);
+    MIi_CpuClear16(0, arg0 + 0x1A, M2C_FIELD(arg0, u8 *, 0x19) * 2);
     var_r5 = 0;
     while (var_r5 < (u32) M2C_FIELD(arg1, u8 *, 0xD)) {
         temp_r2   = arg1 + 0xC + M2C_FIELD(arg1, u16 *, 0x12);

@@ -5,7 +5,7 @@ M2C_UNK func_020ad7a4(M2C_UNK);                     /* extern */
 M2C_UNK func_020ad8b4(s32);                         /* extern */
 M2C_UNK func_020addf0(M2C_UNK);                     /* extern */
 s32 func_020aedc8();                                /* extern */
-s32 func_020d7a84(M2C_UNK *);                       /* extern */
+s32 WM_EndMP(M2C_UNK *);                       /* extern */
 extern M2C_UNK data_02100104;
 extern M2C_UNK data_02100184;
 extern M2C_UNK data_0210019c;
@@ -18,7 +18,7 @@ s32 func_020aecfc(void) {
     M2C_FIELD(&data_0210b320, s32 *, 0x30) = 0;
     M2C_FIELD(&data_0210b320, s32 *, 0x48) = 0xE;
     func_020ad7a4(3);
-    temp_r0 = func_020d7a84(&func_020aeda0);
+    temp_r0 = WM_EndMP(&func_020aeda0);
     if (temp_r0 == 0) {
         return func_020aedc8();
     }

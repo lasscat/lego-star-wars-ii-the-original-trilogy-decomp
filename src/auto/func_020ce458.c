@@ -1,7 +1,7 @@
 #include "m2c.h"
 
 /* Uses instructions the compiler never generates: written in assembly. */
-extern void func_020ce4d4();
+extern void OSi_GetAndDisplayContext();
 extern char data_021156d4[];
 // clang-format off
 asm void func_020ce458(void) {
@@ -18,12 +18,12 @@ asm void func_020ce458(void) {
     and r1, r1, #0x1f
     teq r1, #0x17
     bne L_020ce494
-    bl func_020ce4d4
+    bl OSi_GetAndDisplayContext
     b L_020ce4a0
 L_020ce494:
     teq r1, #0x1b
     bne L_020ce4a0
-    bl func_020ce4d4
+    bl OSi_GetAndDisplayContext
 L_020ce4a0:
     ldr ip, =data_021156d4
     ldr ip, [ip, #0x0]

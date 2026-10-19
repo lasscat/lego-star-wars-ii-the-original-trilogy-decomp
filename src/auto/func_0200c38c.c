@@ -3,9 +3,9 @@
  */
 #include "m2c.h"
 
-M2C_UNK func_01ffc3d8();                            /* extern */
-M2C_UNK func_020c8b9c(M2C_UNK *, s32);              /* extern */
-s32 func_020cb038(M2C_UNK *);                       /* extern */
+M2C_UNK NNS_G3dGeFlushBuffer();                            /* extern */
+M2C_UNK MTX_Copy44To43_(M2C_UNK *, s32);              /* extern */
+s32 G3X_GetClipMtx(M2C_UNK *);                       /* extern */
 M2C_UNK func_020cf528(M2C_UNK *);                   /* extern */
 extern M2C_UNK data_027e02bc;
 
@@ -16,7 +16,7 @@ void func_0200c38c(void *arg0) {
     void *var_r7;
 
     var_r7 = arg0;
-    func_01ffc3d8();
+    NNS_G3dGeFlushBuffer();
     var_r5                                      = 0;
     M2C_FIELD((void *) 0x04000440, s32 *, 0)    = 0;
     M2C_FIELD((void *) 0x04000440, s32 *, 4)    = 0;
@@ -29,8 +29,8 @@ void func_0200c38c(void *arg0) {
             M2C_FIELD((void *) 0x04000440, s32 *, 0x10) = (s32) M2C_FIELD(var_r7, u8 *, 0x3CE);
             do {
 
-            } while (func_020cb038(sp0) != 0);
-            func_020c8b9c(sp0, var_r6);
+            } while (G3X_GetClipMtx(sp0) != 0);
+            MTX_Copy44To43_(sp0, var_r6);
         }
         var_r5 += 1;
         var_r7 += 0x38;

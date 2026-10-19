@@ -14,10 +14,10 @@ typedef struct {
     s32 fc;
 } G;
 
-extern G data_027e0c14;
+extern G NNS_G3dGlb;
 extern M2C_UNK data_027e0cf4;
 
 void func_020c42dc(Blk *arg0) {
     *(Blk *) &data_027e0cf4 = *arg0;
-    data_027e0c14.fc &= ~0xA4;
+    NNS_G3dGlb.fc &= ~0xA4;
 }

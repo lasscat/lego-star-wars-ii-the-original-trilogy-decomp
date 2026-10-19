@@ -7,11 +7,11 @@ typedef unsigned long u32;
 typedef unsigned long long int u64;
 typedef signed long s32;
 typedef int BOOL;
-extern void func_020cea74();
+extern void OS_Terminate();
 typedef u32 OSIntrMode;
-extern OSIntrMode func_020ce804(void);
-extern OSIntrMode func_020ce818(OSIntrMode state);
-extern void func_020cea74(void);
+extern OSIntrMode OS_DisableInterrupts(void);
+extern OSIntrMode OS_RestoreInterrupts(OSIntrMode state);
+extern void OS_Terminate(void);
 typedef struct CPContext {
     u64 div_numer;
     u64 div_denom;
@@ -290,12 +290,12 @@ typedef struct {
 } MBiCacheList;
 extern void func_020dcec4(MBiCacheList *pl, u32 src, u32 len, void *ptr, u32 state);
 void func_020dcec4(MBiCacheList *pl, u32 src, u32 len, void *ptr, u32 state) {
-    OSIntrMode bak_cpsr = func_020ce804();
+    OSIntrMode bak_cpsr = OS_DisableInterrupts();
     {
         MBiCacheInfo *pi = pl->list;
         for (;; ++pi) {
             if (pi >= &pl->list[4]) {
-                func_020cea74();
+                OS_Terminate();
             }
 
             if (pi->state == 0) {
@@ -308,5 +308,5 @@ void func_020dcec4(MBiCacheList *pl, u32 src, u32 len, void *ptr, u32 state) {
         }
     }
 
-    (void) func_020ce818(bak_cpsr);
+    (void) OS_RestoreInterrupts(bak_cpsr);
 }

@@ -1,8 +1,8 @@
 #include "m2c.h"
 
-M2C_UNK func_020ca79c(M2C_UNK *);                   /* extern */
-extern M2C_UNK data_02115368;
+M2C_UNK disableBankForX_(M2C_UNK *);                   /* extern */
+extern M2C_UNK gGXState;
 
 void func_020ca87c(void) {
-    func_020ca79c(&data_02115368);
+    disableBankForX_(&gGXState);
 }

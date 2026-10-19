@@ -2,7 +2,7 @@
 M2C_UNK func_020ad528(M2C_UNK *);
 M2C_UNK func_020ad8b4();
 s32 func_020addf0(M2C_UNK);
-s32 func_020d750c(M2C_UNK *, M2C_UNK *, M2C_UNK, M2C_UNK, s32);
+s32 WM_StartConnectEx(M2C_UNK *, M2C_UNK *, M2C_UNK, M2C_UNK, s32);
 extern M2C_UNK data_0210022c;
 extern M2C_UNK data_02100258;
 extern M2C_UNK data_02100270;
@@ -21,7 +21,7 @@ s32 func_020ae910(void) {
     func_020ad528(&data_0210022c);
     return 1;
 big:
-    t = func_020d750c(&func_020ae9c8, &data_0210b460, 0, 1, 0);
+    t = WM_StartConnectEx(&func_020ae9c8, &data_0210b460, 0, 1, 0);
     if (t == 0) {
         return 1;
     }

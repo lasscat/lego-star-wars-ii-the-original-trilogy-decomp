@@ -1,9 +1,9 @@
 #include "m2c.h"
 
-M2C_UNK func_020cf2d8(void *, void *);              /* extern */
+M2C_UNK MI_Copy36B(void *, void *);              /* extern */
 
 void *func_020acd10(void *arg0, void *arg1) {
-    func_020cf2d8(arg1, arg0);
+    MI_Copy36B(arg1, arg0);
     M2C_FIELD(arg0, s32 *, 0x24) = (s32) M2C_FIELD(arg1, s32 *, 0x24);
     M2C_FIELD(arg0, s32 *, 0x28) = (s32) M2C_FIELD(arg1, s32 *, 0x28);
     M2C_FIELD(arg0, s32 *, 0x2C) = (s32) M2C_FIELD(arg1, s32 *, 0x2C);

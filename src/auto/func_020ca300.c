@@ -22,12 +22,12 @@ typedef struct {
     u16 subBgExtPltt;
     u16 subObjExtPltt;
 } UnkGxVramState;
-extern UnkGxVramState data_02115368;
-extern UnkGxVramState data_02115368;
-void func_020c99fc(u32 lcdc);
+extern UnkGxVramState gGXState;
+extern UnkGxVramState gGXState;
+void GX_VRAMCNT_SetLCDC_(u32 lcdc);
 void func_020ca300(s32 clearImage) {
-    data_02115368.lcdc       = ~clearImage & (data_02115368.lcdc | data_02115368.clearImage);
-    data_02115368.clearImage = clearImage;
+    gGXState.lcdc       = ~clearImage & (gGXState.lcdc | gGXState.clearImage);
+    gGXState.clearImage = clearImage;
 
     switch (clearImage) {
         case 0x03:
@@ -56,5 +56,5 @@ void func_020ca300(s32 clearImage) {
         default:
             break;
     }
-    func_020c99fc(data_02115368.lcdc);
+    GX_VRAMCNT_SetLCDC_(gGXState.lcdc);
 }

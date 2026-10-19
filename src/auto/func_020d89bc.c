@@ -9,8 +9,8 @@ typedef signed char s8;
 typedef signed long s32;
 typedef int BOOL;
 typedef u32 OSIntrMode;
-extern OSIntrMode func_020ce804(void);
-extern OSIntrMode func_020ce818(OSIntrMode state);
+extern OSIntrMode OS_DisableInterrupts(void);
+extern OSIntrMode OS_RestoreInterrupts(OSIntrMode state);
 typedef struct CPContext {
     u64 div_numer;
     u64 div_denom;
@@ -452,8 +452,8 @@ typedef struct MB_CommPWork {
     u8 task_work[2 * 1024];
     MBiTaskInfo cur_task;
 } MB_CommPWork;
-extern MB_CommCommonWork *data_0211e40c;
-extern BOOL func_020d9c54(u16 child_aid);
+extern MB_CommCommonWork *mbc;
+extern BOOL IsChildAidValid(u16 child_aid);
 BOOL func_020d89bc(u16 child_aid, MBCommResponseRequestType ack) {
     u16 req;
     int state;
@@ -461,7 +461,7 @@ BOOL func_020d89bc(u16 child_aid, MBCommResponseRequestType ack) {
 
     ((void) 0);
 
-    enabled = func_020ce804();
+    enabled = OS_DisableInterrupts();
 
     switch (ack) {
         case MB_COMM_RESPONSE_REQUEST_KICK:
@@ -481,19 +481,19 @@ BOOL func_020d89bc(u16 child_aid, MBCommResponseRequestType ack) {
             req   = MB_COMM_USER_REQ_BOOT;
             break;
         default:
-            (void) func_020ce818(enabled);
+            (void) OS_RestoreInterrupts(enabled);
             return 0;
     }
 
-    if (((MB_CommPWork *) data_0211e40c) && func_020d9c54(child_aid)) {
-        if (((MB_CommPWork *) data_0211e40c)->p_comm_state[child_aid - 1] == state) {
-            ((MB_CommPWork *) data_0211e40c)->req2child[child_aid - 1] = req;
-            (void) func_020ce818(enabled);
+    if (((MB_CommPWork *) mbc) && IsChildAidValid(child_aid)) {
+        if (((MB_CommPWork *) mbc)->p_comm_state[child_aid - 1] == state) {
+            ((MB_CommPWork *) mbc)->req2child[child_aid - 1] = req;
+            (void) OS_RestoreInterrupts(enabled);
             return 1;
         }
     }
 
-    (void) func_020ce818(enabled);
+    (void) OS_RestoreInterrupts(enabled);
     return 0;
 }
-BOOL func_020d9c54(u16 child_aid);
+BOOL IsChildAidValid(u16 child_aid);
