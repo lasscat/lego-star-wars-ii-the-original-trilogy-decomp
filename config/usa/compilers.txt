@@ -247,3 +247,6 @@ src/auto/func_02087088.c 1.2/sp2p3
 src/auto/func_02075740.c 2.0/sp1p5 -O1,p
 src/auto/func_02075b7c.c 2.0/sp1p5 -O1,p
 src/auto/func_02093e68.c 2.0/sp1p5 -O1,p
+src/auto/func_020abf4c.c 2.0/sp1p5 -O2,p
+src/auto/func_020c7b10.c 2.0/sp1p5 -O2,p
+src/auto/func_0204c5fc.c 2.0/sp1p5 -O2,p
