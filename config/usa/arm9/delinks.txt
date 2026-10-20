@@ -14142,3 +14142,61 @@ src/auto/func_020bbeb0.c:
 src/auto/func_020e476c.c:
     complete
     .text       start:0x020e476c end:0x020e47b4
+
+src/auto/HuffMakeSubsetHuffTree.c:
+    complete
+    .text       start:0x020d011c end:0x020d01fc
+
+src/auto/MBi_MakeBlockInfoTable.c:
+    complete
+    .text       start:0x020da6f0 end:0x020da7bc
+
+src/auto/MBi_get_blockinfo.c:
+    complete
+    .text       start:0x020da7bc end:0x020da870
+
+src/auto/func_0201cdb8.c:
+    complete
+    .text       start:0x0201cdb8 end:0x0201ce94
+
+src/auto/func_02023870.c:
+    complete
+    .text       start:0x02023870 end:0x02023948
+
+src/auto/func_02072620.c:
+    complete
+    .text       start:0x02072620 end:0x02072700
+
+src/auto/func_0207281c.c:
+    complete
+    .text       start:0x0207281c end:0x02072900
+
+src/auto/func_02075064.c:
+    complete
+    .text       start:0x02075064 end:0x0207513c
+
+src/auto/func_0209320c.c:
+    complete
+    .text       start:0x0209320c end:0x020932e8
+
+
+src/auto/func_0200fb9c.c:
+    complete
+    .text       start:0x0200fb9c end:0x0200fc60
+
+
+src/auto/func_0208c4c8.c:
+    complete
+    .text       start:0x0208c4c8 end:0x0208c588
+
+src/auto/func_020c0fd0.c:
+    complete
+    .text       start:0x020c0fd0 end:0x020c1090
+
+src/auto/func_020e4600.c:
+    complete
+    .text       start:0x020e4600 end:0x020e46bc
+
+src/auto/__rethrow.c:
+    complete
+    .text       start:0x020e4c08 end:0x020e4c54
