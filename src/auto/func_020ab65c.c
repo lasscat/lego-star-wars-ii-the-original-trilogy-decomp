@@ -1,23 +1,11 @@
 #include "m2c.h"
 
-/* Uses instructions the compiler never generates: written in assembly. */
-// clang-format off
-asm s32 func_020ab65c(s32 a0, s32 a1) {
-    ldr r2, [r0, #0xc]
-    ldr r0, =0x7ff
-    ldrh r3, [r2, #0x42]
-    add ip, r2, #0x3c
-    ldrh r2, [ip, r3]
-    add r3, ip, r3
-    mla r1, r2, r1, r3
-    ldr r1, [r1, #0x8]
-    and r2, r1, r0
-    and r1, r1, r0, lsl #0xb
-    mov r0, r2, lsl #0x10
-    mov r1, r1, lsl #0x5
-    mov r2, r0, lsr #0x10
-    mov r0, r1, lsr #0x10
-    mul r0, r2, r0
-    bx lr
+/* Reads a packed 32-bit value and returns the product of its two 11-bit fields. */
+s32 func_020ab65c(M2C_UNK a0, s32 a1) {
+    s32 *t   = M2C_FIELD(a0, s32 *, 0xc);
+    u16 idx  = M2C_FIELD(t, u16 *, 0x42);
+    u8 *base = (u8 *) t + 0x3c;
+    u16 v    = M2C_FIELD(base + idx, u16 *, 0);
+    u32 val  = M2C_FIELD((s32) (base + idx) + v * a1 + 8, u32 *, 0);
+    return (u16) (val & 0x7ff) * (((val & (0x7ff << 11)) << 5) >> 16);
 }
-// clang-format on

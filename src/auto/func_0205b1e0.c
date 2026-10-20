@@ -1,35 +1,29 @@
 #include "m2c.h"
 
-/* Uses instructions the compiler never generates: written in assembly. */
-// clang-format off
-asm void func_0205b1e0(s32 a0, s32 a1, s32 a2) {
-    cmp r2, #0x0
-    beq L_0205b22c
-    ldr r2, [r1, #0x8]
-    mov r0, r2, lsl #0x8
-    movs r0, r0, lsr #0x1f
-    bne L_0205b20c
-    orr r2, r2, #0x800000
-    bic r0, r2, #0x7f0000
-    orr r0, r0, #0x10000
-    str r0, [r1, #0x8]
-    bx lr
-L_0205b20c:
-    mov r0, r2, lsl #0x9
-    mov r0, r0, lsr #0x19
-    add r0, r0, #0x1
-    bic r2, r2, #0x7f0000
-    mov r0, r0, lsl #0x19
-    orr r0, r2, r0, lsr #0x9
-    str r0, [r1, #0x8]
-    bx lr
-L_0205b22c:
-    ldr r0, [r1, #0x8]
-    mov r2, r0, lsl #0x8
-    movs r2, r2, lsr #0x1f
-    biceq r0, r0, #0x7f0000
-    orreq r0, r0, #0xa0000
-    streq r0, [r1, #0x8]
-    bx lr
+/*
+ * Updates the packed value at offset 8 of the object pointed to by a1.
+ *
+ * The word holds a 7-bit field at bits 16..22 and a flag at bit 23.
+ *   a2 != 0 and the flag is clear: set the flag, clear the 7-bit field and
+ *                            store 1 in it.
+ *   a2 != 0 and the flag is set:  increment the 7-bit field (mod 128).
+ *   a2 == 0 and the flag is clear: clear the 7-bit field and store 80 in it.
+ */
+void func_0205b1e0(s32 a0, s32 a1, s32 a2) {
+    u32 *p = (u32 *) (a1 + 8);
+
+    if (a2 != 0) {
+        if (((*p) << 8) >> 31 == 0) {
+            *p |= 0x800000;
+            *p = (*p & ~0x7f0000) | 0x10000;
+        } else {
+            u32 c = (*p << 9) >> 25;
+            *p    = (*p & ~0x7f0000) | (((c + 1) & 0x7f) << 16);
+        }
+    } else {
+        if (((*p) << 8) >> 31 == 0) {
+            *p &= ~0x7f0000;
+            *p |= 0xa0000;
+        }
+    }
 }
-// clang-format on

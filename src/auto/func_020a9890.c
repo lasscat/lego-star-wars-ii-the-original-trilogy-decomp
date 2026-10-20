@@ -1,28 +1,26 @@
 #include "m2c.h"
 
-/* Uses instructions the compiler never generates: written in assembly. */
-// clang-format off
-asm void func_020a9890(s32 a0, s32 a1, s32 a2, s32 a3) {
-    stmdb sp!, {r0, r1, r2, r3}
-    stmdb sp!, {r3}
-    sub sp, sp, #0x4
-    add r1, r0, #0x100
-    ldrh r3, [r1, #0xa8]
-    ldrh r2, [sp, #0xc]
-    strh r3, [sp, #0x0]
-    cmp r2, r3
-    addeq sp, sp, #0x4
-    ldmeqia sp!, {r3}
-    addeq sp, sp, #0x10
-    bxeq lr
-    strh r2, [sp, #0x2]
-    ldrh r3, [sp, #0x2]
-    mvn r2, #0x0
-    strh r3, [r1, #0xa8]
-    str r2, [r0, #0x1ac]
-    add sp, sp, #0x4
-    ldmfd sp!, {r3}
-    add sp, sp, #0x10
-    bx lr
+/* The object holds a nested structure at +0x100 whose u16 member is at +0x1a8;
+   the s32 member that is reset to -1 is at +0x1ac. */
+typedef struct {
+    u8 pad[0xa8];
+    u16 idx;
+} Inner020a9890;
+
+typedef struct {
+    u8 pad[0x100];
+    Inner020a9890 in;
+    u8 pad2[2];
+    s32 flag;
+} Obj020a9890;
+
+void func_020a9890(Obj020a9890 *o, u16 v, ...) {
+    volatile u16 tmp[2];
+    tmp[0] = o->in.idx;
+    if (*(u16 *) &v == o->in.idx) {
+        return;
+    }
+    tmp[1]    = *(u16 *) &v;
+    o->in.idx = tmp[1];
+    o->flag   = -1;
 }
-// clang-format on

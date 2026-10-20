@@ -1,37 +1,30 @@
+/* Reconstructed from USA ARM9 at 0x020b861c (108 bytes).
+ * Walks the 16 records of the tile table backwards and ORs a 2 bit flag into
+ * every record whose type byte matches the byte table of the current glyph.
+ */
 #include "m2c.h"
 
-extern u32 data_0210dc2f[];
-extern u32 data_0210daf0[];
+typedef struct {
+    u8 flag : 2;
+    u8 rest : 6;
+} TileFlags;
 
-/* Uses instructions the compiler never generates: written in assembly. */
-// clang-format off
-asm void func_020b861c(s32 a0) {
-    stmdb   sp!, {r3, r4, r5, lr}
-    ldr     r2, =data_0210dc2f
-    ldr     lr, =data_0210daf0
-    mov     r1, #0xf
-    mov     r3, #0x1e0
-L_020b8630:
-    ldr     ip, [lr, #0x0]
-    ldrb    r4, [r2, #0x4]
-    ldrb    r5, [ip, #0x39]
-    cmp     r5, r4
-    bne     L_020b866c
-    add     ip, ip, #0xcd
-    add     r5, ip, #0x400
-    ldrb    r4, [r5, r3]
-    mov     ip, r4, lsl #0x1e
-    orr     ip, r0, ip, lsr #0x1e
-    and     ip, ip, #0xff
-    bic     r4, r4, #0x3
-    and     ip, ip, #0x3
-    orr     r4, r4, ip
-    strb    r4, [r5, r3]
-L_020b866c:
-    sub     r2, r2, #0x1
-    sub     r3, r3, #0x20
-    subs    r1, r1, #0x1
-    bpl     L_020b8630
-    ldmfd   sp!, {r3, r4, r5, pc}
+extern u8 *data_0210daf0;
+extern M2C_UNK data_0210dc2f;
+
+void func_020b861c(s32 arg0) {
+    s32 i;
+    u8 *p = (u8 *) &data_0210dc2f;
+    s32 off;
+
+    for (i = 15, off = 0x1e0; i >= 0; i--) {
+        u8 *base = data_0210daf0;
+        if (base[0x39] == p[4]) {
+            u8 *row      = base + 0x4cd;
+            TileFlags *t = (TileFlags *) &row[off];
+            t->flag |= arg0;
+        }
+        p -= 1;
+        off -= 0x20;
+    }
 }
-// clang-format on
