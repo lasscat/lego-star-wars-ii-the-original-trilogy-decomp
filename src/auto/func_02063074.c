@@ -2,23 +2,21 @@
 
 extern u32 data_02104364[];
 
-/* Uses instructions the compiler never generates: written in assembly. */
-// clang-format off
-asm void func_02063074(s32 a0) {
-    stmdb sp!, {r3, lr}
-    ldr r2, =data_02104364
-    mov r0, #0x64
-    ldr lr, [r2, #0x20]
-    ldr r1, =0xcccccccd
-    sub ip, lr, lr
-    mul r3, ip, r0
-    umull r0, r1, r3, r1
-    str lr, [r2, #0x50]
-    mov r0, #0x0
-    str r0, [r2, #0x54]
-    str ip, [r2, #0x58]
-    mov r1, r1, lsr #0x7
-    str r1, [r2, #0x5c]
-    ldmfd sp!, {r3, pc}
+/* Resets the counters of the global timer block:
+ *   [0x50] = current value of the field at 0x20
+ *   [0x54] = 0
+ *   [0x58] = difference of the two reads of the field at 0x20
+ *   [0x5c] = that difference scaled by 100/160
+ * The field at 0x20 is read through two different expressions on purpose:
+ * mwccarm folds "x - x" to 0 when both operands are the same expression,
+ * while the original code keeps the subtraction.
+ */
+void func_02063074(s32 arg0) {
+    u32 *state = data_02104364;
+    u32 cur    = state[8];
+    u32 delta  = *(u32 *) ((u8 *) state + 0x20) - state[8];
+    state[20]  = cur;
+    state[21]  = 0;
+    state[22]  = delta;
+    state[23]  = delta * 100 / 160;
 }
-// clang-format on

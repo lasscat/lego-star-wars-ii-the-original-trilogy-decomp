@@ -1,24 +1,27 @@
 #include "m2c.h"
 
-/* Uses instructions the compiler never generates: written in assembly. */
-// clang-format off
-asm void func_0205c324(s32 a0) {
-    mov r2, #0x0
-    str r2, [r0, #0x1c]
-    str r2, [r0, #0x20]
-    ldr r1, =0xffff
-    str r2, [r0, #0x24]
-    strh r1, [r0, #0x28]
-    strh r2, [r0, #0x2a]
-    strh r1, [r0, #0x2c]
-    strb r2, [r0, #0x2e]
-    strb r2, [r0, #0x2f]
-    mov r1, r2
-L_0205c350:
-    str r1, [r0, r2, lsl #0x2]
-    add r2, r2, #0x1
-    cmp r2, #0x7
-    blt L_0205c350
-    bx lr
+/*
+ * Resets a 0x30-byte control block:
+ *   +0x00 .. +0x18  seven s32 words cleared in a loop
+ *   +0x1C, +0x20, +0x24  three s32 words cleared
+ *   +0x28, +0x2C  two u16 fields set to 0xFFFF
+ *   +0x2A         one u16 field cleared
+ *   +0x2E, +0x2F  two u8 fields cleared
+ */
+void func_0205c324(M2C_UNK a0) {
+    s32 i;
+    s32 *p = (s32 *) a0;
+
+    p[7]                        = 0;
+    p[8]                        = 0;
+    p[9]                        = 0;
+    *(u16 *) ((s8 *) a0 + 0x28) = 0xffff;
+    *(u16 *) ((s8 *) a0 + 0x2a) = 0;
+    *(u16 *) ((s8 *) a0 + 0x2c) = 0xffff;
+    *(u8 *) ((s8 *) a0 + 0x2e)  = 0;
+    *(u8 *) ((s8 *) a0 + 0x2f)  = 0;
+
+    for (i = 0; i < 7; i++) {
+        p[i] = 0;
+    }
 }
-// clang-format on

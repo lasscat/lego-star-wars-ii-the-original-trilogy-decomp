@@ -1,25 +1,21 @@
 #include "m2c.h"
 
-extern u32 data_020fdbc4[];
-extern u32 data_020fddf0[];
+extern M2C_UNK data_020fdbc4;
+extern M2C_UNK data_020fddf0;
 
-/* Uses instructions the compiler never generates: written in assembly. */
-// clang-format off
-asm void func_020324d4(s32 a0, s32 a1, s32 a2, s32 a3) {
-    stmdb sp!, {r0, r1, r2, r3}
-    ldr r3, =data_020fdbc4
-    mov r2, #0x0
-    str r3, [r0, #0x0]
-    str r1, [r0, #0x4]
-    strb r2, [r0, #0xc]
-    ldr r1, =data_020fddf0
-    strb r2, [r0, #0xd]
-    str r1, [r0, #0x0]
-    ldrh r1, [sp, #0x8]
-    str r2, [r0, #0x10]
-    strh r1, [r0, #0x14]
-    strb r2, [r0, #0x16]
-    add sp, sp, #0x10
-    bx lr
+/* Initialises the object pointed to by a0.
+ * Offset 0x00 holds a pointer that is first set to data_020fdbc4 and then
+ * overwritten with data_020fddf0; 0x04 receives a1; the byte fields at 0x0c
+ * and 0x0d are cleared; 0x10 is cleared; 0x14 receives the low halfword of
+ * a2 and the byte at 0x16 is cleared.
+ */
+void func_020324d4(u8 *a0, s32 a1, u16 a2, ...) {
+    M2C_FIELD(a0, M2C_UNK **, 0x0) = &data_020fdbc4;
+    M2C_FIELD(a0, s32 *, 0x4)      = a1;
+    M2C_FIELD(a0, u8 *, 0xc)       = 0;
+    M2C_FIELD(a0, u8 *, 0xd)       = 0;
+    M2C_FIELD(a0, M2C_UNK **, 0x0) = &data_020fddf0;
+    M2C_FIELD(a0, s32 *, 0x10)     = 0;
+    M2C_FIELD(a0, u16 *, 0x14)     = *(u16 *) &a2;
+    M2C_FIELD(a0, u8 *, 0x16)      = 0;
 }
-// clang-format on

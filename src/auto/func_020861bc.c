@@ -1,25 +1,22 @@
 #include "m2c.h"
 
-/* Uses instructions the compiler never generates: written in assembly. */
-// clang-format off
-asm void func_020861bc(s32 arg0, s32 arg1, s32 arg2) {
-    stmfd sp!, {r3, r4, r5, lr}
-    add     r3, r0, #0x88
-    and     lr, r1, #0x1f
-    mov     r5, #0x1
-    mov     r4, r1, asr #0x5
-    add     ip, r3, #0x4400
-    mvn     r1, r5, lsl lr
-    ldr     r3, [ip, r4, lsl #0x2]
-    cmp     r2, #0x0
-    and     r1, r3, r1
-    add     r0, r0, #0x88
-    str     r1, [ip, r4, lsl #0x2]
-    add     r1, r0, #0x4400
-    ldr     r0, [r1, r4, lsl #0x2]
-    moveq   r5, #0x0
-    orr     r0, r0, r5, lsl lr
-    str     r0, [r1, r4, lsl #0x2]
-    ldmfd sp!, {r3, r4, r5, pc}
+/* Bit array at offset 0x4488 of the object: 32 flags per word. */
+typedef struct {
+    u8 pad_4400[0x4400];
+    u32 flags[0x220];
+} func_020861bc_Flags;
+
+typedef struct {
+    u8 pad_88[0x88];
+    func_020861bc_Flags flags;
+} func_020861bc_Obj;
+
+/* Sets or clears the flag bit selected by arg1, depending on arg2. */
+void func_020861bc(s32 arg0, s32 arg1, s32 arg2) {
+    func_020861bc_Obj *obj = (func_020861bc_Obj *) arg0;
+    u32 bit                = arg1 & 0x1f;
+    u32 index              = arg1 >> 5;
+
+    obj->flags.flags[index] &= ~(1u << bit);
+    obj->flags.flags[index] |= ((arg2 != 0) ? 1u : 0u) << bit;
 }
-// clang-format on
