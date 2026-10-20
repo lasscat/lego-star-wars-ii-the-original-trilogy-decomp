@@ -2110,6 +2110,10 @@ src/auto/func_02053b50.c:
     complete
     .text       start:0x02053b50 end:0x02053b8c
 
+src/auto/func_02053c98.c:
+    complete
+    .text       start:0x02053c98 end:0x02053ce4
+
 src/auto/func_02053d40.c:
     complete
     .text       start:0x02053d40 end:0x02053d50
@@ -4398,6 +4402,10 @@ src/auto/func_02074ffc.c:
     complete
     .text       start:0x02074ffc end:0x02075018
 
+src/auto/func_02075018.c:
+    complete
+    .text       start:0x02075018 end:0x02075064
+
 src/auto/func_02075b00.c:
     complete
     .text       start:0x02075b00 end:0x02075b1c
@@ -5033,6 +5041,10 @@ src/auto/func_0208d458.c:
 src/auto/func_0208d854.c:
     complete
     .text       start:0x0208d854 end:0x0208d874
+
+src/auto/func_0208da0c.c:
+    complete
+    .text       start:0x0208da0c end:0x0208da5c
 
 src/auto/func_0208da74.c:
     complete
