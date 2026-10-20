@@ -12089,3 +12089,27 @@ src/auto/RtcWaitBusy.c:
 src/auto/func_020cf544.c:
     complete
     .text       start:0x020cf544 end:0x020cf624
+
+src/auto/func_0205b174.c:
+    complete
+    .text       start:0x0205b174 end:0x0205b1e0
+
+src/auto/func_0205b5d8.c:
+    complete
+    .text       start:0x0205b5d8 end:0x0205b644
+
+src/auto/func_020ab704.c:
+    complete
+    .text       start:0x020ab704 end:0x020ab770
+
+src/auto/func_0207a744.c:
+    complete
+    .text       start:0x0207a744 end:0x0207a76c
+
+src/auto/func_0205d088.c:
+    complete
+    .text       start:0x0205d088 end:0x0205d0d0
+
+src/auto/func_02064e64.c:
+    complete
+    .text       start:0x02064e64 end:0x02064eac
