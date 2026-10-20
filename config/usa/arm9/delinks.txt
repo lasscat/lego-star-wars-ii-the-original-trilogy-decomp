@@ -12113,3 +12113,7 @@ src/auto/func_0205d088.c:
 src/auto/func_02064e64.c:
     complete
     .text       start:0x02064e64 end:0x02064eac
+
+src/auto/OSi_CountUpTick.c:
+    complete
+    .text       start:0x020ce660 end:0x020ce6c8
