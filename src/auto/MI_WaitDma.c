@@ -7,12 +7,12 @@ void MI_WaitDma(s32 ch) {
     volatile u32 *cnt;
     u32 *sad;
     flags = OS_DisableInterrupts();
-    cnt = (volatile u32 *) (0x4000000 + ((ch * 3 + 2) * 4 + 0xb0));
+    cnt   = (volatile u32 *) (0x4000000 + ((ch * 3 + 2) * 4 + 0xb0));
     while (*cnt & 0x80000000) {
     }
     if (ch == 0) {
-        sad = (u32 *) (0x4000000 + ch * 12 + 0xb0);
-        *sad = 0;
+        sad        = (u32 *) (0x4000000 + ch * 12 + 0xb0);
+        *sad       = 0;
         *(sad + 1) = 0;
         *(sad + 2) = 0x81400001;
     }

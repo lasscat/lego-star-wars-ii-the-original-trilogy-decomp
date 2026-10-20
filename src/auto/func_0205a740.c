@@ -12,6 +12,6 @@ void func_0205a740(s32 *p, s32 a1, s32 a2, u8 val) {
     } else {
         fn = *(fn_t *) ((s8 *) p + 0x24);
     }
-    ret = fn(q, a1, a2);
+    ret                        = fn(q, a1, a2);
     *(u8 *) (*(s32 *) p + ret) = val;
 }

@@ -9,10 +9,10 @@ u32 OS_DisableInterrupts(void);       /* extern */
 void OS_RestoreInterrupts(u32 state);  /* extern */
 
 void PXI_SetFifoRecvCallback(u32 index, void (*callback)(void)) {
-    u32 *words = (u32 *)0x027FFC00;
+    u32 *words = (u32 *) 0x027FFC00;
     u32 state;
 
-    state = OS_DisableInterrupts();
+    state                        = OS_DisableInterrupts();
     FifoRecvCallbackTable[index] = callback;
     if (callback != NULL) {
         words[0x388 / 4] |= (1 << index);

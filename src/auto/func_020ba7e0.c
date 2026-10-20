@@ -10,7 +10,7 @@ extern void func_02054e78(s32);
 void func_020ba7e0(s32 a0) {
     u32 v;
     s32 r0;
-    if (*(u32 *)&data_027e02a8 & 0x800) {
+    if (*(u32 *) &data_027e02a8 & 0x800) {
         MIi_LockCard();
         v = CARDi_ReadRomID();
         MIi_UnlockCard();

@@ -10,7 +10,7 @@ void *NNS_FndAllocFromUnitHeap(void *heap, u32 index) {
     void *result;
     u32 count;
 
-    result = PopMBlock((u8 *)heap + 0x24);
+    result = PopMBlock((u8 *) heap + 0x24);
     if (result != 0) {
         count = M2C_FIELD(heap, u32 *, 0x28);
         if ((u8) M2C_FIELD(heap, u32 *, 0x20) & 1) {
