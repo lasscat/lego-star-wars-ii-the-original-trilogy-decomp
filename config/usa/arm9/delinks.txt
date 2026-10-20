@@ -3338,6 +3338,10 @@ src/auto/func_0205e8bc.c:
     complete
     .text       start:0x0205e8bc end:0x0205e8d0
 
+src/auto/func_0205e8d0.c:
+    complete
+    .text       start:0x0205e8d0 end:0x0205e938
+
 src/auto/func_0205eb6c.c:
     complete
     .text       start:0x0205eb6c end:0x0205eb98
