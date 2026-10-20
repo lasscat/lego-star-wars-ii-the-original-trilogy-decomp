@@ -12045,3 +12045,27 @@ src/auto/GetNextIndex_.c:
 src/auto/GX_SetDefaultDMA.c:
     complete
     .text       start:0x020c995c end:0x020c999c
+
+src/auto/NNS_FndSetAllocModeForExpHeap.c:
+    complete
+    .text       start:0x020c2904 end:0x020c292c
+
+src/auto/func_0203745c.c:
+    complete
+    .text       start:0x0203745c end:0x02037484
+
+src/auto/func_02074c7c.c:
+    complete
+    .text       start:0x02074c7c end:0x02074c9c
+
+src/auto/func_0200c868.c:
+    complete
+    .text       start:0x0200c868 end:0x0200c894
+
+src/auto/func_02055d0c.c:
+    complete
+    .text       start:0x02055d0c end:0x02055d34
+
+src/auto/func_02075fe0.c:
+    complete
+    .text       start:0x02075fe0 end:0x02076008
