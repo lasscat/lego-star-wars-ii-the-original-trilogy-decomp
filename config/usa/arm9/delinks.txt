@@ -12121,3 +12121,50 @@ src/auto/OSi_CountUpTick.c:
 src/auto/func_0205c9ac.c:
     complete
     .text       start:0x0205c9ac end:0x0205c9e4
+src/auto/func_0205a348.c:
+    complete
+    .text       start:0x0205a348 end:0x0205a398
+
+src/auto/func_0205ea38.c:
+    complete
+    .text       start:0x0205ea38 end:0x0205ea84
+
+src/auto/func_020861bc.c:
+    complete
+    .text       start:0x020861bc end:0x02086204
+
+src/auto/func_02088eb4.c:
+    complete
+    .text       start:0x02088eb4 end:0x02088f00
+
+src/auto/func_0208933c.c:
+    complete
+    .text       start:0x0208933c end:0x02089388
+
+src/auto/func_0208c6dc.c:
+    complete
+    .text       start:0x0208c6dc end:0x0208c72c
+
+src/auto/func_0208c72c.c:
+    complete
+    .text       start:0x0208c72c end:0x0208c77c
+
+src/auto/func_020be798.c:
+    complete
+    .text       start:0x020be798 end:0x020be7e8
+
+src/auto/func_020061bc.c:
+    complete
+    .text       start:0x020061bc end:0x02006220
+
+src/auto/func_02090888.c:
+    complete
+    .text       start:0x02090888 end:0x020908e4
+
+src/auto/func_020c61e0.c:
+    complete
+    .text       start:0x020c61e0 end:0x020c6240
+
+src/auto/func_020c6240.c:
+    complete
+    .text       start:0x020c6240 end:0x020c62a0
