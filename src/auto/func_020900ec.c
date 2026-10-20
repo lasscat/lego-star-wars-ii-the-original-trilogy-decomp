@@ -1,22 +1,12 @@
 #include "m2c.h"
 
-/* Uses instructions the compiler never generates: written in assembly. */
-// clang-format off
-asm void func_020900ec(s32 a0, s32 a1, s32 a2, s32 a3) {
-    stmdb sp!, {r4, lr}
-    mov r4, #0x0
-    cmp r1, #0x0
-    ldmlsia sp!, {r4, pc}
-    mov r0, #0x1
-L_02090100:
-    ldrb lr, [r2, r4]
-    add r4, r4, #0x1
-    cmp lr, #0xff
-    ldrne ip, [r3, #0x0]
-    orrne ip, ip, r0, lsl lr
-    strne ip, [r3, #0x0]
-    cmp r4, r1
-    blo L_02090100
-    ldmfd sp!, {r4, pc}
+void func_020900ec(s32 a0, u32 a1, u8 *a2, u32 *a3) {
+    u32 i;
+    u32 mask = 1;
+    for (i = 0; i < a1; i++) {
+        u8 b = a2[i];
+        if (b != 0xff) {
+            *a3 |= mask << b;
+        }
+    }
 }
-// clang-format on

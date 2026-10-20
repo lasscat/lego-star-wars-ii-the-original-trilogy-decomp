@@ -1,24 +1,16 @@
 #include "m2c.h"
 
-/* Uses instructions the compiler never generates: written in assembly. */
-// clang-format off
-asm s32 func_0201cf04(s32 a0, s32 a1) {
-    and r3, r1, #0xff
-    mov r2, #0x0
-L_0201cf0c:
-    ldr r1, [r0, r2, lsl #0x2]
-    cmp r1, #0x0
-    beq L_0201cf2c
-    add r1, r1, #0x100
-    ldrh r1, [r1, #0x80]
-    cmp r3, r1
-    moveq r0, r2
-    bxeq lr
-L_0201cf2c:
-    add r2, r2, #0x1
-    cmp r2, #0x8
-    blo L_0201cf0c
-    ldr r0, =0xffff
-    bx lr
+/* Searches an 8 entry table of object pointers for the entry whose u16 field
+   at byte offset 0x180 equals the low byte of the key. Returns the index of
+   the match, or 0xffff when there is none. */
+s32 func_0201cf04(s32 *table, s32 key) {
+    u32 i;
+    u32 target = key & 0xff;
+    for (i = 0; i < 8; i++) {
+        s32 *p = table[i];
+        if (p != 0 && target == *(u16 *) ((s8 *) p + 0x180)) {
+            return i;
+        }
+    }
+    return 0xffff;
 }
-// clang-format on

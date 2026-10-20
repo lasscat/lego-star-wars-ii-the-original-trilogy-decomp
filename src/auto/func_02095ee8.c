@@ -1,19 +1,25 @@
 #include "m2c.h"
 
-/* Uses instructions the compiler never generates: written in assembly. */
-// clang-format off
-asm void func_02095ee8(s32 a0, s32 a1, s32 a2) {
-    cmp r1, r2
-    bxeq lr
-    cmp r1, #0xa
-    cmpne r2, #0xa
-    bxeq lr
-    mov r3, #0xa
-    mla r0, r2, r3, r0
-    mov r2, #0x64
-    strb r2, [r1, r0]
-    add r0, r0, r1
-    strb r2, [r0, #0x64]
-    bx lr
+/* Reconstructed from USA ARM9 at 0x02095ee8 (48 bytes).
+ *
+ * The function marks two cells of a 10-wide byte grid with the value 100:
+ * the cell at (a1 + a0 + a2 * 10) and the cell 100 bytes further on.
+ * a0 is the grid base, a1 and a2 are grid coordinates; a coordinate of 10
+ * (out of range) and the diagonal a1 == a2 are rejected.
+ */
+void func_02095ee8(s32 a0, s32 a1, s32 a2) {
+    u8 *p = (u8 *) a1;
+    u8 *q;
+    s32 idx;
+
+    if (a1 == a2) {
+        return;
+    }
+    if (a1 == 0xA || a2 == 0xA) {
+        return;
+    }
+    idx    = a0 + a2 * 10;
+    p[idx] = 100;
+    q      = (u8 *) (idx + a1);
+    q[100] = 100;
 }
-// clang-format on
