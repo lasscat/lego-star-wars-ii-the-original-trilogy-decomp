@@ -1,33 +1,31 @@
 #include "m2c.h"
 
-/* Uses instructions the compiler never generates: written in assembly. */
-// clang-format off
-asm void func_020ad13c(s32 a0, s32 a1, s32 a2, s32 a3) {
-    stmdb sp!, {r0, r1, r2, r3}
-    stmdb sp!, {r3}
-    sub sp, sp, #0x4
-    ldr r3, [r1, #0x154]
-    ldr r2, [sp, #0x10]
-    str r3, [r0, #0x0]
-    ldr r0, [r1, #0x154]
-    ldr r3, [r1, #0x158]
-    cmp r0, r2
-    ldreq r0, [r1, #0x158]
-    str r3, [sp, #0x0]
-    cmpeq r0, r3
-    addeq sp, sp, #0x4
-    ldmeqia sp!, {r3}
-    addeq sp, sp, #0x10
-    bxeq lr
-    ldr r2, [sp, #0x10]
-    ldr r0, [sp, #0x0]
-    str r2, [r1, #0x154]
-    str r0, [r1, #0x158]
-    mvn r0, #0x0
-    str r0, [r1, #0x160]
-    add sp, sp, #0x4
-    ldmfd sp!, {r3}
-    add sp, sp, #0x10
-    bx lr
+/* The prologue "push {r0, r1, r2, r3}" is MWCC's argument home area, created
+ * only for variadic functions.  The third argument is a 4 byte aggregate, so
+ * MWCC keeps it in its home slot ([sp+0x10]) instead of a register and the
+ * callee reloads it from there.
+ *
+ * The field at +0x158 is read through a volatile pointer, so the second read
+ * inside the branch cannot be folded into the first one and the comparison
+ * survives.  The volatile local "t" gives the 4 byte stack slot that holds
+ * the value which is written back to +0x158 at the end. */
+typedef struct {
+    s32 v;
+} Val;
+
+void func_020ad13c(s32 *out, s32 *p, Val a2, ...) {
+    volatile s32 t;
+    s32 b;
+
+    *out = *(s32 *) ((char *) p + 0x154);
+    b    = *(volatile s32 *) ((char *) p + 0x158);
+    t    = b;
+    if (*(s32 *) ((char *) p + 0x154) == a2.v) {
+        if (*(s32 *) ((char *) p + 0x158) == b) {
+            return;
+        }
+    }
+    *(s32 *) ((char *) p + 0x154)          = a2.v;
+    *(volatile s32 *) ((char *) p + 0x158) = t;
+    *(s32 *) ((char *) p + 0x160)          = -1;
 }
-// clang-format on

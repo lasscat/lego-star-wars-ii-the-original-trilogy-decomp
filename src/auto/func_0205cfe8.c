@@ -1,36 +1,35 @@
 #include "m2c.h"
 
-/* Uses instructions the compiler never generates: written in assembly. */
-// clang-format off
-asm s32 func_0205cfe8(s32 a0, s32 a1, s32 a2, s32 a3, s32 a4) {
-    stmdb   sp!, {r3, lr}
-    ldr     ip, [sp, #0x8]
-    cmp     ip, #0x4
-    ldreqb  ip, [r0, #0x2a]
-    streq   ip, [sp, #0x8]
-    ldr     lr, [sp, #0x8]
-    mov     ip, #0xa
-    mla     r0, lr, ip, r0
-    ldrh    ip, [r0, #0x4]
-    mov     r0, #0x0
-    tst     ip, #0x40
-    beq     L_0205cfe834
-    ldr     r0, [r1, #0x0]
-    sub     r0, r0, #0x1
-    cmp     r0, r2
-    sublt   r0, r3, #0x1
-    str     r0, [r1, #0x0]
-    mov     r0, #0x1
-    ldmfd   sp!, {r3, pc}
-L_0205cfe834:
-    tst     ip, #0x80
-    ldmeqia sp!, {r3, pc}
-    ldr     r0, [r1, #0x0]
-    add     r0, r0, #0x1
-    cmp     r0, r3
-    movne   r2, r0
-    str     r2, [r1, #0x0]
-    mov     r0, #0x1
-    ldmfd   sp!, {r3, pc}
+/* Scrolls the selection index stored at *counter within [lo, hi),
+ * using the flags of entry `idx` of the 10-byte-entry table at `table`.
+ * Entry index 4 is indirected through the byte at table + 0x2a. */
+s32 func_0205cfe8(u8 *table, s32 *counter, s32 lo, s32 hi, s32 idx) {
+    u16 flags;
+    s32 value;
+    s32 wrapped;
+    s32 result;
+
+    if (idx == 4) {
+        idx = *(u8 *) (table + 0x2a);
+    }
+    flags = *(u16 *) (table + idx * 10 + 4);
+
+    result = 0;
+    if (flags & 0x40) {
+        value = *counter - 1;
+        if (value < lo) {
+            value = hi - 1;
+        }
+        *counter = value;
+        result   = 1;
+    } else if (flags & 0x80) {
+        value   = *counter + 1;
+        wrapped = lo;
+        if (value != hi) {
+            wrapped = value;
+        }
+        *counter = wrapped;
+        result   = 1;
+    }
+    return result;
 }
-// clang-format on

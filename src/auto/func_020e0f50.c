@@ -1,42 +1,61 @@
 #include "m2c.h"
 
-/* Uses instructions the compiler never generates: written in assembly. */
-// clang-format off
-asm s32 func_020e0f50(s32 a0, s32 a1) {
-    cmp     r0, #0x0
-    beq     L_020e0f68
-    ldr     r3, [r0, #0x4]
-    mov     r2, r3, lsl #0x16
-    movs    r2, r2, lsr #0x1d
-    bne     L_020e0f70
-L_020e0f68:
-    mov     r0, #0x0
-    bx      lr
-L_020e0f70:
-    mov     r2, r3, lsl #0x14
-    movs    r2, r2, lsr #0x1e
-    beq     L_020e0f90
-    cmp     r2, #0x1
-    beq     L_020e0fb8
-    cmp     r2, #0x2
-    moveq   r1, #0x1
-    b       L_020e0fbc
-L_020e0f90:
-    cmp     r1, #0x0
-    ble     L_020e0fa8
-    bic     r2, r3, #0xc00
-    orr     r2, r2, #0x800
-    str     r2, [r0, #0x4]
-    b       L_020e0fbc
-L_020e0fa8:
-    biclt   r2, r3, #0xc00
-    orrlt   r2, r2, #0x400
-    strlt   r2, [r0, #0x4]
-    b       L_020e0fbc
-L_020e0fb8:
-    mvn     r1, #0x0
-L_020e0fbc:
-    mov     r0, r1
-    bx      lr
+/* Metrowerks MSL file modes (only the fields used here are needed).
+ * The bit layout has to match the one the game was built with:
+ *   open_mode:2 io_mode:3 buffer_mode:2 file_kind:3 file_orientation:2 binary_io:1
+ */
+typedef struct {
+    u32 open_mode : 2;
+    u32 io_mode : 3;
+    u32 buffer_mode : 2;
+    u32 file_kind : 3;
+    u32 file_orientation : 2;
+    u32 binary_io : 1;
+} __file_modes;
+
+typedef struct {
+    s32 handle;
+    __file_modes mMode;
+} FILE;
+
+enum __file_orientation {
+    __unoriented,
+    __char_oriented,
+    __wide_oriented
+};
+
+enum __file_kinds {
+    __closed_file,
+    __disk_file,
+    __console_file,
+    __unavailable_file
+};
+
+/* The C library's fwide(): set/query the orientation of a stream. */
+s32 func_020e0f50(FILE *stream, s32 mode) {
+    s32 res;
+    s32 orientation;
+
+    if (stream == NULL || stream->mMode.file_kind == __closed_file) {
+        return 0;
+    }
+
+    orientation = stream->mMode.file_orientation;
+    switch (orientation) {
+        case __unoriented:
+            if (mode > 0) {
+                stream->mMode.file_orientation = __wide_oriented;
+            } else if (mode < 0) {
+                stream->mMode.file_orientation = __char_oriented;
+            }
+            res = mode;
+            break;
+        case __wide_oriented:
+            res = 1;
+            break;
+        case __char_oriented:
+            res = -1;
+            break;
+    }
+    return res;
 }
-// clang-format on

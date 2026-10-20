@@ -1,38 +1,21 @@
 #include "m2c.h"
 
-extern u32 data_020fdbc4[];
-extern u32 data_020fdeec[];
-extern void lr();
+extern M2C_UNK data_020fdbc4;
+extern M2C_UNK data_020fdeec;
 
-/* Uses instructions the compiler never generates: written in assembly. */
-// clang-format off
-asm s32 func_02033d68(s32 a0) {
-    stmdb   sp!, {r0, r1, r2, r3}
-    stmdb   sp!, {r3, lr}
-    ldr     r3, =data_020fdbc4
-    mov lr, #0x0
-    str r3, [r0, #0x0]
-    str r1, [r0, #0x4]
-    strb lr, [r0, #0xc]
-    ldr     r1, =data_020fdeec
-    strb lr, [r0, #0xd]
-    str r1, [r0, #0x0]
-    ldr r1, [r2, #0x0]
-    ldr r3, [sp, #0x14]
-    str r1, [r0, #0x10]
-    ldr ip, [r2, #0x4]
-    ldrh r1, [sp, #0x18]
-    str ip, [r0, #0x14]
-    ldr r2, [r2, #0x8]
-    str r2, [r0, #0x18]
-    str lr, [r0, #0x1c]
-    str lr, [r0, #0x20]
-    str lr, [r0, #0x24]
-    str lr, [r0, #0x28]
-    str r3, [r0, #0x2c]
-    strh r1, [r0, #0x30]
-    ldmfd   sp!, {r3, lr}
-    add sp, sp, #0x10
-    bx lr
+void func_02033d68(u8 *a0, s32 a1, s32 *a2, s32 a3, u16 a4, ...) {
+    M2C_FIELD(a0, M2C_UNK **, 0x0) = &data_020fdbc4;
+    M2C_FIELD(a0, s32 *, 0x4)      = a1;
+    M2C_FIELD(a0, u8 *, 0xc)       = 0;
+    M2C_FIELD(a0, u8 *, 0xd)       = 0;
+    M2C_FIELD(a0, M2C_UNK **, 0x0) = &data_020fdeec;
+    M2C_FIELD(a0, s32 *, 0x10)     = a2[0];
+    M2C_FIELD(a0, s32 *, 0x14)     = a2[1];
+    M2C_FIELD(a0, s32 *, 0x18)     = a2[2];
+    M2C_FIELD(a0, s32 *, 0x1c)     = 0;
+    M2C_FIELD(a0, s32 *, 0x20)     = 0;
+    M2C_FIELD(a0, s32 *, 0x24)     = 0;
+    M2C_FIELD(a0, s32 *, 0x28)     = 0;
+    M2C_FIELD(a0, s32 *, 0x2c)     = *(s32 *) &a3;
+    M2C_FIELD(a0, u16 *, 0x30)     = *(u16 *) &a4;
 }
-// clang-format on

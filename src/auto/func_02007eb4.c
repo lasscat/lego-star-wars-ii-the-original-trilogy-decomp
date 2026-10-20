@@ -1,34 +1,29 @@
 #include "m2c.h"
 
-/* Uses instructions the compiler never generates: written in assembly. */
-// clang-format off
-asm void func_02007eb4(s32 a0, s32 a1, s32 a2) {
-    stmdb   sp!, {r3, lr}
-    ldr     r3, [r2, #0x8]
-    ldr     ip, [r1, #0x8]
-    ldr     lr, [r1, #0x0]
-    sub     r3, ip, r3
-    smull   ip, r1, r3, r3
-    ldr     r2, [r2, #0x0]
-    ldr     r3, =0x40002b0
-    sub     r2, lr, r2
-    smlal   ip, r1, r2, r2
-    mov     r2, #0x1
-    mov     r1, r1, lsl #0x2
-    strh    r2, [r3, #0x0]
-    mov     r2, ip, lsl #0x2
-    str     r2, [r3, #0x8]
-    orr     r1, r1, ip, lsr #0x1e
-    str     r1, [r3, #0xc]
-L_02007ef8:
-    ldrh    r1, [r3, #0x0]
-    tst     r1, #0x8000
-    bne     L_02007ef8
-    ldr     r1, =0x40002b4
-    ldr     r1, [r1, #0x0]
-    add     r1, r1, #0x1
-    mov     r1, r1, lsr #0x1
-    str     r1, [r0, #0x0]
-    ldmfd   sp!, {r3, pc}
+/* The NDS ARM9 coprocessor (CP) block:
+ *   0x040002B0  u16  command / status (bit 15 = busy)
+ *   0x040002B4  u32  result
+ *   0x040002B8  u64  square root input (32.32 fixed point)
+ */
+typedef struct {
+    u16 mode;
+    u16 pad;
+    u32 result;
+    u64 input;
+} CPRegs;
+
+/* Squared distance of two fixed point positions, square rooted in hardware:
+ * the 64 bit sum of squares is written to the CP as a 32.32 value (<< 2),
+ * the square root is started, and the result is halved. */
+void func_02007eb4(u32 *out, s32 *a1, volatile s32 *a2) {
+    volatile CPRegs *cp = (CPRegs *) 0x40002B0;
+    s32 dz              = a1[2] - a2[2];
+    s32 dx              = a1[0] - a2[0];
+    s64 d               = (s64) dx * dx;
+    d += (s64) dz * dz;
+    cp->mode  = 1;
+    cp->input = d << 2;
+    while (cp->mode & 0x8000) {
+    }
+    *out = (*((volatile u32 *) 0x40002B4) + 1) / 2;
 }
-// clang-format on
