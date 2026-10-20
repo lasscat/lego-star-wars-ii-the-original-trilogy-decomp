@@ -14294,3 +14294,59 @@ src/auto/func_0208830c.c:
 src/auto/func_0208d64c.c:
     complete
     .text       start:0x0208d64c end:0x0208d710
+
+src/auto/func_02007eb4.c:
+    complete
+    .text       start:0x02007eb4 end:0x02007f24
+
+src/auto/func_0200aef8.c:
+    complete
+    .text       start:0x0200aef8 end:0x0200af6c
+
+src/auto/func_0201c5e0.c:
+    complete
+    .text       start:0x0201c5e0 end:0x0201c654
+
+src/auto/func_0204f4c8.c:
+    complete
+    .text       start:0x0204f4c8 end:0x0204f53c
+
+src/auto/func_0205cf78.c:
+    complete
+    .text       start:0x0205cf78 end:0x0205cfe8
+
+src/auto/func_0205cfe8.c:
+    complete
+    .text       start:0x0205cfe8 end:0x0205d058
+
+src/auto/func_02060084.c:
+    complete
+    .text       start:0x02060084 end:0x020600f0
+
+src/auto/func_020832d0.c:
+    complete
+    .text       start:0x020832d0 end:0x02083340
+
+src/auto/func_0208345c.c:
+    complete
+    .text       start:0x0208345c end:0x020834c8
+
+src/auto/func_020b861c.c:
+    complete
+    .text       start:0x020b861c end:0x020b8688
+
+src/auto/func_020bb388.c:
+    complete
+    .text       start:0x020bb388 end:0x020bb3f8
+
+src/auto/func_020e0f50.c:
+    complete
+    .text       start:0x020e0f50 end:0x020e0fc4
+
+src/auto/OS_SetProtectionRegion2.c:
+    complete
+    .text       start:0x020ce3d0 end:0x020ce3d8
+
+src/auto/func_020e3fa8.c:
+    complete
+    .text       start:0x020e3fa8 end:0x020e3fb0
