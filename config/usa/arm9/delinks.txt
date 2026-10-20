@@ -6622,6 +6622,10 @@ src/auto/func_020bd98c.c:
     complete
     .text       start:0x020bd98c end:0x020bd9b0
 
+src/auto/func_020bd9b0.c:
+    complete
+    .text       start:0x020bd9b0 end:0x020bda0c
+
 src/auto/func_020bda0c.c:
     complete
     .text       start:0x020bda0c end:0x020bdad8
@@ -6629,6 +6633,10 @@ src/auto/func_020bda0c.c:
 src/auto/func_020bdcfc.c:
     complete
     .text       start:0x020bdcfc end:0x020bdd20
+
+src/auto/func_020bdd20.c:
+    complete
+    .text       start:0x020bdd20 end:0x020bdd74
 
 src/auto/func_020bdfa8.c:
     complete
@@ -7329,6 +7337,10 @@ src/auto/GXS_LoadOAM.c:
 src/auto/GX_LoadOBJ.c:
     complete
     .text       start:0x020cb8ec end:0x020cb944
+
+src/auto/GXS_LoadOBJ.c:
+    complete
+    .text       start:0x020cb944 end:0x020cb99c
 
 src/auto/func_020cb99c.c:
     complete
