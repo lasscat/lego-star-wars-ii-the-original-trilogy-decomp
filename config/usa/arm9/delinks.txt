@@ -230,6 +230,10 @@ src/auto/func_0200c6d4.c:
     complete
     .text       start:0x0200c6d4 end:0x0200c724
 
+src/auto/func_0200c7dc.c:
+    complete
+    .text       start:0x0200c7dc end:0x0200c834
+
 src/auto/func_0200c834.c:
     complete
     .text       start:0x0200c834 end:0x0200c848
@@ -437,6 +441,10 @@ src/auto/func_02017b54.c:
 src/auto/func_02017e88.c:
     complete
     .text       start:0x02017e88 end:0x02017e8c
+
+src/auto/func_02017fb8.c:
+    complete
+    .text       start:0x02017fb8 end:0x02018010
 
 src/auto/func_0201811c.c:
     complete
