@@ -12085,3 +12085,7 @@ src/auto/func_02075614.c:
 src/auto/RtcWaitBusy.c:
     complete
     .text       start:0x020d4be8 end:0x020d4c04
+
+src/auto/func_020cf544.c:
+    complete
+    .text       start:0x020cf544 end:0x020cf624
