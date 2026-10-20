@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v7
@@ -19,6 +21,19 @@ jobs:
 
       - name: Install pre-commit
         run: pip install pre-commit
+
+      - name: Check source policy across the whole change
+        env:
+          SOURCE_POLICY_BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: |
+          base="$SOURCE_POLICY_BASE"
+          if [[ "$base" =~ ^0+$ ]]; then
+            base=$(git hash-object -w -t tree /dev/null)
+          fi
+          python tools/check_source_policy.py --base "$base"
+
+      - name: Test source-policy guard
+        run: python -m unittest discover -s tools/tests -p 'test_source_policy.py'
 
       - name: Cache pre-commit hooks
         uses: actions/cache@v6

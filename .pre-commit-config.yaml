@@ -1,5 +1,14 @@
 exclude: ^\.studio/  # queue data of DS Decomp Studio (clang-format would reformat the JSON)
 repos:
+  - repo: local
+    hooks:
+      - id: source-policy
+        name: Require human approval for new or changed assembly
+        entry: python tools/check_source_policy.py --staged
+        language: python
+        pass_filenames: false
+        always_run: true
+
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v5.0.0
     hooks:
