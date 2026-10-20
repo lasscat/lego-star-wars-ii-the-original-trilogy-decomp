@@ -6626,6 +6626,10 @@ src/auto/func_020ba9b0.c:
     complete
     .text       start:0x020ba9b0 end:0x020ba9f0
 
+src/auto/func_020bae80.c:
+    complete
+    .text       start:0x020bae80 end:0x020baedc
+
 src/auto/func_020baedc.c:
     complete
     .text       start:0x020baedc end:0x020baef0
@@ -7121,6 +7125,10 @@ src/auto/func_020c3d38.c:
 src/auto/NNS_G3dPlttLoad.c:
     complete
     .text       start:0x020c3d40 end:0x020c3d90
+
+src/auto/func_020c4070.c:
+    complete
+    .text       start:0x020c4070 end:0x020c40e0
 
 src/auto/NNS_G3dGlbInit.c:
     complete
