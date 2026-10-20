@@ -338,6 +338,10 @@ src/auto/func_020101e8.c:
     complete
     .text       start:0x020101e8 end:0x02010338
 
+src/auto/func_02010aa4.c:
+    complete
+    .text       start:0x02010aa4 end:0x02010af0
+
 src/auto/func_02010c04.c:
     complete
     .text       start:0x02010c04 end:0x02010c08
@@ -481,6 +485,10 @@ src/auto/func_02018a6c.c:
 src/auto/func_02019418.c:
     complete
     .text       start:0x02019418 end:0x02019450
+
+src/auto/func_02019450.c:
+    complete
+    .text       start:0x02019450 end:0x02019498
 
 src/auto/func_020199bc.c:
     complete
@@ -2033,6 +2041,10 @@ src/auto/func_020534e0.c:
 src/auto/func_020534f4.c:
     complete
     .text       start:0x020534f4 end:0x0205353c
+
+src/auto/func_0205353c.c:
+    complete
+    .text       start:0x0205353c end:0x0205357c
 
 src/auto/func_0205357c.c:
     complete

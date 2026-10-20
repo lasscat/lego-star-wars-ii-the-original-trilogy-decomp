@@ -275,3 +275,4 @@ src/auto/func_020755d8.c 2.0/sp1p5 -O3
 src/auto/func_02075640.c 2.0/sp1p5 -O3
 src/auto/func_0201c560.c 2.0/sp1p5 -O3
 src/auto/func_02032af8.c 2.0/sp1p5 -flag no-opt_common_subs
+src/auto/func_02019450.c 2.0/sp1p5 -O1,p
