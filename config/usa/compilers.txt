@@ -274,3 +274,4 @@ src/auto/func_02001900.c 2.0/sp1p5 -flag no-opt_rebuildconditionals
 src/auto/func_020755d8.c 2.0/sp1p5 -O3
 src/auto/func_02075640.c 2.0/sp1p5 -O3
 src/auto/func_0201c560.c 2.0/sp1p5 -O3
+src/auto/func_02032af8.c 2.0/sp1p5 -flag no-opt_common_subs
