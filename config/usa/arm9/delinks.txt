@@ -12069,3 +12069,19 @@ src/auto/func_02055d0c.c:
 src/auto/func_02075fe0.c:
     complete
     .text       start:0x02075fe0 end:0x02076008
+
+src/auto/func_0208da5c.c:
+    complete
+    .text       start:0x0208da5c end:0x0208da74
+
+src/auto/func_0208c638.c:
+    complete
+    .text       start:0x0208c638 end:0x0208c674
+
+src/auto/func_02075614.c:
+    complete
+    .text       start:0x02075614 end:0x02075640
+
+src/auto/RtcWaitBusy.c:
+    complete
+    .text       start:0x020d4be8 end:0x020d4c04
