@@ -20,6 +20,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import project  # noqa: E402  (this game's version, ROM name, paths: tools/project.py)
+import check_source_policy  # noqa: E402
 REPORT = project.REPORT
 SYMBOLS = project.SYMBOLS
 README = ROOT / "README.md"
@@ -191,6 +192,30 @@ def part_of(path: str) -> str:
     return f"Game code: `{'/'.join(parts[:2])}/`" if len(parts) > 2 else "Game code"
 
 
+def c_source_measures(report: dict, root: Path = ROOT) -> tuple[int, int]:
+    """Return matched code bytes/functions from source units without assembly.
+
+    A whole source unit is excluded when it contains inline or standalone
+    assembly. This is conservative for mixed C/assembly files and keeps the
+    existing mechanical match totals unchanged.
+    """
+    matched_code = matched_functions = 0
+    for unit in source_units(report):
+        path = unit["metadata"].get("source_path") or unit.get("name", "")
+        if not path:
+            continue
+        try:
+            source = (root / path).read_bytes()
+        except OSError:
+            continue
+        if check_source_policy.needs_approval(path, source):
+            continue
+        measures = unit["measures"]
+        matched_code += int(measures.get("matched_code", 0) or 0)
+        matched_functions += int(measures.get("matched_functions", 0) or 0)
+    return matched_code, matched_functions
+
+
 def config_report() -> dict:
     """The same measures as objdiff's report.json, read from the configuration only (delinks.txt + symbols.txt of
     every module): a function is matched when it lies in a `complete` file. Seconds instead of a full build, and
@@ -247,6 +272,7 @@ def cmd_progress(args):
     report = load_report(True) if args.rebuild else (load_report(False) if fresh_report() else config_report())
     m = report["measures"]
     code, data = pct(m, "matched_code_percent"), pct(m, "matched_data_percent")
+    c_code, c_functions = c_source_measures(report)
     parts = {}
     for u in source_units(report):
         path = u["metadata"].get("source_path", u["name"])
@@ -257,9 +283,12 @@ def cmd_progress(args):
         row[2] += int(um.get("total_functions", 0))
         row[3] += int(um.get("matched_code", 0) or 0)
     total_code = int(m.get("total_code", 0) or 0)
+    c_code_percent = 100 * c_code / total_code if total_code else 0
     lines = ["<!-- progress:start -->",
              f"{bar(code)} **{code:.2f}%** of the code matched · data {data:.2f}% · "
              f"{m.get('matched_functions', 0)}/{m['total_functions']} functions",
+             f"**C-only source coverage:** {c_code_percent:.2f}% of code · "
+             f"{c_functions}/{m['total_functions']} functions (assembly-bearing source units excluded)",
              "",
              "| Part of the code | Files | Functions | Share of all code |",
              "|---|---|---|---|"]
@@ -281,7 +310,9 @@ def cmd_progress(args):
         at = mm.start() if mm else len(text)
         new = text[:at].rstrip("\n") + "\n\n## Progress\n\n" + block + "\n\n" + text[at:]
     README.write_text(new, encoding="utf-8", newline="\n")
-    print(f"README.md progress updated: {code:.2f}% code, {m.get('matched_functions', 0)}/{m['total_functions']} functions")
+    print(f"README.md progress updated: {code:.2f}% mechanical code, "
+          f"{c_code_percent:.2f}% C-only source coverage, "
+          f"{m.get('matched_functions', 0)}/{m['total_functions']} functions")
 
 
 def main():
