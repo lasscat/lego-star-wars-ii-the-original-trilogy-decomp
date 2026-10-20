@@ -1,6 +1,6 @@
 #include "m2c.h"
 
-s32 func_020ccb34(s32 arg0) {
+s32 OS_DisableIrqMask(s32 arg0) {
     volatile u16 *p;
     u16 temp_r2;
     s32 temp_r1;

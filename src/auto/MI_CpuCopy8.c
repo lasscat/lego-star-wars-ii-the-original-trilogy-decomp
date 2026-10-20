@@ -6,7 +6,7 @@ typedef unsigned char u8;
 typedef unsigned short u16;
 /* MI_CpuCopyU8 from https://github.com/GoldieLeGenie/DQIV-DECOMP libs/NitroSDK/src/mi/cpumem.c (license: none) */
 // clang-format off
-asm void func_020cf3dc(register const void* src, register void* dest, register u32 count) {
+asm void MI_CpuCopy8(register const void* src, register void* dest, register u32 count) {
     cmp     r2, #0x0
     bxeq    lr
     tst     r1, #0x1

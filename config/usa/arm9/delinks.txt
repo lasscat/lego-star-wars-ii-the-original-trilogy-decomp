@@ -11857,7 +11857,7 @@ src/auto/func_0205ccf8.c:
     complete
     .text       start:0x0205ccf8 end:0x0205cd20
 
-src/auto/func_020c6694.c:
+src/auto/NNSi_G3dGetTexPatAnmDataByIdx.c:
     complete
     .text       start:0x020c6694 end:0x020c66b0
 
@@ -11875,11 +11875,11 @@ src/auto/func_02090730.c:
     complete
     .text       start:0x02090730 end:0x0209075c
 
-src/auto/func_020c228c.c:
+src/auto/InitMBlock.c:
     complete
     .text       start:0x020c228c end:0x020c22b8
 
-src/auto/func_020ccb34.c:
+src/auto/OS_DisableIrqMask.c:
     complete
     .text       start:0x020ccb34 end:0x020ccb64
 
@@ -11959,31 +11959,31 @@ src/auto/func_020a98e4.c:
     complete
     .text       start:0x020a98e4 end:0x020a98f8
 
-src/auto/func_020ce868.c:
+src/auto/OS_SpinWait.c:
     complete
     .text       start:0x020ce868 end:0x020ce878
 
-src/auto/func_020cf19c.c:
+src/auto/MIi_CpuClear16.c:
     complete
     .text       start:0x020cf19c end:0x020cf1b8
 
-src/auto/func_020cf1b8.c:
+src/auto/MIi_CpuCopy16.c:
     complete
     .text       start:0x020cf1b8 end:0x020cf1d8
 
-src/auto/func_020cf1d8.c:
+src/auto/MIi_CpuClear32.c:
     complete
     .text       start:0x020cf1d8 end:0x020cf1f0
 
-src/auto/func_020cf1f0.c:
+src/auto/MIi_CpuCopy32.c:
     complete
     .text       start:0x020cf1f0 end:0x020cf20c
 
-src/auto/func_020cf20c.c:
+src/auto/MIi_CpuSend32.c:
     complete
     .text       start:0x020cf20c end:0x020cf228
 
-src/auto/func_020cf228.c:
+src/auto/MIi_CpuClearFast.c:
     complete
     .text       start:0x020cf228 end:0x020cf27c
 
@@ -11995,15 +11995,15 @@ src/auto/func_020cf2bc.c:
     complete
     .text       start:0x020cf2bc end:0x020cf2d8
 
-src/auto/func_020cf318.c:
+src/auto/MI_Copy64B.c:
     complete
     .text       start:0x020cf318 end:0x020cf344
 
-src/auto/func_020cf344.c:
+src/auto/MI_CpuFill8.c:
     complete
     .text       start:0x020cf344 end:0x020cf3dc
 
-src/auto/func_020cf3dc.c:
+src/auto/MI_CpuCopy8.c:
     complete
     .text       start:0x020cf3dc end:0x020cf518
 

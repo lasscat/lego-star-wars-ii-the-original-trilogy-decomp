@@ -6,7 +6,7 @@ typedef unsigned char u8;
 typedef unsigned short u16;
 /* MI_CpuFillFromSrc from https://github.com/GoldieLeGenie/DQIV-DECOMP libs/NitroSDK/src/mi/cpumem.c (license: none) */
 // clang-format off
-asm void func_020cf20c(register const u32* src, register u32* dest, register u32 count) {
+asm void MIi_CpuSend32(register const u32* src, register u32* dest, register u32 count) {
     add     ip, r0, r2
     b       L_020cf214
 L_020cf214:

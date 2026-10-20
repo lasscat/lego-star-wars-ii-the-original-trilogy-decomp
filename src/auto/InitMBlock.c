@@ -1,6 +1,6 @@
 #include "m2c.h"
 
-void *func_020c228c(void *arg0, u16 arg1) {
+void *InitMBlock(void *arg0, u16 arg1) {
     u8 *p = *(u8 **) arg0;
     s32 v;
     *(u16 *) p         = arg1;
