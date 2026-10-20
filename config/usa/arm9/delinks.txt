@@ -350,6 +350,10 @@ src/auto/func_020101e8.c:
     complete
     .text       start:0x020101e8 end:0x02010338
 
+src/auto/func_020108f4.c:
+    complete
+    .text       start:0x020108f4 end:0x02010954
+
 src/auto/func_02010aa4.c:
     complete
     .text       start:0x02010aa4 end:0x02010af0
@@ -1305,6 +1309,10 @@ src/auto/func_0202db24.c:
 src/auto/func_0202db74.c:
     complete
     .text       start:0x0202db74 end:0x0202db94
+
+src/auto/func_0202db94.c:
+    complete
+    .text       start:0x0202db94 end:0x0202dbf4
 
 src/auto/func_0202f784.c:
     complete
