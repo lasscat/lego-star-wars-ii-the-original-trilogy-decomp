@@ -122,6 +122,10 @@ src/auto/func_02004b78.c:
     complete
     .text       start:0x02004b78 end:0x02004b88
 
+src/auto/func_02005654.c:
+    complete
+    .text       start:0x02005654 end:0x02005698
+
 src/auto/func_02006360.c:
     complete
     .text       start:0x02006360 end:0x0200636c
@@ -1045,6 +1049,10 @@ src/auto/func_0202897c.c:
 src/auto/func_02028ea8.c:
     complete
     .text       start:0x02028ea8 end:0x02028f04
+
+src/auto/func_0202915c.c:
+    complete
+    .text       start:0x0202915c end:0x02029198
 
 src/auto/func_02029198.c:
     complete
@@ -3306,6 +3314,10 @@ src/auto/func_02060e50.c:
     complete
     .text       start:0x02060e50 end:0x02060e6c
 
+src/auto/func_02060fa4.c:
+    complete
+    .text       start:0x02060fa4 end:0x02060fe4
+
 src/auto/func_020610bc.c:
     complete
     .text       start:0x020610bc end:0x020610e4
@@ -3341,6 +3353,10 @@ src/auto/func_02062778.c:
 src/auto/func_020627b0.c:
     complete
     .text       start:0x020627b0 end:0x020627d4
+
+src/auto/func_020627d4.c:
+    complete
+    .text       start:0x020627d4 end:0x02062814
 
 src/auto/func_020628f4.c:
     complete
@@ -7853,6 +7869,10 @@ src/auto/func_020d3a08.c:
 src/auto/PMi_DummyCallback.c:
     complete
     .text       start:0x020d3a84 end:0x020d3a8c
+
+src/auto/func_020d3a8c.c:
+    complete
+    .text       start:0x020d3a8c end:0x020d3acc
 
 src/auto/PMi_ReadRegister.c:
     complete
