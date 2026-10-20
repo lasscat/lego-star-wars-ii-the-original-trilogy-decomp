@@ -2506,6 +2506,10 @@ src/auto/func_02057774.c:
     complete
     .text       start:0x02057774 end:0x02057788
 
+src/auto/func_0205780c.c:
+    complete
+    .text       start:0x0205780c end:0x02057880
+
 src/auto/func_02057a08.c:
     complete
     .text       start:0x02057a08 end:0x02057a28
@@ -3049,6 +3053,10 @@ src/auto/func_0205c274.c:
 src/auto/func_0205c368.c:
     complete
     .text       start:0x0205c368 end:0x0205c37c
+
+src/auto/func_0205c4d4.c:
+    complete
+    .text       start:0x0205c4d4 end:0x0205c5d4
 
 src/auto/func_0205c5d4.c:
     complete
