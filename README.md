@@ -11,11 +11,11 @@ No game assets in this repository: see `extract/README.md`.
 ## Progress
 
 <!-- progress:start -->
-`█████░░░░░░░░░░░░░░░` **22.65%** of the code matched · data 0.00% · 3015/4764 functions
+`█████░░░░░░░░░░░░░░░` **22.66%** of the code matched · data 0.00% · 3019/4764 functions
 
 | Part of the code | Files | Functions | Share of all code |
 |---|---|---|---|
-| Auto-matched (raw m2c output, to clean up) | 3016 | 3015/3016 | 22.65% |
+| Auto-matched (raw m2c output, to clean up) | 3020 | 3019/3020 | 22.66% |
 
 *Updated 2026-10-19 by `python tools/match.py progress` ([DS Decomp Studio](https://github.com/liolu/ds-decomp-studio)). A function counts only when it compiles to the exact same bytes and the ROM still rebuilds byte for byte.*
 <!-- progress:end -->
