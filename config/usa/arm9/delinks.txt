@@ -2086,6 +2086,10 @@ src/auto/func_02054168.c:
     complete
     .text       start:0x02054168 end:0x02054178
 
+src/auto/func_0205427c.c:
+    complete
+    .text       start:0x0205427c end:0x0205435c
+
 src/auto/func_020548c4.c:
     complete
     .text       start:0x020548c4 end:0x02054900
@@ -3330,6 +3334,10 @@ src/auto/func_020636d4.c:
     complete
     .text       start:0x020636d4 end:0x020636fc
 
+src/auto/func_02063968.c:
+    complete
+    .text       start:0x02063968 end:0x02063a58
+
 src/auto/func_02063b38.c:
     complete
     .text       start:0x02063b38 end:0x02063b50
@@ -4502,6 +4510,10 @@ src/auto/func_02083964.c:
     complete
     .text       start:0x02083964 end:0x02083978
 
+src/auto/func_02083c08.c:
+    complete
+    .text       start:0x02083c08 end:0x02083cd8
+
 src/auto/func_02084b1c.c:
     complete
     .text       start:0x02084b1c end:0x02084b6c
@@ -5546,6 +5558,14 @@ src/auto/func_020a6f3c.c:
     complete
     .text       start:0x020a6f3c end:0x020a6f80
 
+src/auto/func_020a9308.c:
+    complete
+    .text       start:0x020a9308 end:0x020a9484
+
+src/auto/func_020a9484.c:
+    complete
+    .text       start:0x020a9484 end:0x020a95d4
+
 src/auto/func_020a97e0.c:
     complete
     .text       start:0x020a97e0 end:0x020a9804
@@ -6286,6 +6306,10 @@ src/auto/func_020b9c90.c:
     complete
     .text       start:0x020b9c90 end:0x020b9cc4
 
+src/auto/func_020b9cc4.c:
+    complete
+    .text       start:0x020b9cc4 end:0x020b9d94
+
 src/auto/func_020b9d94.c:
     complete
     .text       start:0x020b9d94 end:0x020b9de4
@@ -6746,6 +6770,10 @@ src/auto/NNSi_GfdAddNewFreeBlock.c:
     complete
     .text       start:0x020c30b4 end:0x020c3110
 
+src/auto/NNSi_GfdAllocLnkVramAligned.c:
+    complete
+    .text       start:0x020c3124 end:0x020c3264
+
 src/auto/NNS_GfdInitLnkTexVramManager.c:
     complete
     .text       start:0x020c33a8 end:0x020c3400
@@ -6901,6 +6929,18 @@ src/auto/NNSi_G3dGetTexPatAnmTexNameByIdx.c:
 src/auto/NNSi_G3dGetTexPatAnmPlttNameByIdx.c:
     complete
     .text       start:0x020c6610 end:0x020c6620
+
+src/auto/getMdlTrans_.c:
+    complete
+    .text       start:0x020c672c end:0x020c6794
+
+src/auto/GetMatColAnmuAlphaValue_.c:
+    complete
+    .text       start:0x020c72c8 end:0x020c73b4
+
+src/auto/GetTexSRTAnmSinCosVal_.c:
+    complete
+    .text       start:0x020c7618 end:0x020c7724
 
 src/auto/NNSi_G3dAnmCalcNsBta.c:
     complete
