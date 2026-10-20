@@ -5934,6 +5934,10 @@ src/auto/func_020a99a8.c:
     complete
     .text       start:0x020a99a8 end:0x020a99bc
 
+src/auto/func_020a99bc.c:
+    complete
+    .text       start:0x020a99bc end:0x020a9a24
+
 src/auto/func_020a9a24.c:
     complete
     .text       start:0x020a9a24 end:0x020a9a30
