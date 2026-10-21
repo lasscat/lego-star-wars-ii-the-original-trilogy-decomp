@@ -14018,3 +14018,64 @@ src/auto/texmtxCalc_flagT_.c:
 src/auto/HuffMakeSubsetHuffTree.c:
     complete
     .text       start:0x020d011c end:0x020d01fc
+
+src/auto/PXIi_HandlerRecvFifoNotEmpty.c:
+    complete
+    .text       start:0x020d1338 end:0x020d1450
+src/auto/MBi_SetRecvBufferFromChild.c:
+    complete
+    .text       start:0x020dd464 end:0x020dd580
+src/auto/func_02026464.c:
+    complete
+    .text       start:0x02026464 end:0x020265b4
+src/auto/func_0207d8f8.c:
+    complete
+    .text       start:0x0207d8f8 end:0x0207da48
+src/auto/MBi_get_blockinfo.c:
+    complete
+    .text       start:0x020da7bc end:0x020da870
+src/auto/FX_AtanIdx.c:
+    complete
+    .text       start:0x020c963c end:0x020c96f8
+src/auto/MBi_ReadIconInfo.c:
+    complete
+    .text       start:0x020dab5c end:0x020dabfc
+src/auto/MBi_ReadyBeaconSendStatus.c:
+    complete
+    .text       start:0x020dadb4 end:0x020dae54
+src/auto/MBi_MakeBlockInfoTable.c:
+    complete
+    .text       start:0x020da6f0 end:0x020da7bc
+src/auto/func_0205c37c.c:
+    complete
+    .text       start:0x0205c37c end:0x0205c4d4
+src/auto/func_02088014.c:
+    complete
+    .text       start:0x02088014 end:0x0208816c
+src/auto/NNSi_GfdFreeLnkVram.c:
+    complete
+    .text       start:0x020c3264 end:0x020c33a8
+src/auto/FSi_FindPath.c:
+    complete
+    .text       start:0x020d28c0 end:0x020d2a04
+src/auto/func_02034e24.c:
+    complete
+    .text       start:0x02034e24 end:0x02034f88
+src/auto/func_02073a00.c:
+    complete
+    .text       start:0x02073a00 end:0x02073b68
+src/auto/func_0208c360.c:
+    complete
+    .text       start:0x0208c360 end:0x0208c4c8
+src/auto/func_020887fc.c:
+    complete
+    .text       start:0x020887fc end:0x02088968
+src/auto/MBi_SetTask.c:
+    complete
+    .text       start:0x020dd1a4 end:0x020dd310
+src/auto/getTransDataEx_.c:
+    complete
+    .text       start:0x020c6948 end:0x020c6aa4
+src/auto/func_0206468c.c:
+    complete
+    .text       start:0x0206468c end:0x020647ec
