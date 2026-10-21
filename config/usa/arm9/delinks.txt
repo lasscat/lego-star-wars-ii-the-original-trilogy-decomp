@@ -14329,3 +14329,67 @@ src/auto/func_0201ca1c.c:
 src/auto/func_02028550.c:
     complete
     .text       start:0x02028550 end:0x020286dc
+
+src/auto/FSi_NextCommand.c:
+    complete
+    .text       start:0x020d2088 end:0x020d229c
+src/auto/func_02017310.c:
+    complete
+    .text       start:0x02017310 end:0x0201755c
+src/auto/func_0202765c.c:
+    complete
+    .text       start:0x0202765c end:0x020278ac
+src/auto/func_020380e4.c:
+    complete
+    .text       start:0x020380e4 end:0x020382d0
+src/auto/func_0204a1d4.c:
+    complete
+    .text       start:0x0204a1d4 end:0x0204a400
+src/auto/func_0206ed3c.c:
+    complete
+    .text       start:0x0206ed3c end:0x0206ef0c
+src/auto/func_0207d684.c:
+    complete
+    .text       start:0x0207d684 end:0x0207d8f8
+src/auto/func_02085658.c:
+    complete
+    .text       start:0x02085658 end:0x0208580c
+src/auto/func_0208837c.c:
+    complete
+    .text       start:0x0208837c end:0x02088574
+src/auto/func_0208896c.c:
+    complete
+    .text       start:0x0208896c end:0x02088b78
+src/auto/func_0208e874.c:
+    complete
+    .text       start:0x0208e874 end:0x0208ea58
+src/auto/func_020b37c0.c:
+    complete
+    .text       start:0x020b37c0 end:0x020b3998
+src/auto/func_020b8b1c.c:
+    complete
+    .text       start:0x020b8b1c end:0x020b8cd0
+src/auto/func_020e41e8.c:
+    complete
+    .text       start:0x020e41e8 end:0x020e43c4
+src/auto/MBi_CommParentSendDLFileInfo.c:
+    complete
+    .text       start:0x020d9580 end:0x020d9718
+src/auto/func_02068b90.c:
+    complete
+    .text       start:0x02068b90 end:0x02068d74
+src/auto/func_020b6308.c:
+    complete
+    .text       start:0x020b6308 end:0x020b650c
+src/auto/func_0203351c.c:
+    complete
+    .text       start:0x0203351c end:0x02033770
+src/auto/func_020782a8.c:
+    complete
+    .text       start:0x020782a8 end:0x020784b8
+src/auto/func_0209a824.c:
+    complete
+    .text       start:0x0209a824 end:0x0209aa78
+src/auto/func_020aaf54.c:
+    complete
+    .text       start:0x020aaf54 end:0x020ab1a8
