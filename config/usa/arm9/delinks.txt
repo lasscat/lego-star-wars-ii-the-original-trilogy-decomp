@@ -13538,3 +13538,95 @@ src/auto/func_0209007c.cpp:
 src/auto/func_020b0cd4.cpp:
     complete
     .text       start:0x020b0cd4 end:0x020b10a8
+
+src/auto/func_0206f5b4.cpp:
+    complete
+    .text       start:0x0206f5b4 end:0x0206f71c
+
+src/auto/func_020718d4.cpp:
+    complete
+    .text       start:0x020718d4 end:0x020719b4
+
+src/auto/func_02072620.cpp:
+    complete
+    .text       start:0x02072620 end:0x02072700
+
+src/auto/func_0201c478.cpp:
+    complete
+    .text       start:0x0201c478 end:0x0201c51c
+
+src/auto/func_0202c948.cpp:
+    complete
+    .text       start:0x0202c948 end:0x0202c9f0
+
+src/auto/func_02072700.cpp:
+    complete
+    .text       start:0x02072700 end:0x02072818
+
+src/auto/func_020976e0.cpp:
+    complete
+    .text       start:0x020976e0 end:0x020977f8
+
+src/auto/func_02094610.cpp:
+    complete
+    .text       start:0x02094610 end:0x0209468c
+
+src/auto/func_02094930.cpp:
+    complete
+    .text       start:0x02094930 end:0x020949b8
+
+src/auto/func_02072ad8.cpp:
+    complete
+    .text       start:0x02072ad8 end:0x02072bc8
+
+src/auto/func_02018e74.cpp:
+    complete
+    .text       start:0x02018e74 end:0x02018f68
+
+src/auto/func_020049cc.cpp:
+    complete
+    .text       start:0x020049cc end:0x02004acc
+
+src/auto/func_0206f748.cpp:
+    complete
+    .text       start:0x0206f748 end:0x0206f848
+
+src/auto/func_0207009c.cpp:
+    complete
+    .text       start:0x0207009c end:0x020701a0
+
+src/auto/func_0202fbbc.cpp:
+    complete
+    .text       start:0x0202fbbc end:0x0202fcc8
+
+src/auto/func_0205ce64.cpp:
+    complete
+    .text       start:0x0205ce64 end:0x0205cf50
+
+src/auto/func_020aa91c.cpp:
+    complete
+    .text       start:0x020aa91c end:0x020aaa08
+
+src/auto/func_020261fc.cpp:
+    complete
+    .text       start:0x020261fc end:0x02026318
+
+src/auto/func_0203b574.cpp:
+    complete
+    .text       start:0x0203b574 end:0x0203b698
+
+src/auto/func_0209679c.cpp:
+    complete
+    .text       start:0x0209679c end:0x02096828
+
+src/auto/func_020aa7c0.cpp:
+    complete
+    .text       start:0x020aa7c0 end:0x020aa84c
+
+src/auto/func_0205938c.cpp:
+    complete
+    .text       start:0x0205938c end:0x02059408
+
+src/auto/func_0205de08.cpp:
+    complete
+    .text       start:0x0205de08 end:0x0205de84
