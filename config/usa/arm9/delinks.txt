@@ -14268,3 +14268,64 @@ src/auto/func_0204f5a0.c:
 src/auto/func_0208e374.c:
     complete
     .text       start:0x0208e374 end:0x0208e514
+
+src/auto/func_02085fb8.c:
+    complete
+    .text       start:0x02085fb8 end:0x02086184
+src/auto/func_020b7dc4.c:
+    complete
+    .text       start:0x020b7dc4 end:0x020b7f90
+src/auto/func_02004404.c:
+    complete
+    .text       start:0x02004404 end:0x020045c8
+src/auto/func_0206ded4.c:
+    complete
+    .text       start:0x0206ded4 end:0x0206e098
+src/auto/func_020b4364.c:
+    complete
+    .text       start:0x020b4364 end:0x020b4520
+src/auto/func_0206e2e0.c:
+    complete
+    .text       start:0x0206e2e0 end:0x0206e4ac
+src/auto/func_0200ad80.c:
+    complete
+    .text       start:0x0200ad80 end:0x0200aef8
+src/auto/func_020ab238.c:
+    complete
+    .text       start:0x020ab238 end:0x020ab40c
+src/auto/MBi_StartParentCore.c:
+    complete
+    .text       start:0x020dc804 end:0x020dc9e8
+src/auto/func_0204f014.c:
+    complete
+    .text       start:0x0204f014 end:0x0204f1ec
+src/auto/func_0207c1b0.c:
+    complete
+    .text       start:0x0207c1b0 end:0x0207c37c
+src/auto/func_020531fc.c:
+    complete
+    .text       start:0x020531fc end:0x02053398
+src/auto/func_0200e8f0.c:
+    complete
+    .text       start:0x0200e8f0 end:0x0200ea7c
+src/auto/func_02004dec.c:
+    complete
+    .text       start:0x02004dec end:0x02004f7c
+src/auto/func_020852c8.c:
+    complete
+    .text       start:0x020852c8 end:0x02085480
+src/auto/func_020985d8.c:
+    complete
+    .text       start:0x020985d8 end:0x02098790
+src/auto/func_02081a10.c:
+    complete
+    .text       start:0x02081a10 end:0x02081bf0
+src/auto/func_02054674.c:
+    complete
+    .text       start:0x02054674 end:0x02054858
+src/auto/func_0201ca1c.c:
+    complete
+    .text       start:0x0201ca1c end:0x0201cba8
+src/auto/func_02028550.c:
+    complete
+    .text       start:0x02028550 end:0x020286dc
