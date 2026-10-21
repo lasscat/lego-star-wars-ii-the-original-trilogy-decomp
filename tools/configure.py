@@ -65,7 +65,7 @@ CC_FLAGS = " ".join([
     "-gccext,on",           # Enable GCC extensions
     "-fp soft",             # Compute float operations in software
     "-inline noauto",       # Inline only functions marked with 'inline'
-    f"-lang={GAME_CFG.get('lang', 'c')}",  # game.toml: lang = "c" or "c++"
+    # Select language per source below; conflicting -lang options force mwcc into C mode.
     "-Cpp_exceptions off",  # Disable C++ exceptions
     "-RTTI off",            # Disable runtime type information
     "-interworking",        # Enable ARM/Thumb interworking

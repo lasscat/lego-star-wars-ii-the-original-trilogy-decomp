@@ -20,6 +20,9 @@ jobs:
       - name: Install pre-commit
         run: pip install pre-commit
 
+      - name: Test per-source compiler language selection
+        run: python -m unittest discover -s tools/tests -p 'test_configure.py'
+
       - name: Cache pre-commit hooks
         uses: actions/cache@v6
         with:

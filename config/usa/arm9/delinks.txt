@@ -12828,3 +12828,15 @@ src/auto/func_020e0f50.c:
 src/auto/func_02064dec.c:
     complete
     .text       start:0x02064dec end:0x02064e64
+
+src/auto/func_02020a9c.cpp:
+    complete
+    .text       start:0x02020a9c end:0x02020ad4
+
+src/auto/func_02020ad4.cpp:
+    complete
+    .text       start:0x02020ad4 end:0x02020b0c
+
+src/auto/func_02020e4c.cpp:
+    complete
+    .text       start:0x02020e4c end:0x02020e84
