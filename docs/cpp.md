@@ -2,8 +2,8 @@
 
 C is the default reconstruction language. Use natural C++ where the binary and
 compiler probes support C++ constructs; do not replace difficult C with assembly.
-This branch proposes C++ support for maintainer review. A matching ROM does not
-by itself establish upstream acceptance of this source-policy decision.
+Upstream accepted natural `.cpp` translation units for evidenced C++ routines in
+the review of PR #3 and requested the small function-only pilot as a separate PR.
 
 ## When to try C++
 
@@ -30,12 +30,13 @@ by itself establish upstream acceptance of this source-policy decision.
 
 | Source | Per-file selector |
 |---|---|
-| `.c` | `-lang=c` |
+| `.c` | `-lang=` the language from `game.toml` (default `c`) |
 | `.cpp` | `-lang=c++` |
 
 There must be **exactly one** language selector in a compilation command. Keep
 it out of global `CC_FLAGS`, `extra_cc_flags` and per-file compiler overrides.
-The legacy `game.toml` `lang` key does not override extension-based selection.
+The `game.toml` `lang` key applies to `.c` files; `.cpp` files always select C++.
+This project's ordinary reconstruction language remains C.
 Do not change any other global compiler flag to match a target.
 
 With the original `2.0/sp1p5` compiler, conflicting selectors resolve to C in

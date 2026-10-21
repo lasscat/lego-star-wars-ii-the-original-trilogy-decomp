@@ -25,7 +25,7 @@ def load_build_parts(game_config=None):
         node for node in tree.body
         if isinstance(node, ast.FunctionDef) and node.name in functions
         or isinstance(node, ast.Assign)
-        and any(isinstance(target, ast.Name) and target.id == "CC_FLAGS" for target in node.targets)
+        and any(isinstance(target, ast.Name) and target.id in {"CC_FLAGS", "C_LANG"} for target in node.targets)
     ]
     command = next(
         node for node in ast.walk(tree)
@@ -88,14 +88,16 @@ class CompilerLanguageTests(unittest.TestCase):
                 self.assertFalse(any(flag.startswith("-lang") for flag in flags))
 
     def test_generated_commands_have_one_correct_selector(self):
-        namespace = load_build_parts({"lang": "c"})
-        for edge, expected in zip(self.edges(namespace), ("-lang=c", "-lang=c++")):
-            with self.subTest(source=edge["inputs"]):
-                variables = edge["variables"]
-                command = namespace["mwcc_cmd"].replace("$cc_flags", variables["cc_flags"])
-                command = command.replace("$cc_extra", variables["cc_extra"])
-                selectors = [flag for flag in shlex.split(command) if flag.startswith("-lang")]
-                self.assertEqual(selectors, [expected])
+        for game_config in ({}, {"lang": "c"}, {"lang": "c++"}):
+            namespace = load_build_parts(game_config)
+            language = game_config.get("lang", "c")
+            for edge, expected in zip(self.edges(namespace), (f"-lang={language}", "-lang=c++")):
+                with self.subTest(game_config=game_config, source=edge["inputs"]):
+                    variables = edge["variables"]
+                    command = namespace["mwcc_cmd"].replace("$cc_flags", variables["cc_flags"])
+                    command = command.replace("$cc_extra", variables["cc_extra"])
+                    selectors = [flag for flag in shlex.split(command) if flag.startswith("-lang")]
+                    self.assertEqual(selectors, [expected])
 
     def test_per_file_profile_keeps_extension_language(self):
         namespace = load_build_parts()
