@@ -13954,3 +13954,67 @@ src/auto/func_0209f404.c:
 src/auto/func_020a2064.c:
     complete
     .text       start:0x020a2064 end:0x020a210c
+
+src/auto/MI_DmaFill32.c:
+    complete
+    .text       start:0x020ceaa0 end:0x020ceb20
+src/auto/MI_DmaFill16.c:
+    complete
+    .text       start:0x020ceb90 end:0x020cec10
+src/auto/MIi_CardDmaCopy32.c:
+    complete
+    .text       start:0x020cf694 end:0x020cf708
+src/auto/NNSi_G3dAnmObjInitNsBca.c:
+    complete
+    .text       start:0x020c66b0 end:0x020c672c
+src/auto/MI_DmaFill32Async.c:
+    complete
+    .text       start:0x020cec7c end:0x020ced40
+src/auto/MI_DmaFill16Async.c:
+    complete
+    .text       start:0x020cedd8 end:0x020cee9c
+src/auto/MBi_GetBeaconPeriodDispersion.c:
+    complete
+    .text       start:0x020dc408 end:0x020dc470
+src/auto/CARDi_ReadRomSyncCore.c:
+    complete
+    .text       start:0x020d5c58 end:0x020d5cf0
+src/auto/MB_SetParentCommParam.c:
+    complete
+    .text       start:0x020dc698 end:0x020dc730
+src/auto/CARDi_ReadRom.c:
+    complete
+    .text       start:0x020d5cf0 end:0x020d5de8
+src/auto/GetTexSRTAnmVectorVal_.c:
+    complete
+    .text       start:0x020c7518 end:0x020c7618
+src/auto/func_0206d334.c:
+    complete
+    .text       start:0x0206d334 end:0x0206d488
+src/auto/func_02096374.c:
+    complete
+    .text       start:0x02096374 end:0x020964c8
+src/auto/MI_DmaCopy32.c:
+    complete
+    .text       start:0x020ceb20 end:0x020ceb90
+src/auto/NNS_GfdFreeLnkTexVram.c:
+    complete
+    .text       start:0x020c3490 end:0x020c3504
+src/auto/CARDi_ReadFromCache.c:
+    complete
+    .text       start:0x020d56e4 end:0x020d5770
+src/auto/MB_SendGameInfoBeacon.c:
+    complete
+    .text       start:0x020dad28 end:0x020dadb4
+src/auto/MI_DmaCopy16.c:
+    complete
+    .text       start:0x020cec10 end:0x020cec7c
+src/auto/GX_LoadBGExtPltt.c:
+    complete
+    .text       start:0x020cc03c end:0x020cc0ac
+src/auto/texmtxCalc_flagT_.c:
+    complete
+    .text       start:0x020c7e1c end:0x020c7efc
+src/auto/HuffMakeSubsetHuffTree.c:
+    complete
+    .text       start:0x020d011c end:0x020d01fc
