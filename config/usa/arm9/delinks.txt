@@ -14079,3 +14079,64 @@ src/auto/getTransDataEx_.c:
 src/auto/func_0206468c.c:
     complete
     .text       start:0x0206468c end:0x020647ec
+
+src/auto/MBi_SendMP.c:
+    complete
+    .text       start:0x020dccf0 end:0x020dcdd0
+src/auto/GetTexSRTAnm_.c:
+    complete
+    .text       start:0x020c7724 end:0x020c7808
+src/auto/func_020e3fb0.c:
+    complete
+    .text       start:0x020e3fb0 end:0x020e4104
+src/auto/func_0200e738.c:
+    complete
+    .text       start:0x0200e738 end:0x0200e890
+src/auto/AllocFromTail.c:
+    complete
+    .text       start:0x020c2560 end:0x020c2610
+src/auto/func_020af0b4.c:
+    complete
+    .text       start:0x020af0b4 end:0x020af204
+src/auto/CARDi_RequestStreamCommand.c:
+    complete
+    .text       start:0x020d54b0 end:0x020d5598
+src/auto/RecycleRegion.c:
+    complete
+    .text       start:0x020c2610 end:0x020c2700
+src/auto/func_0206fe00.c:
+    complete
+    .text       start:0x0206fe00 end:0x0206ff64
+src/auto/func_0209af38.c:
+    complete
+    .text       start:0x0209af38 end:0x0209b0b8
+src/auto/NNSi_G3dGetTexPatAnmFV.c:
+    complete
+    .text       start:0x020c6620 end:0x020c6694
+src/auto/OS_WaitIrq.c:
+    complete
+    .text       start:0x020cc828 end:0x020cc89c
+src/auto/IC_InvalidateRange.c:
+    complete
+    .text       start:0x0201c0ac end:0x0201c1e4
+src/auto/CARD_IdentifyBackup.c:
+    complete
+    .text       start:0x020d55ac end:0x020d56e4
+src/auto/GX_LoadTex.c:
+    complete
+    .text       start:0x020cc3c0 end:0x020cc500
+src/auto/PXI_InitFifo.c:
+    complete
+    .text       start:0x020d1140 end:0x020d1240
+src/auto/func_020ab40c.c:
+    complete
+    .text       start:0x020ab40c end:0x020ab574
+src/auto/func_020243dc.c:
+    complete
+    .text       start:0x020243dc end:0x02024540
+src/auto/OS_SetIrqFunction.c:
+    complete
+    .text       start:0x020cc9c0 end:0x020cca48
+src/auto/PXI_SendWordByFifo.c:
+    complete
+    .text       start:0x020d12b0 end:0x020d1338
