@@ -14207,3 +14207,64 @@ src/auto/func_020b891c.c:
 src/auto/MBi_SetSegmentInfo.c:
     complete
     .text       start:0x020da57c end:0x020da6f0
+
+src/auto/func_020367e8.c:
+    complete
+    .text       start:0x020367e8 end:0x02036970
+src/auto/func_0208d478.c:
+    complete
+    .text       start:0x0208d478 end:0x0208d5dc
+src/auto/func_020714bc.c:
+    complete
+    .text       start:0x020714bc end:0x02071644
+src/auto/func_0207411c.c:
+    complete
+    .text       start:0x0207411c end:0x020742a4
+src/auto/func_02089078.c:
+    complete
+    .text       start:0x02089078 end:0x020891fc
+src/auto/func_0201b48c.c:
+    complete
+    .text       start:0x0201b48c end:0x0201b614
+src/auto/func_020903f0.c:
+    complete
+    .text       start:0x020903f0 end:0x02090584
+src/auto/func_02070ec4.c:
+    complete
+    .text       start:0x02070ec4 end:0x02071024
+src/auto/func_02062550.c:
+    complete
+    .text       start:0x02062550 end:0x02062694
+src/auto/func_0209444c.c:
+    complete
+    .text       start:0x0209444c end:0x02094610
+src/auto/func_0209b0b8.c:
+    complete
+    .text       start:0x0209b0b8 end:0x0209b27c
+src/auto/FSi_TranslateCommand.c:
+    complete
+    .text       start:0x020d14ac end:0x020d163c
+src/auto/func_02003784.c:
+    complete
+    .text       start:0x02003784 end:0x02003948
+src/auto/func_02032828.c:
+    complete
+    .text       start:0x02032828 end:0x020329a4
+src/auto/HuffSetOneNodeOffset.c:
+    complete
+    .text       start:0x020d02ac end:0x020d0438
+src/auto/MBi_CommParentSendData.c:
+    complete
+    .text       start:0x020d9a48 end:0x020d9bc8
+src/auto/func_0204f1ec.c:
+    complete
+    .text       start:0x0204f1ec end:0x0204f39c
+src/auto/getScaleDataEx_.c:
+    complete
+    .text       start:0x020c6c98 end:0x020c6e2c
+src/auto/func_0204f5a0.c:
+    complete
+    .text       start:0x0204f5a0 end:0x0204f728
+src/auto/func_0208e374.c:
+    complete
+    .text       start:0x0208e374 end:0x0208e514
