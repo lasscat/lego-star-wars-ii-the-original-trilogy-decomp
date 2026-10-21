@@ -12,7 +12,6 @@ No game assets in this repository: see `extract/README.md`.
 
 <!-- progress:start -->
 `█████░░░░░░░░░░░░░░░` **24.45%** of the code matched · data 0.00% · 3205/4764 functions
-**C-only source coverage:** 23.96% of code · 3148/4764 functions (assembly-bearing source units excluded)
 
 | Part of the code | Files | Functions | Share of all code |
 |---|---|---|---|

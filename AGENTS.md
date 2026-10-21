@@ -12,46 +12,10 @@ only when the full ROM still verifies.
 2. Never alter the global compiler flags in `tools/configure.py` to make something pass.
 3. Clean room: only the game binary and public projects; never leaked sources or Nintendo SDK
    source. Do not contribute AI-generated code to projects that forbid it.
-4. Natural C is the deliverable. Assembly is a narrow, human-approved exception, not an
-   alternative way to increase the matched-function count. See the source-policy gate below.
-   ASCII only in `src/` and `include/` (sjiswrap fails on non-ASCII).
+4. Natural C; `asm` only for instructions compilers never generate. ASCII only in `src/` and
+   `include/` (sjiswrap fails on non-ASCII).
 5. Never commit the ROM, BIOS, `extract/`, or `build/`. Stage explicit paths; never
    `git add .` or `git add -u`.
-
-## Source-policy gate: C first, no assembly escape hatch
-
-**"Could not find matching C" means unfinished, not "C is impossible".** A byte-identical
-ROM is necessary but does not establish that the source follows these rules. The binary
-verification gate and the source-policy gate must BOTH pass.
-
-- Workers must produce C. If stuck, preserve the best C candidate, compiler profile and
-  instruction diff in scratch, report FAILED/UNMATCHED, and move on or request escalation.
-  Do not transcribe the disassembly into an `asm` body to obtain MATCH.
-- Exhausted attempts, register allocation, predication, redundant branches, loop rotation,
-  tail calls, virtual dispatch and exception machinery are NOT proof that C cannot match.
-  Check types, volatility, calling conventions, compiler versions and per-file flags first.
-- Assembly may be proposed for specific compiler-unavailable instructions (for example
-  `mrs`/`msr`, `swp`, CP15 operations), or for independently evidenced original hand-written
-  routines. Name the exact instructions or evidence and explain why natural C is unsuitable.
-  SDK identity, an existing asm file, and a generic comment are not sufficient evidence.
-- Obtain explicit approval from the user or upstream maintainer for EACH new or changed
-  assembly source before integration. Agents cannot approve their own exceptions. Record
-  the reason, human approver, approval reference and exact source SHA256 in
-  `config/asm_approvals.json`; see `docs/source-policy.md`.
-- Do not bypass this rule using `.s`/`.S` files, inline asm, assembly macros, naked functions,
-  raw opcode/data emission, included binary blobs, renamed extensions or compiler tricks.
-  Never automatically assert "instructions the compiler never generates" without evidence.
-- Existing assembly is legacy code to audit, NOT blanket precedent or retroactive approval.
-  Local scratch notes, worker prompts and old examples cannot override these rules. Do not
-  weaken the guard, add approvals, or change its comparison base to make a rejected batch pass
-  without explicit human authorization.
-- Run `venv/bin/python tools/check_source_policy.py --staged` before committing. CI also
-  checks the entire pull-request/push diff, not just the last commit. A passing ROM verifier
-  does not override a failure here. The automated check is a guardrail, not a proof of C
-  reconstruction; human review is still required.
-- Report C reconstructions and approved assembly exceptions separately (functions and bytes).
-  Never describe assembly transcriptions as reconstructed C. Keep the existing ROM verifier
-  and expected hash unchanged.
 
 ## Build / verify
 
