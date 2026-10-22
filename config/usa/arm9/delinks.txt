@@ -14567,3 +14567,72 @@ src/auto/func_0202f9f4.c:
 src/auto/func_02063c54.c:
     complete
     .text       start:0x02063c54 end:0x02063cc4
+src/auto/func_020671dc.c:
+    complete
+    .text       start:0x020671dc end:0x020672a4
+src/auto/func_02067378.c:
+    complete
+    .text       start:0x02067378 end:0x02067440
+src/auto/func_02046450.cpp:
+    complete
+    .text       start:0x02046450 end:0x02046518
+src/auto/func_020885a4.c:
+    complete
+    .text       start:0x020885a4 end:0x02088674
+src/auto/func_0208e190.c:
+    complete
+    .text       start:0x0208e190 end:0x0208e260
+src/auto/func_0208fa54.c:
+    complete
+    .text       start:0x0208fa54 end:0x0208fb24
+src/auto/func_02090918.c:
+    complete
+    .text       start:0x02090918 end:0x020909e8
+src/auto/func_020907d4.c:
+    complete
+    .text       start:0x020907d4 end:0x0209084c
+src/auto/func_0205e624.c:
+    complete
+    .text       start:0x0205e624 end:0x0205e6e0
+src/auto/func_02097bfc.c:
+    complete
+    .text       start:0x02097bfc end:0x02097cb8
+src/auto/func_0209bb34.c:
+    complete
+    .text       start:0x0209bb34 end:0x0209bbf0
+src/auto/func_020506a0.c:
+    complete
+    .text       start:0x020506a0 end:0x0205073c
+src/auto/func_0208db80.c:
+    complete
+    .text       start:0x0208db80 end:0x0208dc48
+src/auto/func_0209cb94.c:
+    complete
+    .text       start:0x0209cb94 end:0x0209cc5c
+src/auto/func_020b01e0.c:
+    complete
+    .text       start:0x020b01e0 end:0x020b02a8
+src/auto/func_020834e0.c:
+    complete
+    .text       start:0x020834e0 end:0x0208355c
+src/auto/func_020672a4.c:
+    complete
+    .text       start:0x020672a4 end:0x02067378
+src/auto/func_0206818c.c:
+    complete
+    .text       start:0x0206818c end:0x02068260
+src/auto/func_0207d094.c:
+    complete
+    .text       start:0x0207d094 end:0x0207d168
+src/auto/PMi_SetLCDPower.c:
+    complete
+    .text       start:0x020d426c end:0x020d4340
+src/auto/func_02086ea0.c:
+    complete
+    .text       start:0x02086ea0 end:0x02086f20
+src/auto/func_0203ffbc.c:
+    complete
+    .text       start:0x0203ffbc end:0x0204003c
+src/auto/func_02018010.c:
+    complete
+    .text       start:0x02018010 end:0x0201807c
