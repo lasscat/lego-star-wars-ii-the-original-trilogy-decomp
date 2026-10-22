@@ -14501,3 +14501,69 @@ src/auto/func_0205d614.c:
 src/auto/func_02003ac4.cpp:
     complete
     .text       start:0x02003ac4 end:0x02003b5c
+src/auto/func_020bb3f8.c:
+    complete
+    .text       start:0x020bb3f8 end:0x020bb488
+src/auto/func_0203fe38.c:
+    complete
+    .text       start:0x0203fe38 end:0x0203fecc
+src/auto/func_020aff04.c:
+    complete
+    .text       start:0x020aff04 end:0x020affbc
+src/auto/func_02064b3c.c:
+    complete
+    .text       start:0x02064b3c end:0x02064bd8
+src/auto/func_020658e4.c:
+    complete
+    .text       start:0x020658e4 end:0x02065980
+src/auto/func_02094bf0.c:
+    complete
+    .text       start:0x02094bf0 end:0x02094ca0
+src/auto/func_0209be44.c:
+    complete
+    .text       start:0x0209be44 end:0x0209bef4
+src/auto/func_0207df90.c:
+    complete
+    .text       start:0x0207df90 end:0x0207e050
+src/auto/func_0209b7cc.c:
+    complete
+    .text       start:0x0209b7cc end:0x0209b88c
+src/auto/func_02094b30.c:
+    complete
+    .text       start:0x02094b30 end:0x02094bf0
+src/auto/func_02066ed0.c:
+    complete
+    .text       start:0x02066ed0 end:0x02066fa0
+src/auto/func_02067508.c:
+    complete
+    .text       start:0x02067508 end:0x020675d8
+src/auto/func_02067838.c:
+    complete
+    .text       start:0x02067838 end:0x02067908
+src/auto/func_0207e8ac.c:
+    complete
+    .text       start:0x0207e8ac end:0x0207e97c
+src/auto/func_02048f44.c:
+    complete
+    .text       start:0x02048f44 end:0x02048fd4
+src/auto/func_0207b68c.c:
+    complete
+    .text       start:0x0207b68c end:0x0207b71c
+src/auto/func_0209f948.c:
+    complete
+    .text       start:0x0209f948 end:0x0209f9d8
+src/auto/func_0201807c.c:
+    complete
+    .text       start:0x0201807c end:0x0201811c
+src/auto/func_02051134.c:
+    complete
+    .text       start:0x02051134 end:0x020511d4
+src/auto/func_02053b8c.c:
+    complete
+    .text       start:0x02053b8c end:0x02053c2c
+src/auto/func_0202f9f4.c:
+    complete
+    .text       start:0x0202f9f4 end:0x0202fa64
+src/auto/func_02063c54.c:
+    complete
+    .text       start:0x02063c54 end:0x02063cc4
