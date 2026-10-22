@@ -17,12 +17,12 @@ See [the C++ build and source guide](docs/cpp.md) before adding a `.cpp` file.
 ## Progress
 
 <!-- progress:start -->
-`███████░░░░░░░░░░░░░` **37.29%** of the code matched · data 0.00% · 3712/4764 functions
-**C-only source coverage:** 36.80% of code · 3655/4764 functions (assembly-bearing source units excluded)
+`████████░░░░░░░░░░░░` **37.76%** of the code matched · data 0.00% · 3733/4764 functions
+**C-only source coverage:** 37.28% of code · 3676/4764 functions (assembly-bearing source units excluded)
 
 | Part of the code | Files | Functions | Share of all code |
 |---|---|---|---|
-| Auto-matched (raw m2c output, to clean up) | 3713 | 3712/3713 | 37.29% |
+| Auto-matched (raw m2c output, to clean up) | 3734 | 3733/3734 | 37.76% |
 
 *Updated 2026-10-21 by `python tools/match.py progress` ([DS Decomp Studio](https://github.com/liolu/ds-decomp-studio)). A function counts only when it compiles to the exact same bytes and the ROM still rebuilds byte for byte.*
 <!-- progress:end -->
