@@ -14408,3 +14408,6 @@ src/auto/func_020b650c.c:
 src/auto/func_020784b8.c:
     complete
     .text       start:0x020784b8 end:0x020787b0
+src/auto/NNSi_G3dFuncSbc_BB.c:
+    complete
+    .text       start:0x020c4894 end:0x020c4b9c
