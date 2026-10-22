@@ -14891,3 +14891,63 @@ src/auto/func_020e48dc.c:
 src/auto/func_02042da0.cpp:
     complete
     .text       start:0x02042da0 end:0x02042f54
+src/auto/func_020964c8.c:
+    complete
+    .text       start:0x020964c8 end:0x02096684
+src/auto/func_02062bb4.c:
+    complete
+    .text       start:0x02062bb4 end:0x02062d10
+src/auto/func_02069a8c.c:
+    complete
+    .text       start:0x02069a8c end:0x02069be8
+src/auto/func_0207da48.c:
+    complete
+    .text       start:0x0207da48 end:0x0207dba4
+src/auto/func_020202bc.c:
+    complete
+    .text       start:0x020202bc end:0x020204c0
+src/auto/func_0205c0f0.c:
+    complete
+    .text       start:0x0205c0f0 end:0x0205c274
+src/auto/func_02032518.c:
+    complete
+    .text       start:0x02032518 end:0x020325f0
+src/auto/func_020509b8.cpp:
+    complete
+    .text       start:0x020509b8 end:0x02050b48
+src/auto/func_020abf98.c:
+    complete
+    .text       start:0x020abf98 end:0x020ac130
+src/auto/func_02052a9c.c:
+    complete
+    .text       start:0x02052a9c end:0x02052b6c
+src/auto/func_0208aaf0.c:
+    complete
+    .text       start:0x0208aaf0 end:0x0208ac98
+src/auto/func_02006e88.c:
+    complete
+    .text       start:0x02006e88 end:0x02007154
+src/auto/func_020b58a8.c:
+    complete
+    .text       start:0x020b58a8 end:0x020b5ba8
+src/auto/func_02008c44.c:
+    complete
+    .text       start:0x02008c44 end:0x02008f50
+src/auto/func_02008f50.c:
+    complete
+    .text       start:0x02008f50 end:0x0200913c
+src/auto/func_02093700.c:
+    complete
+    .text       start:0x02093700 end:0x02093958
+src/auto/NNSi_G3dFuncSbc_BBY.c:
+    complete
+    .text       start:0x020c4b9c end:0x020c4f00
+src/auto/func_02096828.cpp:
+    complete
+    .text       start:0x02096828 end:0x02096adc
+src/auto/func_020e16fc.c:
+    complete
+    .text       start:0x020e16fc end:0x020e1a80
+src/auto/MTX_Inverse43.c:
+    complete
+    .text       start:0x020c8510 end:0x020c889c
