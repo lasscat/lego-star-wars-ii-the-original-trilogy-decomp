@@ -14765,3 +14765,69 @@ src/auto/func_02042ba4.c:
 src/auto/func_020ad438.c:
     complete
     .text       start:0x020ad438 end:0x020ad528
+src/auto/func_02074ad8.c:
+    complete
+    .text       start:0x02074ad8 end:0x02074c10
+src/auto/func_0209ef14.c:
+    complete
+    .text       start:0x0209ef14 end:0x0209f04c
+src/auto/func_020c800c.c:
+    complete
+    .text       start:0x020c800c end:0x020c8144
+src/auto/func_0209c7e8.c:
+    complete
+    .text       start:0x0209c7e8 end:0x0209c900
+src/auto/func_020a96c8.c:
+    complete
+    .text       start:0x020a96c8 end:0x020a97e0
+src/auto/func_02090a14.c:
+    complete
+    .text       start:0x02090a14 end:0x02090ae8
+src/auto/func_020bb778.c:
+    complete
+    .text       start:0x020bb778 end:0x020bb84c
+src/auto/func_02030540.c:
+    complete
+    .text       start:0x02030540 end:0x02030670
+src/auto/func_020bd5d4.cpp:
+    complete
+    .text       start:0x020bd5d4 end:0x020bd700
+src/auto/func_0201d89c.c:
+    complete
+    .text       start:0x0201d89c end:0x0201d98c
+src/auto/func_0203aa54.c:
+    complete
+    .text       start:0x0203aa54 end:0x0203ab44
+src/auto/func_02087ce4.c:
+    complete
+    .text       start:0x02087ce4 end:0x02087e14
+src/auto/raise.c:
+    complete
+    .text       start:0x020e0c80 end:0x020e0db0
+src/auto/func_0206ab54.c:
+    complete
+    .text       start:0x0206ab54 end:0x0206ac84
+src/auto/func_02071024.c:
+    complete
+    .text       start:0x02071024 end:0x02071154
+src/auto/func_0209d840.c:
+    complete
+    .text       start:0x0209d840 end:0x0209d948
+src/auto/func_020ace50.c:
+    complete
+    .text       start:0x020ace50 end:0x020acf58
+src/auto/func_02050cf0.c:
+    complete
+    .text       start:0x02050cf0 end:0x02050e2c
+src/auto/NNS_FndResizeForMBlockExpHeap.c:
+    complete
+    .text       start:0x020c2768 end:0x020c28c8
+src/auto/func_020d38bc.c:
+    complete
+    .text       start:0x020d38bc end:0x020d39dc
+src/auto/func_0206c49c.c:
+    complete
+    .text       start:0x0206c49c end:0x0206c5c0
+src/auto/func_0208adb8.c:
+    complete
+    .text       start:0x0208adb8 end:0x0208aedc
