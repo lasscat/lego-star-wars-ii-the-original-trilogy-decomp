@@ -281,3 +281,4 @@ src/auto/GX_LoadOBJ.c 2.0/sp1p5 -flag no-opt_propagation
 src/auto/func_02067a98.c 2.0/sp1p5 -flag no-opt_common_subs
 src/auto/func_02047b38.c 2.0/sp1p5 -flag no-opt_common_subs
 src/auto/func_0207c1b0.c 2.0/sp1p5 -flag no-opt_rebuildconditionals
+src/auto/func_0205e984.c 2.0/sp1p5 -flag no-opt_rebuildconditionals
