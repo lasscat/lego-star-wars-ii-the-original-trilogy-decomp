@@ -14411,3 +14411,93 @@ src/auto/func_020784b8.c:
 src/auto/NNSi_G3dFuncSbc_BB.c:
     complete
     .text       start:0x020c4894 end:0x020c4b9c
+src/auto/func_020d0438.c:
+    complete
+    .text       start:0x020d0438 end:0x020d04c0
+src/auto/func_020afdc4.c:
+    complete
+    .text       start:0x020afdc4 end:0x020afe4c
+src/auto/func_0207094c.c:
+    complete
+    .text       start:0x0207094c end:0x020709d4
+src/auto/func_0207b49c.c:
+    complete
+    .text       start:0x0207b49c end:0x0207b540
+src/auto/func_020e4ae8.c:
+    complete
+    .text       start:0x020e4ae8 end:0x020e4b88
+src/auto/func_02055a18.c:
+    complete
+    .text       start:0x02055a18 end:0x02055abc
+src/auto/func_02066e20.c:
+    complete
+    .text       start:0x02066e20 end:0x02066ec4
+src/auto/func_02064cd8.c:
+    complete
+    .text       start:0x02064cd8 end:0x02064d88
+src/auto/func_020654bc.c:
+    complete
+    .text       start:0x020654bc end:0x0206556c
+src/auto/func_02066c80.c:
+    complete
+    .text       start:0x02066c80 end:0x02066d30
+src/auto/func_02067908.c:
+    complete
+    .text       start:0x02067908 end:0x020679b8
+src/auto/func_020bd884.c:
+    complete
+    .text       start:0x020bd884 end:0x020bd940
+src/auto/func_020013a4.c:
+    complete
+    .text       start:0x020013a4 end:0x02001464
+src/auto/func_020512d4.c:
+    complete
+    .text       start:0x020512d4 end:0x02051388
+src/auto/func_020518fc.c:
+    complete
+    .text       start:0x020518fc end:0x020519b0
+src/auto/func_0204c7b0.c:
+    complete
+    .text       start:0x0204c7b0 end:0x0204c864
+src/auto/HuffRemainingNodeCanSetOffset.c:
+    complete
+    .text       start:0x020d01fc end:0x020d02ac
+src/auto/MBi_ReceiveRequestDataPiece.c:
+    complete
+    .text       start:0x020dd580 end:0x020dd60c
+src/auto/func_020463c4.c:
+    complete
+    .text       start:0x020463c4 end:0x02046450
+src/auto/func_0208afd8.c:
+    complete
+    .text       start:0x0208afd8 end:0x0208b064
+src/auto/func_020be800.c:
+    complete
+    .text       start:0x020be800 end:0x020be88c
+src/auto/func_02010b7c.c:
+    complete
+    .text       start:0x02010b7c end:0x02010c04
+src/auto/func_0200c28c.c:
+    complete
+    .text       start:0x0200c28c end:0x0200c31c
+src/auto/func_02032b44.c:
+    complete
+    .text       start:0x02032b44 end:0x02032bd4
+src/auto/func_0200b9a8.c:
+    complete
+    .text       start:0x0200b9a8 end:0x0200ba44
+src/auto/func_020d7820.c:
+    complete
+    .text       start:0x020d7820 end:0x020d78c0
+src/auto/func_02033810.c:
+    complete
+    .text       start:0x02033810 end:0x020338bc
+src/auto/func_020adc40.c:
+    complete
+    .text       start:0x020adc40 end:0x020adc78
+src/auto/func_0205d614.c:
+    complete
+    .text       start:0x0205d614 end:0x0205d66c
+src/auto/func_02003ac4.cpp:
+    complete
+    .text       start:0x02003ac4 end:0x02003b5c
