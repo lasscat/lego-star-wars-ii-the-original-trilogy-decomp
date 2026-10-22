@@ -14951,3 +14951,87 @@ src/auto/func_020e16fc.c:
 src/auto/MTX_Inverse43.c:
     complete
     .text       start:0x020c8510 end:0x020c889c
+src/auto/func_0205b01c.c:
+    complete
+    .text       start:0x0205b01c end:0x0205b0e8
+src/auto/func_0206b628.c:
+    complete
+    .text       start:0x0206b628 end:0x0206b6f4
+src/auto/func_02066470.c:
+    complete
+    .text       start:0x02066470 end:0x0206653c
+src/auto/func_0209f640.c:
+    complete
+    .text       start:0x0209f640 end:0x0209f844
+src/auto/func_02001480.c:
+    complete
+    .text       start:0x02001480 end:0x02001688
+src/auto/func_02084f58.c:
+    complete
+    .text       start:0x02084f58 end:0x020852c8
+src/auto/func_020a0630.c:
+    complete
+    .text       start:0x020a0630 end:0x020a09a0
+src/auto/func_0206b06c.c:
+    complete
+    .text       start:0x0206b06c end:0x0206b3e4
+src/auto/func_020082a4.c:
+    complete
+    .text       start:0x020082a4 end:0x020084b0
+src/auto/CARDi_IdentifyBackupCore.c:
+    complete
+    .text       start:0x020d5070 end:0x020d52d8
+src/auto/parse_format.c:
+    complete
+    .text       start:0x020dea20 end:0x020defb0
+src/auto/func_020687b4.c:
+    complete
+    .text       start:0x020687b4 end:0x02068b90
+src/auto/func_0209fa28.c:
+    complete
+    .text       start:0x0209fa28 end:0x0209fd70
+src/auto/WmReceiveFifo.c:
+    complete
+    .text       start:0x020d66ac end:0x020d6a58
+src/auto/func_020771bc.c:
+    complete
+    .text       start:0x020771bc end:0x02077414
+src/auto/func_0209a40c.c:
+    complete
+    .text       start:0x0209a40c end:0x0209a824
+src/auto/func_02083e94.c:
+    complete
+    .text       start:0x02083e94 end:0x02084348
+src/auto/func_020743c4.c:
+    complete
+    .text       start:0x020743c4 end:0x02074490
+src/auto/func_02075784.c:
+    complete
+    .text       start:0x02075784 end:0x02075850
+src/auto/func_0209f04c.c:
+    complete
+    .text       start:0x0209f04c end:0x0209f158
+src/auto/func_020ba2ac.c:
+    complete
+    .text       start:0x020ba2ac end:0x020ba3b8
+src/auto/ldexp.c:
+    complete
+    .text       start:0x020e10c8 end:0x020e1314
+src/auto/long2str.c:
+    complete
+    .text       start:0x020defb0 end:0x020df1fc
+src/auto/func_020787b0.c:
+    complete
+    .text       start:0x020787b0 end:0x0207a230
+src/auto/func_020230b0.cpp:
+    complete
+    .text       start:0x020230b0 end:0x02023374
+src/auto/func_020c0fd0.c:
+    complete
+    .text       start:0x020c0fd0 end:0x020c1090
+src/auto/func_020bbeb0.c:
+    complete
+    .text       start:0x020bbeb0 end:0x020bbf78
+src/auto/func_020d3b70.c:
+    complete
+    .text       start:0x020d3b70 end:0x020d3c38
