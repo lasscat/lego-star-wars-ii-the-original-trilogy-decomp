@@ -14393,3 +14393,18 @@ src/auto/func_0209a824.c:
 src/auto/func_020aaf54.c:
     complete
     .text       start:0x020aaf54 end:0x020ab1a8
+src/auto/func_020257cc.c:
+    complete
+    .text       start:0x020257cc end:0x02025aa0
+src/auto/func_020b4080.c:
+    complete
+    .text       start:0x020b4080 end:0x020b4364
+src/auto/func_020b601c.c:
+    complete
+    .text       start:0x020b601c end:0x020b6308
+src/auto/func_020b650c.c:
+    complete
+    .text       start:0x020b650c end:0x020b67f8
+src/auto/func_020784b8.c:
+    complete
+    .text       start:0x020784b8 end:0x020787b0
