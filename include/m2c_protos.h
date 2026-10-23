@@ -1047,6 +1047,9 @@ void NNSi_G3dFuncSbc_BB(void *, s32);
 #ifndef M2C_SELF_NNSi_G3dFuncSbc_BBY
 void NNSi_G3dFuncSbc_BBY(void *, s32);
 #endif
+#ifndef M2C_SELF_NNSi_G3dFuncSbc_SHP_InternalDefault
+void NNSi_G3dFuncSbc_SHP_InternalDefault(void *, s32, void *);
+#endif
 #ifndef M2C_SELF_NNSi_G3dGetTexPatAnmDataByIdx
 s32 NNSi_G3dGetTexPatAnmDataByIdx(void *, s32);
 #endif
@@ -1787,6 +1790,9 @@ int fflush(void *);
 #endif
 #ifndef M2C_SELF_frexp
 double frexp(double, int *);
+#endif
+#ifndef M2C_SELF_func_01ffc450
+void func_01ffc450(s32 *);
 #endif
 #ifndef M2C_SELF_func_0200138c
 void func_0200138c(void);
@@ -10113,9 +10119,6 @@ void NNSi_G3dFuncSbc_NODEMIX(M2C_UNK);
 #ifndef M2C_SELF_NNSi_G3dFuncSbc_POSSCALE
 void NNSi_G3dFuncSbc_POSSCALE(M2C_UNK);
 #endif
-#ifndef M2C_SELF_NNSi_G3dFuncSbc_SHP_InternalDefault
-void NNSi_G3dFuncSbc_SHP_InternalDefault(M2C_UNK, M2C_UNK, M2C_UNK);
-#endif
 #ifndef M2C_SELF_NNSi_G3dGetJointScaleBasic
 void NNSi_G3dGetJointScaleBasic(M2C_UNK, M2C_UNK, M2C_UNK, M2C_UNK);
 #endif
@@ -10412,9 +10415,6 @@ void func_01ffbf00(M2C_UNK, M2C_UNK);
 #endif
 #ifndef M2C_SELF_func_01ffc438
 void func_01ffc438(void);
-#endif
-#ifndef M2C_SELF_func_01ffc450
-void func_01ffc450(M2C_UNK);
 #endif
 #ifndef M2C_SELF_func_01ffd2c8
 void func_01ffd2c8(void);
