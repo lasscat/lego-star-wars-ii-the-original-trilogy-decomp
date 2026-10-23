@@ -6750,6 +6750,10 @@ src/auto/func_020baedc.c:
     complete
     .text       start:0x020baedc end:0x020baef0
 
+src/auto/func_020bafb4.c:
+    complete
+    .text       start:0x020bafb4 end:0x020bb028
+
 src/auto/func_020bb180.c:
     complete
     .text       start:0x020bb180 end:0x020bb1d8
