@@ -1,0 +1,6 @@
+/* compiler: 2.0/sp1p5 */
+#include "m2c.h"
+
+u32 sRootListInitialized[1];
+u32 sRootList[3];
+u32 s_VramTransferManager[5];

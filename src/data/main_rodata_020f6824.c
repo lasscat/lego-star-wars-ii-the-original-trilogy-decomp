@@ -1,0 +1,17 @@
+/* compiler: 2.0/sp1p5 */
+#include "m2c.h"
+
+extern u8 data_020e6064[];
+extern u8 data_020f51f4[];
+
+const u32 data_020f6824[24] = {0xFFFFFF00, 0x0BFFFFFF, 0xFF070602, 0xFFFFFFFF, 0x04030102, 0xFFFFFF05, 0xFFFF0203, 0xFFFFFFFF,
+                               0xFFFF0204, 0xFFFFFFFF, 0xFFFF0205, 0xFFFFFFFF, 0xFFFFFF06, 0xFFFFFFFF, 0xFFFFFF07, 0xFFFFFF0A,
+                               0xFFFF0708, 0xFFFFFFFF, 0xFFFF0709, 0xFFFFFFFF, 0xFFFF090A, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF};
+const u32 data_020f6884[40] = {
+    (u32) &data_020f51f4, 0x000113B7, (u32) &data_020e6064, 0x000013B8, (u32) &data_020e6064, 0x000013B9,
+    (u32) &data_020e6064, 0x000013BA, (u32) &data_020e6064, 0x000013BB, (u32) &data_020e6064, 0x000013BC,
+    (u32) &data_020e6064, 0x000013BD, (u32) &data_020e6064, 0x000013BE, (u32) &data_020e6064, 0x000013BF,
+    (u32) &data_020e6064, 0x000013AF, (u32) &data_020e6064, 0x000013B0, (u32) &data_020e6064, 0x000013B1,
+    (u32) &data_020e6064, 0x000013B2, (u32) &data_020e6064, 0x000013B3, (u32) &data_020e6064, 0x000013B4,
+    (u32) &data_020e6064, 0x000013B5, (u32) &data_020e6064, 0x000013B6, (u32) &data_020e6064, 0x000013C0,
+    (u32) &data_020e6064, 0x000013C1, (u32) &data_020e6064, 0x000013AE};
