@@ -20226,3 +20226,60 @@ src/data/main_rodata_020fc9dc.c:
 src/data/main_rodata_020fca38.c:
     complete
     .rodata     start:0x020fca38 end:0x020fca58
+
+src/data/main_rodata_020ed2e8.c:
+    complete
+    .rodata     start:0x020ed2e8 end:0x020ed2ec
+
+src/data/main_rodata_020edca0.c:
+    complete
+    .rodata     start:0x020edca0 end:0x020edca4
+
+
+src/data/main_rodata_020ee044.c:
+    complete
+    .rodata     start:0x020ee044 end:0x020ee048
+
+
+src/data/main_rodata_020f6bc0.c:
+    complete
+    .rodata     start:0x020f6bc0 end:0x020f6bc4
+
+
+src/data/main_rodata_020fc9d8.c:
+    complete
+    .rodata     start:0x020fc9d8 end:0x020fc9dc
+
+src/data/main_bss_02101dcc.c:
+    complete
+    .bss        start:0x02101dcc end:0x02101dd8
+
+src/data/main_bss_02101dfc.c:
+    complete
+    .bss        start:0x02101dfc end:0x02101e00
+
+src/data/main_bss_021039b4.c:
+    complete
+    .bss        start:0x021039b4 end:0x021039b8
+
+
+src/data/main_bss_021041c0.c:
+    complete
+    .bss        start:0x021041c0 end:0x021041c4
+
+src/data/main_bss_021043c4.c:
+    complete
+    .bss        start:0x021043c4 end:0x021043cc
+
+src/data/main_bss_0210da88.c:
+    complete
+    .bss        start:0x0210da88 end:0x0210da94
+
+
+src/data/main_bss_02115364.c:
+    complete
+    .bss        start:0x02115364 end:0x02115368
+
+src/data/main_bss_02115370.c:
+    complete
+    .bss        start:0x02115370 end:0x02115380
