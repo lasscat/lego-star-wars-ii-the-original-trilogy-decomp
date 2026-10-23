@@ -4,7 +4,7 @@
     python tools/match.py status              # overall progress and per-file progress
     python tools/match.py worklist [-n 20]    # unmatched functions in delinked files, smallest first
     python tools/match.py check FUNCTION      # rebuild, print the function's match % (and diff with --diff)
-    python tools/match.py verify              # strict gate: ROM OK, complete files at 100%, ASCII sources
+    python tools/match.py verify              # strict gate: pre-commit on changed files, ROM OK, complete files 100%, ASCII
     python tools/match.py progress            # rewrite the progress table in README.md (no build needed)
 
 `verify` exits with a non-zero code on any failure. Automated sessions must not commit unless it passes.
@@ -135,8 +135,76 @@ def non_ascii_files() -> list[str]:
     return bad
 
 
+PROFNAMES = ROOT / "build" / "profnames.json"
+
+
+def load_profnames() -> dict:
+    """{function: {"rec": [start, end], "end4": padded end}} for the -profile functions (tools/profpad.py)."""
+    try:
+        return json.loads(PROFNAMES.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+
+
+def profile_padding(unit: dict, section: dict, profnames: dict) -> bool:
+    """PROFILE PADDING: a -profile function owns a `.data` record (its name, len+1 bytes) that the original linker
+    padded to 4 bytes. workbench delinks the record as [start, end4) because that links byte-identically, while the
+    compiled object only holds the len+1 name bytes: objdiff then reports the `.data` section at 2n/(n+m). Every
+    record byte still matches and the padding is zero (profpad only adds end4 when it is), so this exact difference
+    is accepted -- and nothing else."""
+    if section.get("name") != ".data":
+        return False
+    rec = profnames.get(Path(unit["metadata"].get("source_path", "")).stem)
+    if not rec or "end4" not in rec:
+        return False
+    start, end = rec["rec"]
+    length = end - start
+    target = int(section.get("size", 0))
+    if target != rec["end4"] - start:
+        return False
+    expected = 200.0 * length / (length + target)
+    return abs(float(section.get("fuzzy_match_percent", 0)) - expected) < 0.01
+
+
+def changed_files() -> list[str]:
+    """Files of the working tree that differ from the last commit (modified, added, untracked)."""
+    r = run(["git", "status", "--porcelain", "--untracked-files=all"])
+    files = []
+    for line in (r.stdout or "").splitlines():
+        path = line[3:].split(" -> ")[-1].strip().strip('"')
+        if line[:2].strip() != "D" and (ROOT / path).is_file() and not path.startswith((".studio/", "build/")):
+            files.append(path)
+    return files
+
+
+def format_changed() -> None:
+    """The game repos' CI runs pre-commit (clang-format, trailing whitespace, line endings) and fails on any file it
+    would change. Every tool and every contributor runs `verify` before committing, so the changed files are fixed
+    here, with the same pinned hooks, BEFORE the build: what verify checks is what gets committed."""
+    files = changed_files()
+    if not files or not (ROOT / ".pre-commit-config.yaml").exists():
+        return
+    import importlib.util
+    import shutil
+    if importlib.util.find_spec("pre_commit"):
+        exe = [sys.executable, "-m", "pre_commit"]
+    elif shutil.which("pre-commit"):
+        exe = [shutil.which("pre-commit")]
+    else:
+        print("WARN: pre-commit is not installed (pip install pre-commit): sources not formatted, the CI may fail")
+        return
+    before = {f: (ROOT / f).read_bytes() for f in files}
+    for k in range(0, len(files), 100):  # chunks: a command line of a thousand paths is too long for Windows
+        run(exe + ["run", "--files", *files[k:k + 100]])
+    fixed = [f for f in files if (ROOT / f).is_file() and (ROOT / f).read_bytes() != before[f]]
+    if fixed:
+        print(f"INFO: pre-commit formatted {len(fixed)} file(s): " + ", ".join(fixed[:5]) + (" ..." if len(fixed) > 5 else ""))
+
+
 def cmd_verify(args):
     ok = True
+    if not args.no_format:
+        format_changed()
     r = run(["ninja"])
     out = (r.stdout or "") + (r.stderr or "")
     if r.returncode != 0 or f"{project.ROM_NAME}: OK" not in out:
@@ -146,10 +214,11 @@ def cmd_verify(args):
     else:
         print(f"OK  : ROM is byte-identical ({project.ROM_NAME}: OK)")
     report = build_report()
+    profnames = load_profnames()
     for u in source_units(report):
         if u["metadata"].get("complete"):
             for s in u.get("sections", []):
-                if float(s.get("fuzzy_match_percent", 0)) < 100.0:
+                if float(s.get("fuzzy_match_percent", 0)) < 100.0 and not profile_padding(u, s, profnames):
                     print(f"FAIL: {u['metadata'].get('source_path')} is marked complete but {s['name']} is "
                           f"{float(s.get('fuzzy_match_percent', 0)):.2f}%")
                     ok = False
@@ -297,6 +366,7 @@ def main():
     p.add_argument("--diff", action="store_true", help="Show target/candidate disassembly when not matching")
     p.set_defaults(fn=cmd_check)
     p = sub.add_parser("verify")
+    p.add_argument("--no-format", action="store_true", help="Do not run pre-commit on the changed files first")
     p.set_defaults(fn=cmd_verify)
     args = ap.parse_args()
     if args.cmd == "verify":

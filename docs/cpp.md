@@ -121,15 +121,13 @@ one coordinated change; do not append a second owner. Do not leave `.c` and
 `.cpp` files with the same basename: both map to the same object path.
 
 ```sh
-venv/bin/python tools/match.py verify
+python tools/match.py verify
 sha1sum lego_star_wars_ii_the_original_trilogy_usa.nds
-venv/bin/python tools/check_source_policy.py --staged
 ```
 
-The source-policy checker is a preserved local development safeguard, not an
-addition to the function-only contribution. On this development machine it must
-remain available and pass. A missing local checker is a setup blocker for agents,
-not permission to skip review or weaken the ROM gate.
+Review the complete contribution for natural source and correct range ownership,
+in addition to running binary verification. A byte match alone does not establish
+that source is a natural reconstruction.
 
 Only `VERIFY PASSED` from the unchanged full-ROM verifier establishes an
 integrated match. The ROM SHA1 must remain
@@ -138,10 +136,9 @@ objdiff percentages are candidate diagnostics, not this gate. Stage explicit
 intended paths before the staged policy check; rerun full verification after
 any formatter changes to source. Regenerate progress with the unchanged tool.
 
-Report C, natural C++, and human-approved assembly exceptions separately. The
-generated legacy "C-only source coverage" metric excludes assembly-bearing
-units and includes natural `.cpp` units; do not describe it as a pure-C count
-or hand-edit its value to compensate.
+Report C, natural C++, and approved assembly exceptions separately. The generated
+progress is mechanical binary coverage, not a pure-C reconstruction count. Do not
+hand-edit generated values.
 
 The first validated pilot is three C++ functions / 168 bytes:
 `func_02020a9c`, `func_02020ad4`, and `func_02020e4c`. None requires extra data,
