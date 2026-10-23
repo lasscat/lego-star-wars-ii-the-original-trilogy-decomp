@@ -478,6 +478,10 @@ src/auto/func_02018200.c:
     complete
     .text       start:0x02018200 end:0x02018210
 
+src/auto/func_02018210.c:
+    complete
+    .text       start:0x02018210 end:0x02018278
+
 src/auto/func_02018414.c:
     complete
     .text       start:0x02018414 end:0x02018420
