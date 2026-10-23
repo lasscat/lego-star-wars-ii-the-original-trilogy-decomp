@@ -51,10 +51,18 @@ state in `r0` and pass it back: `state = OS_DisableIrq(); ...; OS_RestoreIrq(sta
 
 ## Flags (`tools/configure.py`)
 
-`-O4,p -enum int -char signed -str noreuse -proc arm946e -gccext,on -fp soft -inline noauto -lang=c -interworking`
+`-O4,p -enum int -char signed -str noreuse -proc arm946e -gccext,on -fp soft -inline noauto -interworking`
 
 - `-char signed`: confirmed (`ldrsb` in strcat).
-- `-lang=c`: the engine is written in C.
+- Language is selected once per source: `.c` uses `-lang=c`, `.cpp` uses `-lang=c++`.
+  There is no global language selector; all other existing compiler flags are unchanged.
+- The engine contains C++-style virtual dispatch; that does not imply all engine code is
+  C++. See [cpp.md](cpp.md) for evidence-driven selection, `extern "C"`, vtable emission,
+  the validated function-only template and full-ROM verification requirements.
+- Conflicting C/C++ `-lang` selectors resolve to C in either order in the probed compiler.
+  Do not add a language flag to `compilers.txt` to override extension-based selection.
+- The historical probe helpers above assume C. A `.cpp` filename alone does not make
+  their compiler invocation correct for C++; inspect the command before using them.
 
 ## Reproduced observations
 - A function that works in `r2`/`r3` and leaves `r0`/`r1` untouched before a call forwards its arguments to the
