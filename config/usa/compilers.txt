@@ -282,3 +282,18 @@ src/auto/func_02067a98.c 2.0/sp1p5 -flag no-opt_common_subs
 src/auto/func_02047b38.c 2.0/sp1p5 -flag no-opt_common_subs
 src/auto/func_0207c1b0.c 2.0/sp1p5 -flag no-opt_rebuildconditionals
 src/auto/func_0205e984.c 2.0/sp1p5 -flag no-opt_rebuildconditionals
+src/auto/mtx_inverse44.c 2.0/sp1p5 -O4,p -lang c99 -ipa file -inline on,noauto
+src/auto/getScaleData_.c 2.0/sp1p5 -O4,p -lang c99 -ipa file -inline on,noauto
+src/auto/MI_Copy64B.c 2.0/sp1p5 -O4,p -lang c99 -ipa file -inline on,noauto
+src/donor/func_020c3d90.c 2.0/sp1p5 -O4,p -lang c99 -ipa file -inline on,noauto
+src/donor/func_020c3e84.c 2.0/sp1p5 -O4,p -lang c99 -ipa file -inline on,noauto
+src/donor/func_020c3fc4.c 2.0/sp1p5 -O4,p -lang c99 -ipa file -inline on,noauto
+src/donor/NNS_G3dScrPosToWorldLine.c 2.0/sp1p5 -O4,p -lang c99 -ipa file -inline on,noauto
+src/donor/func_020c631c.c 2.0/sp1p5 -O4,p -lang c99 -ipa file -inline on,noauto
+src/donor/func_020c6458.c 2.0/sp1p5 -O4,p -lang c99 -ipa file -inline on,noauto
+src/donor/func_020c744c.c 2.0/sp1p5 -O4,p -lang c99 -ipa file -inline on,noauto
+src/donor/FSi_SendCommand.c 2.0/sp1p5 -O4,p -lang c99 -ipa file -inline on,noauto
+src/donor/FSi_InitRom.c 2.0/sp1p5 -O4,p -lang c99 -ipa file -inline on,noauto
+src/donor/TP_CalcCalibrateParam.c 2.0/sp1p5 -O4,p -lang c99 -ipa file -inline on,noauto
+src/donor/CARDi_OnReadCard.c 2.0/sp1p5 -O4,p -lang c99 -ipa file -inline on,noauto
+src/donor/MBi_CommParentCallback.c 2.0/sp1p5 -O4,p -lang c99 -ipa file -inline on,noauto

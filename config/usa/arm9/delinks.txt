@@ -16094,3 +16094,83 @@ src/data/main_data_02101538.c:
 src/data/main_rodata_020fc9c8.c:
     complete
     .rodata     start:0x020fc9c8 end:0x020fc9d8
+
+src/auto/func_0204c408.c:
+    complete
+    .text       start:0x0204c408 end:0x0204c4a4
+
+src/auto/func_020529cc.c:
+    complete
+    .text       start:0x020529cc end:0x02052a9c
+
+src/auto/mtx_inverse44.c:
+    complete
+    .text       start:0x020c43e4 end:0x020c45ec
+
+src/auto/getScaleData_.c:
+    complete
+    .text       start:0x020c6aa4 end:0x020c6c98
+
+src/auto/OS_SetProtectionRegion2.c:
+    complete
+    .text       start:0x020ce3d0 end:0x020ce3d8
+
+src/auto/func_020cf2bc.c:
+    complete
+    .text       start:0x020cf2bc end:0x020cf2d8
+
+src/auto/MI_Copy64B.c:
+    complete
+    .text       start:0x020cf318 end:0x020cf344
+
+src/auto/func_020de3e0.c:
+    complete
+    .text       start:0x020de3e0 end:0x020de690
+
+src/donor/func_020c3d90.c:
+    complete
+    .text       start:0x020c3d90 end:0x020c3e84
+
+src/donor/func_020c3e84.c:
+    complete
+    .text       start:0x020c3e84 end:0x020c3f2c
+
+src/donor/func_020c3fc4.c:
+    complete
+    .text       start:0x020c3fc4 end:0x020c4070
+
+src/donor/NNS_G3dScrPosToWorldLine.c:
+    complete
+    .text       start:0x020c5f2c end:0x020c61b0
+
+src/donor/func_020c631c.c:
+    complete
+    .text       start:0x020c631c end:0x020c6458
+
+src/donor/func_020c6458.c:
+    complete
+    .text       start:0x020c6458 end:0x020c6578
+
+src/donor/func_020c744c.c:
+    complete
+    .text       start:0x020c744c end:0x020c7518
+
+src/donor/FSi_SendCommand.c:
+    complete
+    .text       start:0x020d2374 end:0x020d2518
+
+src/donor/FSi_InitRom.c:
+    complete
+    .text       start:0x020d2e28 end:0x020d2f70
+
+src/donor/TP_CalcCalibrateParam.c:
+    complete
+    .text       start:0x020d36d0 end:0x020d38bc
+
+src/donor/CARDi_OnReadCard.c:
+    complete
+    .text       start:0x020d5824 end:0x020d58f4
+
+src/donor/MBi_CommParentCallback.c:
+    complete
+    .text       start:0x020d8b10 end:0x020d8fb0
