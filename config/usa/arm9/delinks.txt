@@ -15148,6 +15148,10 @@ src/auto/func_0209d840.c:
 src/auto/func_020ace50.c:
     complete
     .text       start:0x020ace50 end:0x020acf58
+src/auto/func_02050c44.c:
+    complete
+    .text       start:0x02050c44 end:0x02050cf0
+
 src/auto/func_02050cf0.c:
     complete
     .text       start:0x02050cf0 end:0x02050e2c
