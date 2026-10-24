@@ -13943,6 +13943,10 @@ src/auto/func_020600f0.c:
     complete
     .text       start:0x020600f0 end:0x02060158
 
+src/auto/func_02060e6c.c:
+    complete
+    .text       start:0x02060e6c end:0x02060f24
+
 src/auto/func_02060f24.c:
     complete
     .text       start:0x02060f24 end:0x02060fa4
