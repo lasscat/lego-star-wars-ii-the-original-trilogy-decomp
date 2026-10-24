@@ -3822,6 +3822,10 @@ src/auto/func_02064cac.c:
     complete
     .text       start:0x02064cac end:0x02064cd8
 
+src/auto/func_02064eac.c:
+    complete
+    .text       start:0x02064eac end:0x02064f48
+
 src/auto/func_02064f48.c:
     complete
     .text       start:0x02064f48 end:0x02064f68
