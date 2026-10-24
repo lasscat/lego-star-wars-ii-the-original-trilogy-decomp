@@ -20531,3 +20531,19 @@ src/data/main_bss_02115364.c:
 src/data/main_bss_02115370.c:
     complete
     .bss        start:0x02115370 end:0x02115380
+
+src/auto/func_020e0ad4.c:
+    complete
+    .text       start:0x020e0ad4 end:0x020e0bec
+
+src/auto/func_020ae63c.c:
+    complete
+    .text       start:0x020ae63c end:0x020ae704
+
+src/auto/func_020affbc.c:
+    complete
+    .text       start:0x020affbc end:0x020b006c
+
+src/auto/func_020bd534.c:
+    complete
+    .text       start:0x020bd534 end:0x020bd5d4
