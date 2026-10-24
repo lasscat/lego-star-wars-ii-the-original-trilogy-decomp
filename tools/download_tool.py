@@ -27,8 +27,7 @@ def mwccarm_url(tag: str) -> str:
     return 'http://decomp.aetias.com/files/mwccarm.zip'
 
 def wibo_url(tag: str) -> str:
-    asset = 'wibo-macos' if platform.system == 'macos' else 'wibo'
-    return f'https://github.com/decompals/wibo/releases/download/{tag}/{asset}'
+    return f'https://github.com/decompals/wibo/releases/download/{tag}/wibo'
 
 def objdiff_url(tag: str) -> str:
     return f'https://github.com/encounter/objdiff/releases/download/{tag}/objdiff-cli-{platform.system}-{platform.machine}{platform.exe}'
@@ -47,8 +46,7 @@ TOOLS = {
 
 download_url = TOOLS[args.tool](args.tag)
 print(f'\nDownloading {args.tool} {args.tag}...')
-response = requests.get(download_url, timeout=120)
-response.raise_for_status()
+response = requests.get(download_url)
 if download_url.endswith('.zip'):
     zip_file = zipfile.ZipFile(io.BytesIO(response.content))
     zip_file.extractall(args.path)
