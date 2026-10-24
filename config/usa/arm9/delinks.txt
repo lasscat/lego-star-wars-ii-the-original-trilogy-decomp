@@ -6810,6 +6810,10 @@ src/auto/func_020b8f48.c:
     complete
     .text       start:0x020b8f48 end:0x020b8f70
 
+src/auto/func_020b8fa4.c:
+    complete
+    .text       start:0x020b8fa4 end:0x020b9068
+
 src/auto/func_020b9068.c:
     complete
     .text       start:0x020b9068 end:0x020b9088
