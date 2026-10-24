@@ -11989,6 +11989,10 @@ src/auto/func_0209cc5c.c:
     complete
     .text       start:0x0209cc5c end:0x0209cd18
 
+src/auto/func_020a59dc.c:
+    complete
+    .text       start:0x020a59dc end:0x020a5af8
+
 src/auto/func_020a6e98.c:
     complete
     .text       start:0x020a6e98 end:0x020a6efc
