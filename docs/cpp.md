@@ -74,7 +74,8 @@ nine preceding virtuals for offset `0x24` and eleven for offset `0x2c`.
 For the function-only pattern:
 
 - Declare virtual methods, but do not define them, even as empty methods.
-- Dispatch through existing object pointers; do not construct or destroy objects.
+- Dispatch through existing object pointers; do not construct or destroy objects
+  (evidenced constructors and `operator new` are allowed, see [exceptions.md](exceptions.md)).
 - Do not create global/static class instances, RTTI, exception machinery or
   replacement vtable arrays. `-RTTI off` alone does not prevent vtable emission.
 - Inspect object sections and symbols before integration. The desired object

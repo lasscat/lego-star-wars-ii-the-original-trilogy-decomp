@@ -13,6 +13,7 @@ No game assets in this repository: see `extract/README.md`.
 The build supports evidenced natural C++ alongside C,
 with per-source language selection and the unchanged full-ROM matching gate.
 See [the C++ build and source guide](docs/cpp.md) before adding a `.cpp` file.
+See [matching exceptions](docs/exceptions.md) before using assembly, `volatile` or other non-natural constructs.
 
 ## Progress
 
