@@ -1862,6 +1862,10 @@ src/auto/func_02044a90.c:
     complete
     .text       start:0x02044a90 end:0x02044a94
 
+src/auto/func_02044a94.cpp:
+    complete
+    .text       start:0x02044a94 end:0x02044b58
+
 src/auto/func_02044b58.c:
     complete
     .text       start:0x02044b58 end:0x02044bac
