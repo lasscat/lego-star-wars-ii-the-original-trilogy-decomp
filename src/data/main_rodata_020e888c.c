@@ -1,0 +1,5 @@
+/* compiler: 2.0/sp1p5 */
+#include "m2c.h"
+
+const u32 data_020e888c[15] = {0x11C50000, 0xFFFF11C4, 0x0033FFFF, 0xFFFF11D1, 0xFFFF11D0, 0x11C80035, 0xFFFF11C4, 0x0050FFFF,
+                               0xFFFF11CA, 0xFFFF11C9, 0x11CD0051, 0x11CB11CC, 0x0052FFFF, 0x11CE11CF, 0xFFFFFFFF};

@@ -1,0 +1,13 @@
+/* compiler: 2.0/sp1p5 */
+#include "m2c.h"
+
+extern u8 data_020e6064[];
+
+const u32 data_020f676c[22] = {0x08070100, 0xFFFFFFFF, 0x03020100, 0xFFFFFFFF, 0xFFFFFF02, 0xFFFFFFFF, 0xFF040301, 0xFFFFFFFF,
+                               0xFFFF0403, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFF0706, 0xFFFFFFFF, 0xFF080706, 0xFFFFFFFF,
+                               0x09080700, 0xFFFFFF05, 0xFF0A0908, 0xFFFFFFFF, 0xFFFF0A05, 0xFFFFFFFF};
+const u32 data_020f67c4[24] = {
+    (u32) &data_020e6064, 0x00000B9D, (u32) &data_020e6064, 0x00000B9E, (u32) &data_020e6064, 0x00000B9F,
+    (u32) &data_020e6064, 0x00000BA0, (u32) &data_020e6064, 0x00000BA1, (u32) &data_020e6064, 0x00000BA2,
+    (u32) &data_020e6064, 0x00000BA3, (u32) &data_020e6064, 0x00000BA4, (u32) &data_020e6064, 0x00000BA5,
+    (u32) &data_020e6064, 0x00000B9B, (u32) &data_020e6064, 0x00000B9C, (u32) &data_020e6064, 0x00000BA6};
