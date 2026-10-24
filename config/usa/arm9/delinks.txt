@@ -12117,6 +12117,10 @@ src/auto/func_02072444.c:
     complete
     .text       start:0x02072444 end:0x020724e0
 
+src/auto/func_0207c054.c:
+    complete
+    .text       start:0x0207c054 end:0x0207c118
+
 src/auto/func_0207c118.c:
     complete
     .text       start:0x0207c118 end:0x0207c1b0
