@@ -5298,6 +5298,10 @@ src/auto/func_0208d854.c:
     complete
     .text       start:0x0208d854 end:0x0208d874
 
+src/auto/func_0208d8cc.c:
+    complete
+    .text       start:0x0208d8cc end:0x0208da0c
+
 src/auto/func_0208da0c.c:
     complete
     .text       start:0x0208da0c end:0x0208da5c
