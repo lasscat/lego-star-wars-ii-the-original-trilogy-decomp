@@ -17,11 +17,11 @@ See [the C++ build and source guide](docs/cpp.md) before adding a `.cpp` file.
 ## Progress
 
 <!-- progress:start -->
-`█████████░░░░░░░░░░░` **45.40%** of the code matched · data 92.91% · 3937/4764 functions
+`█████████░░░░░░░░░░░` **45.47%** of the code matched · data 92.91% · 3941/4764 functions
 
 | Part of the code | Files | Functions | Share of all code |
 |---|---|---|---|
-| Auto-matched (raw m2c output, to clean up) | 3925 | 3925/3925 | 44.92% |
+| Auto-matched (raw m2c output, to clean up) | 3930 | 3929/3930 | 44.98% |
 | Reused from other decompilations, not merged into files yet | 12 | 12/12 | 0.49% |
 | Game code: `src/data/` | 1314 | 0/0 | 0.00% |
 
