@@ -3758,6 +3758,10 @@ src/auto/func_02064a34.c:
     complete
     .text       start:0x02064a34 end:0x02064a58
 
+src/auto/func_02064a58.c:
+    complete
+    .text       start:0x02064a58 end:0x02064b10
+
 src/auto/func_02064b10.c:
     complete
     .text       start:0x02064b10 end:0x02064b3c
