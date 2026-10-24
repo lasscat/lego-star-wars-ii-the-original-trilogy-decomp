@@ -13249,6 +13249,10 @@ src/auto/func_0206eb90.cpp:
     complete
     .text       start:0x0206eb90 end:0x0206ebe8
 
+src/auto/func_02075d00.c:
+    complete
+    .text       start:0x02075d00 end:0x02075db0
+
 src/auto/func_02075db0.cpp:
     complete
     .text       start:0x02075db0 end:0x02075e04
