@@ -14930,6 +14930,10 @@ src/auto/func_0207b540.c:
     complete
     .text       start:0x0207b540 end:0x0207b5dc
 
+src/auto/func_0207b5dc.c:
+    complete
+    .text       start:0x0207b5dc end:0x0207b68c
+
 src/auto/func_0207b68c.c:
     complete
     .text       start:0x0207b68c end:0x0207b71c
