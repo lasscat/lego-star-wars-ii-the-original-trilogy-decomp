@@ -14532,6 +14532,10 @@ src/auto/func_020ab238.c:
 src/auto/MBi_StartParentCore.c:
     complete
     .text       start:0x020dc804 end:0x020dc9e8
+src/auto/func_0204d328.c:
+    complete
+    .text       start:0x0204d328 end:0x0204d3bc
+
 src/auto/func_0204d638.c:
     complete
     .text       start:0x0204d638 end:0x0204d6d4
