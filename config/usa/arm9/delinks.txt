@@ -4434,6 +4434,10 @@ src/auto/func_0206e2a0.c:
     complete
     .text       start:0x0206e2a0 end:0x0206e2e0
 
+src/auto/func_0206e7b4.c:
+    complete
+    .text       start:0x0206e7b4 end:0x0206e870
+
 src/auto/func_0206e870.c:
     complete
     .text       start:0x0206e870 end:0x0206e874
