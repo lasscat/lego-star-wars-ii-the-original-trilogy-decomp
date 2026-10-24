@@ -5018,6 +5018,10 @@ src/auto/func_020834cc.c:
     complete
     .text       start:0x020834cc end:0x020834e0
 
+src/auto/func_020838b8.c:
+    complete
+    .text       start:0x020838b8 end:0x02083940
+
 src/auto/func_02083940.c:
     complete
     .text       start:0x02083940 end:0x02083964
