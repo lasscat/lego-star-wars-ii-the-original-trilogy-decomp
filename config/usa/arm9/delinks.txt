@@ -2970,6 +2970,10 @@ src/auto/func_0205a114.c:
     complete
     .text       start:0x0205a114 end:0x0205a148
 
+src/auto/func_0205a148.c:
+    complete
+    .text       start:0x0205a148 end:0x0205a1cc
+
 src/auto/func_0205a1cc.c:
     complete
     .text       start:0x0205a1cc end:0x0205a1e0
