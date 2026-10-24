@@ -4378,6 +4378,10 @@ src/auto/func_0206d4b0.c:
     complete
     .text       start:0x0206d4b0 end:0x0206d4d0
 
+src/auto/func_0206d4d0.c:
+    complete
+    .text       start:0x0206d4d0 end:0x0206d5a8
+
 src/auto/func_0206d5a8.c:
     complete
     .text       start:0x0206d5a8 end:0x0206d5ec
