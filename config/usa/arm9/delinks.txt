@@ -1026,6 +1026,10 @@ src/auto/func_02025168.c:
     complete
     .text       start:0x02025168 end:0x02025198
 
+src/auto/func_02025198.c:
+    complete
+    .text       start:0x02025198 end:0x02025264
+
 src/auto/func_02025264.c:
     complete
     .text       start:0x02025264 end:0x0202526c
