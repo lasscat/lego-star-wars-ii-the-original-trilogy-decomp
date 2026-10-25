@@ -178,6 +178,10 @@ src/auto/func_0200ad5c.c:
     complete
     .text       start:0x0200ad5c end:0x0200ad80
 
+src/auto/func_0200aef8.c:
+    complete
+    .text       start:0x0200aef8 end:0x0200af6c
+
 src/auto/func_0200af6c.c:
     complete
     .text       start:0x0200af6c end:0x0200af88
@@ -13613,6 +13617,10 @@ src/auto/func_0200f508.c:
     complete
     .text       start:0x0200f508 end:0x0200f5d0
 
+src/auto/func_0200f5d0.c:
+    complete
+    .text       start:0x0200f5d0 end:0x0200f650
+
 src/auto/func_0200f650.cpp:
     complete
     .text       start:0x0200f650 end:0x0200f744
@@ -13661,6 +13669,10 @@ src/auto/func_0201ec3c.cpp:
 src/auto/func_0201ed28.cpp:
     complete
     .text       start:0x0201ed28 end:0x0201ede4
+
+src/auto/func_0201eec4.c:
+    complete
+    .text       start:0x0201eec4 end:0x0201ef28
 
 src/auto/func_0201ef28.cpp:
     complete
@@ -16834,6 +16846,10 @@ src/auto/getScaleData_.c:
 src/auto/OS_SetProtectionRegion2.c:
     complete
     .text       start:0x020ce3d0 end:0x020ce3d8
+
+src/auto/func_020cf27c.c:
+    complete
+    .text       start:0x020cf27c end:0x020cf2bc
 
 src/auto/func_020cf2bc.c:
     complete
