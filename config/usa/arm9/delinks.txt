@@ -20803,3 +20803,7 @@ src/auto/func_020affbc.c:
 src/auto/func_020bd534.c:
     complete
     .text       start:0x020bd534 end:0x020bd5d4
+
+src/auto/func_020b73e0.c:
+    complete
+    .text       start:0x020b73e0 end:0x020b7dc4
