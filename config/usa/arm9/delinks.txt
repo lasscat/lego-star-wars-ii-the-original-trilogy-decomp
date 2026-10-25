@@ -1926,6 +1926,10 @@ src/auto/func_02045888.c:
     complete
     .text       start:0x02045888 end:0x020458a0
 
+src/auto/func_020462b8.cpp:
+    complete
+    .text       start:0x020462b8 end:0x02046394
+
 src/auto/func_02046394.c:
     complete
     .text       start:0x02046394 end:0x020463c4
