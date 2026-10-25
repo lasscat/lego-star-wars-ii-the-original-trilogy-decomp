@@ -17,15 +17,15 @@ See [the C++ build and source guide](docs/cpp.md) before adding a `.cpp` file.
 ## Progress
 
 <!-- progress:start -->
-`██████████░░░░░░░░░░` **49.31%** of the code matched · data 92.91% · 4034/4764 functions
+`██████████░░░░░░░░░░` **49.46%** of the code matched · data 92.91% · 4039/4764 functions
 
 | Part of the code | Files | Functions | Share of all code |
 |---|---|---|---|
-| Auto-matched (raw m2c output, to clean up) | 4023 | 4022/4023 | 48.83% |
+| Auto-matched (raw m2c output, to clean up) | 4028 | 4027/4028 | 48.97% |
 | Reused from other decompilations, not merged into files yet | 12 | 12/12 | 0.49% |
 | Game code: `src/data/` | 1314 | 0/0 | 0.00% |
 
-*Updated 2026-10-24 by `python tools/match.py progress` ([DS Decomp Studio](https://github.com/liolu/ds-decomp-studio)). A function counts only when it compiles to the exact same bytes and the ROM still rebuilds byte for byte.*
+*Updated 2026-10-25 by `python tools/match.py progress` ([DS Decomp Studio](https://github.com/liolu/ds-decomp-studio)). A function counts only when it compiles to the exact same bytes and the ROM still rebuilds byte for byte.*
 <!-- progress:end -->
 
 ```shell
