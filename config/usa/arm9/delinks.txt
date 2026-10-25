@@ -1970,6 +1970,10 @@ src/auto/func_02045888.c:
     complete
     .text       start:0x02045888 end:0x020458a0
 
+src/auto/func_020458a0.c:
+    complete
+    .text       start:0x020458a0 end:0x02045990
+
 src/auto/func_020462b8.cpp:
     complete
     .text       start:0x020462b8 end:0x02046394
