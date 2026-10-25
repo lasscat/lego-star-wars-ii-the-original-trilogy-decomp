@@ -538,6 +538,10 @@ src/auto/func_02018658.c:
     complete
     .text       start:0x02018658 end:0x02018680
 
+src/auto/func_020186ec.c:
+    complete
+    .text       start:0x020186ec end:0x020187d0
+
 src/auto/func_02018a08.c:
     complete
     .text       start:0x02018a08 end:0x02018a6c
