@@ -178,6 +178,10 @@ src/auto/func_0200af88.c:
     complete
     .text       start:0x0200af88 end:0x0200af90
 
+src/auto/func_0200af90.cpp:
+    complete
+    .text       start:0x0200af90 end:0x0200b0dc
+
 src/auto/func_0200b0dc.c:
     complete
     .text       start:0x0200b0dc end:0x0200b0f0
