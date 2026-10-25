@@ -3630,6 +3630,10 @@ src/auto/func_02060fa4.c:
     complete
     .text       start:0x02060fa4 end:0x02060fe4
 
+src/auto/func_02060fe4.c:
+    complete
+    .text       start:0x02060fe4 end:0x020610bc
+
 src/auto/func_020610bc.c:
     complete
     .text       start:0x020610bc end:0x020610e4
