@@ -12265,6 +12265,10 @@ src/auto/func_020a59dc.c:
     complete
     .text       start:0x020a59dc end:0x020a5af8
 
+src/auto/func_020a6bb4.c:
+    complete
+    .text       start:0x020a6bb4 end:0x020a6cac
+
 src/auto/func_020a6e98.c:
     complete
     .text       start:0x020a6e98 end:0x020a6efc
