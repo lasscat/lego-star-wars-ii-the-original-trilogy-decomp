@@ -14686,6 +14686,10 @@ src/auto/SetPlttParamaters_.c:
 src/auto/func_020bb028.c:
     complete
     .text       start:0x020bb028 end:0x020bb180
+src/auto/func_0202abc8.c:
+    complete
+    .text       start:0x0202abc8 end:0x0202aca4
+
 src/auto/func_0202aca4.c:
     complete
     .text       start:0x0202aca4 end:0x0202adf8
