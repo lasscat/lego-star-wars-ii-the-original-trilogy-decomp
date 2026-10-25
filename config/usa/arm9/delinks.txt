@@ -15202,6 +15202,10 @@ src/auto/func_0200fa74.cpp:
 src/auto/func_020afcbc.c:
     complete
     .text       start:0x020afcbc end:0x020afd7c
+src/auto/func_02050e2c.c:
+    complete
+    .text       start:0x02050e2c end:0x02050f24
+
 src/auto/func_02050f24.c:
     complete
     .text       start:0x02050f24 end:0x02050fbc
