@@ -12869,6 +12869,10 @@ src/auto/GX_SetDefaultDMA.c:
     complete
     .text       start:0x020c995c end:0x020c999c
 
+src/auto/func_020541dc.c:
+    complete
+    .text       start:0x020541dc end:0x0205427c
+
 src/auto/func_0205427c.c:
     complete
     .text       start:0x0205427c end:0x0205435c
