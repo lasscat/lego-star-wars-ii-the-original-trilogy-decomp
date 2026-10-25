@@ -1410,6 +1410,10 @@ src/auto/func_0202e838.c:
     complete
     .text       start:0x0202e838 end:0x0202e8e4
 
+src/auto/func_0202e8e4.c:
+    complete
+    .text       start:0x0202e8e4 end:0x0202f784
+
 src/auto/func_0202f784.c:
     complete
     .text       start:0x0202f784 end:0x0202f790
