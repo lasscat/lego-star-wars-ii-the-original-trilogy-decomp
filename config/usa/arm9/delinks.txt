@@ -494,6 +494,10 @@ src/auto/func_0201811c.c:
     complete
     .text       start:0x0201811c end:0x0201812c
 
+src/auto/func_0201812c.c:
+    complete
+    .text       start:0x0201812c end:0x02018200
+
 src/auto/func_02018200.c:
     complete
     .text       start:0x02018200 end:0x02018210
