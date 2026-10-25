@@ -10481,6 +10481,10 @@ src/auto/func_020bec84.c:
     complete
     .text       start:0x020bec84 end:0x020bed00
 
+src/auto/func_020bed00.c:
+    complete
+    .text       start:0x020bed00 end:0x020bedd4
+
 src/auto/func_020bedd4.c:
     complete
     .text       start:0x020bedd4 end:0x020bedec
