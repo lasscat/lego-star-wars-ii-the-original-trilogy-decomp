@@ -4,16 +4,16 @@
 #include "m2c.h"
 
 /* Link this reference into the chain at object+4, or clear its two links. */
-void func_0200f244(void *arg0, char *arg1) {
-    if (arg1 != NULL) {
-        arg1 += 4;
+void func_0200f244(void *reference, char *object) {
+    if (object != NULL) {
+        object += 4;
     }
-    if (arg1 != NULL) {
-        *(void **) arg0                = arg1;
-        *(void **) ((char *) arg0 + 4) = *(void **) arg1;
-        *(void **) arg1                = arg0;
+    if (object != NULL) {
+        *(void **) reference                = object;
+        *(void **) ((char *) reference + 4) = *(void **) object;
+        *(void **) object                   = reference;
     } else {
-        *(void **) arg0                = NULL;
-        *(void **) ((char *) arg0 + 4) = NULL;
+        *(void **) reference                = NULL;
+        *(void **) ((char *) reference + 4) = NULL;
     }
 }
