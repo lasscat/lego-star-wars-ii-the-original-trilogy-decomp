@@ -14447,6 +14447,10 @@ src/auto/func_02072ad8.cpp:
     complete
     .text       start:0x02072ad8 end:0x02072bc8
 
+src/auto/func_02018ad8.c:
+    complete
+    .text       start:0x02018ad8 end:0x02018cf4
+
 src/auto/func_02018e74.cpp:
     complete
     .text       start:0x02018e74 end:0x02018f68
