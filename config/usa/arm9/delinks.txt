@@ -6666,6 +6666,10 @@ src/auto/func_020ad954.c:
     complete
     .text       start:0x020ad954 end:0x020ad970
 
+src/auto/func_020ad970.c:
+    complete
+    .text       start:0x020ad970 end:0x020adaf0
+
 src/auto/func_020adaf0.c:
     complete
     .text       start:0x020adaf0 end:0x020adb5c
