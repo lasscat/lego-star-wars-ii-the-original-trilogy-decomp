@@ -978,6 +978,10 @@ src/auto/func_02022130.c:
     complete
     .text       start:0x02022130 end:0x02022138
 
+src/auto/func_02022138.cpp:
+    complete
+    .text       start:0x02022138 end:0x02022338
+
 src/auto/func_02022338.c:
     complete
     .text       start:0x02022338 end:0x02022368
