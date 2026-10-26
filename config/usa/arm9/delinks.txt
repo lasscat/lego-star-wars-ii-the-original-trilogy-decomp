@@ -5050,6 +5050,10 @@ src/auto/func_0207d168.c:
     complete
     .text       start:0x0207d168 end:0x0207d1dc
 
+src/auto/func_0207d1dc.c:
+    complete
+    .text       start:0x0207d1dc end:0x0207d394
+
 src/auto/func_0207d560.c:
     complete
     .text       start:0x0207d560 end:0x0207d59c
