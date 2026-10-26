@@ -1,39 +1,47 @@
 #include "m2c.h"
 
-M2C_UNK NNS_G3dGeSendDL(void *, s32);                 /* extern */
+M2C_UNK NNS_G3dGeSendDL(void *, s32); /* extern */
 
-void func_020c565c(void *arg0) {
-    s32 var_r1;
-    u8 var_r4;
-    void *temp_r0;
+/* Process one G3D command-stream display-list record. The callback mode at
+ * context +0x96 can run the context callback before or after submission;
+ * context flag bits 0x40 and 0x100 suppress submission. Otherwise the first
+ * nine-byte record supplies a byte-packed address offset and byte length for
+ * NNS_G3dGeSendDL. The record cursor advances by nine bytes afterward.
+ */
+void func_020c565c(void *context) {
+    s32 callbackFlag;
+    u8 callbackMode;
+    void *displayListRecord;
 
-    if (M2C_FIELD(arg0, M2C_UNK(**)(void *), 0x34) != NULL) {
-        var_r4 = M2C_FIELD(arg0, u8 *, 0x96);
+    if (M2C_FIELD(context, M2C_UNK(**)(void *), 0x34) != NULL) {
+        callbackMode = M2C_FIELD(context, u8 *, 0x96);
     } else {
-        var_r4 = 0;
+        callbackMode = 0;
     }
-    if (var_r4 == 1) {
-        M2C_FIELD(arg0, s32 *, 8) = (s32) (M2C_FIELD(arg0, s32 *, 8) & ~0x40);
-        M2C_FIELD(arg0, M2C_UNK(**)(void *), 0x34)(arg0);
-        if (M2C_FIELD(arg0, M2C_UNK(**)(void *), 0x34) != NULL) {
-            var_r4 = M2C_FIELD(arg0, u8 *, 0x96);
+    if (callbackMode == 1) {
+        M2C_FIELD(context, s32 *, 8) = (s32) (M2C_FIELD(context, s32 *, 8) & ~0x40);
+        M2C_FIELD(context, M2C_UNK(**)(void *), 0x34)(context);
+        if (M2C_FIELD(context, M2C_UNK(**)(void *), 0x34) != NULL) {
+            callbackMode = M2C_FIELD(context, u8 *, 0x96);
         } else {
-            var_r4 = 0;
+            callbackMode = 0;
         }
-        var_r1 = M2C_FIELD(arg0, s32 *, 8) & 0x40;
+        callbackFlag = M2C_FIELD(context, s32 *, 8) & 0x40;
     } else {
-        var_r1 = 0;
+        callbackFlag = 0;
     }
-    if (!(M2C_FIELD(arg0, s32 *, 8) & 0x100) && (var_r1 == 0)) {
-        temp_r0 = M2C_FIELD(arg0, void **, 0);
-        NNS_G3dGeSendDL(temp_r0 + (M2C_FIELD(temp_r0, u8 *, 1) | (M2C_FIELD(temp_r0, u8 *, 2) << 8) |
-                                   (M2C_FIELD(temp_r0, u8 *, 3) << 0x10) | (M2C_FIELD(temp_r0, u8 *, 4) << 0x18)),
-                        M2C_FIELD(temp_r0, u8 *, 5) | (M2C_FIELD(temp_r0, u8 *, 6) << 8) |
-                            (M2C_FIELD(temp_r0, u8 *, 7) << 0x10) | (M2C_FIELD(temp_r0, u8 *, 8) << 0x18));
+    if (!(M2C_FIELD(context, s32 *, 8) & 0x100) && (callbackFlag == 0)) {
+        displayListRecord = M2C_FIELD(context, void **, 0);
+        NNS_G3dGeSendDL(displayListRecord + (M2C_FIELD(displayListRecord, u8 *, 1) |
+                                             (M2C_FIELD(displayListRecord, u8 *, 2) << 8) |
+                                             (M2C_FIELD(displayListRecord, u8 *, 3) << 0x10) |
+                                             (M2C_FIELD(displayListRecord, u8 *, 4) << 0x18)),
+                        M2C_FIELD(displayListRecord, u8 *, 5) | (M2C_FIELD(displayListRecord, u8 *, 6) << 8) |
+                            (M2C_FIELD(displayListRecord, u8 *, 7) << 0x10) | (M2C_FIELD(displayListRecord, u8 *, 8) << 0x18));
     }
-    if (var_r4 == 3) {
-        M2C_FIELD(arg0, s32 *, 8) = (s32) (M2C_FIELD(arg0, s32 *, 8) & ~0x40);
-        M2C_FIELD(arg0, M2C_UNK(**)(void *), 0x34)(arg0);
+    if (callbackMode == 3) {
+        M2C_FIELD(context, s32 *, 8) = (s32) (M2C_FIELD(context, s32 *, 8) & ~0x40);
+        M2C_FIELD(context, M2C_UNK(**)(void *), 0x34)(context);
     }
-    M2C_FIELD(arg0, void **, 0) = (void *) (M2C_FIELD(arg0, void **, 0) + 9);
+    M2C_FIELD(context, void **, 0) = (void *) (M2C_FIELD(context, void **, 0) + 9);
 }
