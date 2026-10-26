@@ -11473,6 +11473,10 @@ src/auto/OS_EnableIrqMask.c:
     complete
     .text       start:0x020ccb04 end:0x020ccb34
 
+src/auto/func_02023978.cpp:
+    complete
+    .text       start:0x02023978 end:0x02023b1c
+
 src/auto/func_02023b1c.c:
     complete
     .text       start:0x02023b1c end:0x02023b4c
