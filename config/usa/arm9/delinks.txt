@@ -326,6 +326,10 @@ src/auto/func_0200e890.c:
     complete
     .text       start:0x0200e890 end:0x0200e8f0
 
+src/auto/func_0200ea7c.c:
+    complete
+    .text       start:0x0200ea7c end:0x0200ec08
+
 src/auto/func_0200ed14.c:
     complete
     .text       start:0x0200ed14 end:0x0200ed78
