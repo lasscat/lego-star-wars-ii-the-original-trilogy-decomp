@@ -24,12 +24,12 @@ extern u32 data_020ee388[];
 extern u32 data_020ee2f4[];
 
 enum {
-    MODE_OFFSET   = 0xD0,
-    LABEL_BASE_A  = 0x1CB,
+    MODE_OFFSET = 0xD0,
+    LABEL_BASE_A = 0x1CB,
     LABEL_DEFAULT = 0x29A,
-    LABEL_BASE_B  = 0x261,
-    LABEL_BASE_C  = 0x243,
-    BIAS_MODE0    = 0x16,
+    LABEL_BASE_B = 0x261,
+    LABEL_BASE_C = 0x243,
+    BIAS_MODE0 = 0x16,
 };
 
 /* Refreshes the item widget for the current slot according to its mode byte. */
@@ -54,11 +54,11 @@ void func_02077414(void *arg0) {
         }
         func_02077b7c(arg0);
     } else if (M2C_FIELD(arg0, u8 *, MODE_OFFSET) == 0 || M2C_FIELD(arg0, u8 *, MODE_OFFSET) == 2) {
-        tab_val = data_020ee388[idx];
-        bias    = 0;
+        tab_val  = data_020ee388[idx];
+        bias = 0;
         if (M2C_FIELD(arg0, u8 *, MODE_OFFSET) == 0) {
-            tab_val = data_020ee2f4[idx];
-            bias    = BIAS_MODE0;
+            tab_val  = data_020ee2f4[idx];
+            bias = BIAS_MODE0;
         }
         bit = idx + bias;
         if (func_0208671c(&data_02104d90, bit) != 0) {
