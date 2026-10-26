@@ -5022,6 +5022,10 @@ src/auto/func_0207e050.c:
     complete
     .text       start:0x0207e050 end:0x0207e108
 
+src/auto/func_0207e460.c:
+    complete
+    .text       start:0x0207e460 end:0x0207e590
+
 src/auto/func_0207e840.c:
     complete
     .text       start:0x0207e840 end:0x0207e8ac
