@@ -6218,6 +6218,10 @@ src/auto/func_0209d9fc.c:
     complete
     .text       start:0x0209d9fc end:0x0209da24
 
+src/auto/func_0209dd64.c:
+    complete
+    .text       start:0x0209dd64 end:0x0209ded4
+
 src/auto/func_0209ded4.c:
     complete
     .text       start:0x0209ded4 end:0x0209df00
@@ -12444,6 +12448,10 @@ src/auto/func_0208d7d4.c:
 src/auto/func_0208dad8.c:
     complete
     .text       start:0x0208dad8 end:0x0208db80
+
+src/auto/func_02095240.cpp:
+    complete
+    .text       start:0x02095240 end:0x020953b0
 
 src/auto/func_020953b0.cpp:
     complete
