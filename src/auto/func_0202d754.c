@@ -3,6 +3,7 @@
  */
 #include "m2c.h"
 
+/* Copy a reference and link it into the same object's chain, or clear both links. */
 void func_0202d754(void *arg0, s8 **arg1) {
     s8 *var_r2;
 

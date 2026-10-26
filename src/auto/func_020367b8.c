@@ -3,6 +3,7 @@
  */
 #include "m2c.h"
 
+/* Link this reference into the chain at object+4, or clear its two links. */
 void func_020367b8(void *arg0, char *arg1) {
     if (arg1 != NULL) {
         arg1 += 4;
