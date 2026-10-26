@@ -570,6 +570,10 @@ src/auto/func_02019450.c:
     complete
     .text       start:0x02019450 end:0x02019498
 
+src/auto/func_02019554.cpp:
+    complete
+    .text       start:0x02019554 end:0x020196d4
+
 src/auto/func_020199bc.c:
     complete
     .text       start:0x020199bc end:0x020199d0
