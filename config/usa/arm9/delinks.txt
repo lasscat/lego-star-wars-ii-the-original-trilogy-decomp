@@ -10,6 +10,10 @@ src/auto/Entry.c:
     complete
     .text       start:0x02000800 end:0x02000938
 
+src/auto/func_02000938.c:
+    complete
+    .text       start:0x02000938 end:0x02000950
+
 src/auto/func_02000950.c:
     complete
     .text       start:0x02000950 end:0x02000a0c
@@ -6338,6 +6342,10 @@ src/auto/func_0209d9fc.c:
     complete
     .text       start:0x0209d9fc end:0x0209da24
 
+src/auto/func_0209dd64.c:
+    complete
+    .text       start:0x0209dd64 end:0x0209ded4
+
 src/auto/func_0209ded4.c:
     complete
     .text       start:0x0209ded4 end:0x0209df00
@@ -10905,6 +10913,10 @@ src/auto/func_02055b24.c:
     complete
     .text       start:0x02055b24 end:0x02055b64
 
+src/auto/func_020979b4.cpp:
+    complete
+    .text       start:0x020979b4 end:0x02097b28
+
 src/auto/func_02097b28.c:
     complete
     .text       start:0x02097b28 end:0x02097b68
@@ -12601,6 +12613,10 @@ src/auto/func_02094ca0.c:
     complete
     .text       start:0x02094ca0 end:0x02094eb0
 
+src/auto/func_02095240.cpp:
+    complete
+    .text       start:0x02095240 end:0x020953b0
+
 src/auto/func_020953b0.cpp:
     complete
     .text       start:0x020953b0 end:0x02095548
@@ -13300,6 +13316,10 @@ src/auto/func_02029120.c:
 src/auto/func_02059ec0.c:
     complete
     .text       start:0x02059ec0 end:0x02059efc
+
+src/auto/func_02075064.c:
+    complete
+    .text       start:0x02075064 end:0x0207513c
 
 src/auto/func_020754e8.c:
     complete
