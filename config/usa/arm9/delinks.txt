@@ -10,6 +10,10 @@ src/auto/Entry.c:
     complete
     .text       start:0x02000800 end:0x02000938
 
+src/auto/func_02000938.c:
+    complete
+    .text       start:0x02000938 end:0x02000950
+
 src/auto/func_02000950.c:
     complete
     .text       start:0x02000950 end:0x02000a0c

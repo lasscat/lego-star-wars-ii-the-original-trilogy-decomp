@@ -1,0 +1,66 @@
+{
+    "src/auto/MI_Copy64B.c": {
+        "sha256": "ce6e5bd683653149f2045aa797497afe9b4c4419e16a797016fac453a3c529eb",
+        "reason":
+            "Preserve exact unchanged upstream implementation during authorized synchronization; no new assembly reconstruction.",
+        "approved_by": "User",
+        "approval":
+            "User replied \"approve\" to the 2026-10-23 per-source approval request naming MI_Copy64B.c, OS_SetProtectionRegion2.c and func_020cf2bc.c."
+    },
+    "src/auto/OS_SetProtectionRegion2.c": {
+        "sha256": "4db768a385d5178b701408b939b222297a409766bc7d355cef4a6365389395a2",
+        "reason":
+            "Preserve exact unchanged upstream implementation during authorized synchronization; no new assembly reconstruction.",
+        "approved_by": "User",
+        "approval":
+            "User replied \"approve\" to the 2026-10-23 per-source approval request naming MI_Copy64B.c, OS_SetProtectionRegion2.c and func_020cf2bc.c."
+    },
+    "src/auto/func_020cf2bc.c": {
+        "sha256": "8939b7d6702e7018df0eb0e356878460632f1e8f38260abd3a99b18dfb1d1258",
+        "reason":
+            "Preserve exact unchanged upstream implementation during authorized synchronization; no new assembly reconstruction.",
+        "approved_by": "User",
+        "approval":
+            "User replied \"approve\" to the 2026-10-23 per-source approval request naming MI_Copy64B.c, OS_SetProtectionRegion2.c and func_020cf2bc.c."
+    },
+    "src/auto/func_0200f5d0.c": {
+        "sha256": "981d82e82baf0e8e2e60d47f50283cd1f1cdcbc2d2f3c2dfe0555d7588b905b3",
+        "reason":
+            "Hand-written asm accepted by the maintainer (docs/exceptions.md): unrelocated literal-pool zero (ldr r5,=0) with unscheduled smull/smlal body and hand-written r0-r3 parameter homing.",
+        "approved_by": "User",
+        "approval":
+            "User replied \"i approve asm\" (2026-10-24) to the coordinator asking whether to approve the four asm sources func_0200f5d0, func_0200aef8, func_0201eec4, func_020cf27c."
+    },
+    "src/auto/func_0200aef8.c": {
+        "sha256": "c0f1e493c217aa8b939f2cc7945217a34e8fdad2a9cfe0fc46d2b6ca410f7c9e",
+        "reason":
+            "Hand-written asm accepted by the maintainer (docs/exceptions.md): unrelocated literal-pool zero (ldr r4,=0) with unscheduled smull/smlal body and hand-written r0-r3 parameter homing.",
+        "approved_by": "User",
+        "approval":
+            "User replied \"i approve asm\" (2026-10-24) to the coordinator asking whether to approve the four asm sources func_0200f5d0, func_0200aef8, func_0201eec4, func_020cf27c."
+    },
+    "src/auto/func_0201eec4.c": {
+        "sha256": "2e56487a28f4e8b6b5303dec4b8c0eb4fd3847ddf7008fc2b4fb5954515c8e13",
+        "reason":
+            "Hand-written asm accepted by the maintainer (docs/exceptions.md): unrelocated literal-pool zero (ldr r4,=0) with unscheduled smull/smlal body and hand-written r0-r3 parameter homing.",
+        "approved_by": "User",
+        "approval":
+            "User replied \"i approve asm\" (2026-10-24) to the coordinator asking whether to approve the four asm sources func_0200f5d0, func_0200aef8, func_0201eec4, func_020cf27c."
+    },
+    "src/auto/func_020cf27c.c": {
+        "sha256": "4309fb45cd48a5ebf12fc5ca433989fdcf817da976208e7bf9b926d3a1331334",
+        "reason":
+            "Hand-written asm accepted by the maintainer (docs/exceptions.md): predicated 8-register ldmlt/stmlt with writeback, lr-free r4-r10 prologue (Nitro MIi_CpuCopyFast shape).",
+        "approved_by": "User",
+        "approval":
+            "User replied \"i approve asm\" (2026-10-24) to the coordinator asking whether to approve the four asm sources func_0200f5d0, func_0200aef8, func_0201eec4, func_020cf27c."
+    },
+    "src/auto/func_02000938.c": {
+        "sha256": "0af2728ef92e379ea2409c509083ec15ebb147db3146de96ef221cc66d1f4044",
+        "reason":
+            "Hand-written SDK MIi_CpuFill32 loop: predicated single-register stmltia with writeback and an ip end pointer. mwcc emits post-indexed str, an r2 end pointer and an unsigned compare in five natural-C forms, never this shape (same class as func_020cf27c).",
+        "approved_by": "User",
+        "approval":
+            "User, 2026-10-25, after being told func_02000938 was an ASM candidate needing approval: \"do waht u think is best and make a seperate branch + pr for asm\"."
+    }
+}
