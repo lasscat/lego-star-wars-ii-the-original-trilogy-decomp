@@ -2034,6 +2034,10 @@ src/auto/func_02044ecc.c:
     complete
     .text       start:0x02044ecc end:0x02044ed0
 
+src/auto/func_02044ed0.c:
+    complete
+    .text       start:0x02044ed0 end:0x020451c4
+
 src/auto/func_020451c4.c:
     complete
     .text       start:0x020451c4 end:0x020451dc
