@@ -350,6 +350,10 @@ src/auto/func_0200ee24.c:
     complete
     .text       start:0x0200ee24 end:0x0200ee88
 
+src/auto/func_0200f274.cpp:
+    complete
+    .text       start:0x0200f274 end:0x0200f508
+
 src/auto/func_0200fae8.c:
     complete
     .text       start:0x0200fae8 end:0x0200faf8
