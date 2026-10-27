@@ -4638,6 +4638,10 @@ src/auto/func_0206dab8.c:
     complete
     .text       start:0x0206dab8 end:0x0206dad0
 
+src/auto/func_0206dad0.c:
+    complete
+    .text       start:0x0206dad0 end:0x0206dd60
+
 src/auto/func_0206dd60.c:
     complete
     .text       start:0x0206dd60 end:0x0206de48
