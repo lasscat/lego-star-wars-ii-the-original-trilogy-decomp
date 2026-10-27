@@ -5786,6 +5786,10 @@ src/auto/func_02091b68.c:
     complete
     .text       start:0x02091b68 end:0x02091b88
 
+src/auto/func_02091b88.cpp:
+    complete
+    .text       start:0x02091b88 end:0x02091dc4
+
 src/auto/func_02091dc4.c:
     complete
     .text       start:0x02091dc4 end:0x02091e30
