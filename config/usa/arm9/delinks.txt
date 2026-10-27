@@ -14455,6 +14455,10 @@ src/auto/func_02094930.cpp:
     complete
     .text       start:0x02094930 end:0x020949b8
 
+src/auto/func_02072900.cpp:
+    complete
+    .text       start:0x02072900 end:0x02072ad8
+
 src/auto/func_02072ad8.cpp:
     complete
     .text       start:0x02072ad8 end:0x02072bc8
