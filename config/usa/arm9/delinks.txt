@@ -2434,6 +2434,10 @@ src/auto/func_02054900.c:
     complete
     .text       start:0x02054900 end:0x02054954
 
+src/auto/func_02054c80.c:
+    complete
+    .text       start:0x02054c80 end:0x02054da8
+
 src/auto/func_02054da8.c:
     complete
     .text       start:0x02054da8 end:0x02054db8
@@ -3274,6 +3278,10 @@ src/auto/func_0205b488.c:
     complete
     .text       start:0x0205b488 end:0x0205b4e8
 
+src/auto/func_0205b644.c:
+    complete
+    .text       start:0x0205b644 end:0x0205b850
+
 src/auto/func_0205bcbc.c:
     complete
     .text       start:0x0205bcbc end:0x0205bd38
@@ -3845,6 +3853,10 @@ src/auto/func_02062e48.c:
 src/auto/func_02062e80.c:
     complete
     .text       start:0x02062e80 end:0x02062e98
+
+src/auto/func_02062e98.c:
+    complete
+    .text       start:0x02062e98 end:0x02062fbc
 
 src/auto/func_02062fbc.c:
     complete
@@ -7165,6 +7177,10 @@ src/auto/func_020ba0a4.c:
 src/auto/func_020ba104.c:
     complete
     .text       start:0x020ba104 end:0x020ba140
+
+src/auto/func_020ba4b8.c:
+    complete
+    .text       start:0x020ba4b8 end:0x020ba6cc
 
 src/auto/func_020ba6cc.c:
     complete
@@ -12925,6 +12941,10 @@ src/auto/func_020c78e4.c:
     complete
     .text       start:0x020c78e4 end:0x020c7984
 
+src/auto/func_020296a4.c:
+    complete
+    .text       start:0x020296a4 end:0x02029894
+
 src/auto/func_02029894.c:
     complete
     .text       start:0x02029894 end:0x020299a0
@@ -14865,6 +14885,10 @@ src/auto/MBi_MakeBlockInfoTable.c:
 src/auto/func_0205c37c.c:
     complete
     .text       start:0x0205c37c end:0x0205c4d4
+src/auto/func_02087e14.c:
+    complete
+    .text       start:0x02087e14 end:0x02088014
+
 src/auto/func_02088014.c:
     complete
     .text       start:0x02088014 end:0x0208816c
