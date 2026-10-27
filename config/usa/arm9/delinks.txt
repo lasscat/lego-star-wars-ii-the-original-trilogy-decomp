@@ -170,6 +170,10 @@ src/auto/func_02007f58.c:
     complete
     .text       start:0x02007f58 end:0x02007f60
 
+src/auto/func_02007f60.c:
+    complete
+    .text       start:0x02007f60 end:0x020081f0
+
 src/auto/func_02008288.c:
     complete
     .text       start:0x02008288 end:0x020082a4
