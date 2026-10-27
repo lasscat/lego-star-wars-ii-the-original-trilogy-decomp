@@ -18,11 +18,11 @@ See [matching exceptions](docs/exceptions.md) before using assembly, `volatile` 
 ## Progress
 
 <!-- progress:start -->
-`███████████░░░░░░░░░` **52.58%** of the code matched · data 92.91% · 4133/4764 functions
+`███████████░░░░░░░░░` **52.64%** of the code matched · data 92.91% · 4134/4764 functions
 
 | Part of the code | Files | Functions | Share of all code |
 |---|---|---|---|
-| Auto-matched (raw m2c output, to clean up) | 4122 | 4121/4122 | 52.09% |
+| Auto-matched (raw m2c output, to clean up) | 4123 | 4122/4123 | 52.15% |
 | Reused from other decompilations, not merged into files yet | 12 | 12/12 | 0.49% |
 | Game code: `src/data/` | 1314 | 0/0 | 0.00% |
 
