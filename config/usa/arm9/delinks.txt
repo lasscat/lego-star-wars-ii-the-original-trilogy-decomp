@@ -6318,6 +6318,10 @@ src/auto/func_0209be1c.c:
     complete
     .text       start:0x0209be1c end:0x0209be44
 
+src/auto/func_0209bef4.c:
+    complete
+    .text       start:0x0209bef4 end:0x0209c2f0
+
 src/auto/func_0209c2f0.c:
     complete
     .text       start:0x0209c2f0 end:0x0209c390
