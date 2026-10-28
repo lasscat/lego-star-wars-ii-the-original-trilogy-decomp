@@ -15977,6 +15977,10 @@ src/auto/NNS_FndResizeForMBlockExpHeap.c:
 src/auto/func_020d38bc.c:
     complete
     .text       start:0x020d38bc end:0x020d39dc
+src/auto/func_0206bc7c.c:
+    complete
+    .text       start:0x0206bc7c end:0x0206c49c
+
 src/auto/func_0206c49c.c:
     complete
     .text       start:0x0206c49c end:0x0206c5c0
