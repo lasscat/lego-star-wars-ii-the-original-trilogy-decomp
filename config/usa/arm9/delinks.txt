@@ -15131,6 +15131,10 @@ src/auto/GX_LoadBGExtPltt.c:
 src/auto/texmtxCalc_flagT_.c:
     complete
     .text       start:0x020c7e1c end:0x020c7efc
+src/auto/func_020cf708.c:
+    complete
+    .text       start:0x020cf708 end:0x020cfe1c
+
 src/auto/HuffMakeSubsetHuffTree.c:
     complete
     .text       start:0x020d011c end:0x020d01fc
