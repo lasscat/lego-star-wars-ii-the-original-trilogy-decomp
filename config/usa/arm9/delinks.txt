@@ -7954,6 +7954,10 @@ src/auto/func_020c5738.c:
     complete
     .text       start:0x020c5738 end:0x020c5a4c
 
+src/auto/func_020c5a4c.c:
+    complete
+    .text       start:0x020c5a4c end:0x020c5dcc
+
 src/auto/NNS_G3dGeSetBuffer.c:
     complete
     .text       start:0x020c5dcc end:0x020c5dec
