@@ -7334,6 +7334,10 @@ src/auto/func_020b973c.c:
     complete
     .text       start:0x020b973c end:0x020b9768
 
+src/auto/func_020b9768.c:
+    complete
+    .text       start:0x020b9768 end:0x020b9a60
+
 src/auto/func_020b9a60.c:
     complete
     .text       start:0x020b9a60 end:0x020b9a9c
