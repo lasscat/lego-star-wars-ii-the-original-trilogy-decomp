@@ -4918,6 +4918,10 @@ src/auto/func_0207375c.c:
     complete
     .text       start:0x0207375c end:0x0207376c
 
+src/auto/func_02073b68.c:
+    complete
+    .text       start:0x02073b68 end:0x02073f54
+
 src/auto/func_02073f54.c:
     complete
     .text       start:0x02073f54 end:0x02074034
