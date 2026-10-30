@@ -5082,6 +5082,10 @@ src/auto/func_02075bc0.c:
     complete
     .text       start:0x02075bc0 end:0x02075be0
 
+src/auto/func_02076008.c:
+    complete
+    .text       start:0x02076008 end:0x02076144
+
 src/auto/func_02076144.c:
     complete
     .text       start:0x02076144 end:0x0207615c
