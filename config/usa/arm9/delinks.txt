@@ -11813,6 +11813,10 @@ src/auto/func_020adca4.c:
     complete
     .text       start:0x020adca4 end:0x020add78
 
+src/auto/func_0200ee88.c:
+    complete
+    .text       start:0x0200ee88 end:0x0200f244
+
 src/auto/func_0200f244.c:
     complete
     .text       start:0x0200f244 end:0x0200f274
