@@ -85,6 +85,10 @@ src/auto/updateHintVec_.c:
     complete
     .text       start:0x01ffb514 end:0x01ffb57c
 
+src/auto/NNS_G3dDraw.c:
+    complete
+    .text       start:0x01ffb57c end:0x01ffb658
+
 src/auto/func_01ffb658.c:
     complete
     .text       start:0x01ffb658 end:0x01ffb680
