@@ -310,3 +310,4 @@ src/auto/NNSi_G3dGetJointScaleBasic.c 2.0/sp1p5 -O4,p -lang c99 -ipa file -inlin
 src/auto/NNS_G3dGeFlushBuffer.c 2.0/sp1p5 -O4,p -lang c99 -ipa file -inline on,noauto
 src/auto/updateHintVec_.c 2.0/sp1p5 -O4,p -lang c99 -ipa file -inline on,noauto
 src/auto/NNSi_G3dFuncSbc_POSSCALE.c 2.0/sp1p5 -O4,p -lang c99 -ipa file -inline on,noauto
+src/auto/NNSi_G3dSendJointSRTBasic.c 2.0/sp1p5 -O4,p -lang c99 -ipa file -inline on,noauto

@@ -129,6 +129,10 @@ src/auto/NNSi_G3dAnmCalcNsBca.c:
     complete
     .text       start:0x01ffc534 end:0x01ffc570
 
+src/auto/NNSi_G3dSendJointSRTBasic.c:
+    complete
+    .text       start:0x01ffcff8 end:0x01ffd074
+
 src/auto/NNSi_G3dGetJointScaleBasic.c:
     complete
     .text       start:0x01ffd074 end:0x01ffd0b4
