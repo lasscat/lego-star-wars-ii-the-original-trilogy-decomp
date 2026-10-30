@@ -137,6 +137,10 @@ src/auto/NNSi_G3dGetJointScaleBasic.c:
     complete
     .text       start:0x01ffd074 end:0x01ffd0b4
 
+src/auto/NNSi_G3dSendJointSRTMaya.c:
+    complete
+    .text       start:0x01ffd0b4 end:0x01ffd178
+
 src/auto/func_01ffd4c8.c:
     complete
     .text       start:0x01ffd4c8 end:0x01ffd538
