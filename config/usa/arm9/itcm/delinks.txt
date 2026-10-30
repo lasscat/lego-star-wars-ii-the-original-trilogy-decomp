@@ -1,6 +1,10 @@
     .text       start:0x01ff8000 end:0x01ffd5c0 kind:code align:32
     .bss        start:0x01ffd5c0 end:0x01ffd5c0 kind:bss align:32
 
+src/auto/func_01ff90a8.c:
+    complete
+    .text       start:0x01ff90a8 end:0x01ff90f8
+
 src/auto/NNSi_G3dFuncSbc_SHP_InternalDefault.c:
     complete
     .text       start:0x01ffbdc0 end:0x01ffbe94
