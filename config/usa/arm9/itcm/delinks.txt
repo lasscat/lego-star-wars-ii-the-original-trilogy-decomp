@@ -141,6 +141,10 @@ src/auto/getTransData_.c:
     complete
     .text       start:0x01ffc924 end:0x01ffca84
 
+src/auto/getRotDataByIdx_.c:
+    complete
+    .text       start:0x01ffce8c end:0x01ffcff8
+
 src/auto/NNSi_G3dSendJointSRTBasic.c:
     complete
     .text       start:0x01ffcff8 end:0x01ffd074
