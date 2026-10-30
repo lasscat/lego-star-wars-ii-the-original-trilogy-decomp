@@ -6794,6 +6794,10 @@ src/auto/func_020ac130.c:
     complete
     .text       start:0x020ac130 end:0x020ac278
 
+src/auto/func_020ac278.c:
+    complete
+    .text       start:0x020ac278 end:0x020ac5dc
+
 src/auto/func_020ac5dc.c:
     complete
     .text       start:0x020ac5dc end:0x020ac624
