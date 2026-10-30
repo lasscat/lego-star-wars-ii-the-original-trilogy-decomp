@@ -9442,6 +9442,10 @@ src/auto/MB_EndToIdle.c:
     complete
     .text       start:0x020dcacc end:0x020dcb08
 
+src/auto/MB_DisconnectChild.c:
+    complete
+    .text       start:0x020dcb08 end:0x020dcc94
+
 src/auto/MBi_SetMaxScanTime.c:
     complete
     .text       start:0x020dcc94 end:0x020dcca4
