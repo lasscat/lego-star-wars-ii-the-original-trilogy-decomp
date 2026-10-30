@@ -137,6 +137,10 @@ src/auto/NNSi_G3dAnmCalcNsBca.c:
     complete
     .text       start:0x01ffc534 end:0x01ffc570
 
+src/auto/getTransData_.c:
+    complete
+    .text       start:0x01ffc924 end:0x01ffca84
+
 src/auto/NNSi_G3dSendJointSRTBasic.c:
     complete
     .text       start:0x01ffcff8 end:0x01ffd074
