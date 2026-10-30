@@ -17,6 +17,10 @@ src/auto/func_01ffa338.c:
     complete
     .text       start:0x01ffa338 end:0x01ffa408
 
+src/auto/func_01ffb658.c:
+    complete
+    .text       start:0x01ffb658 end:0x01ffb680
+
 src/auto/func_01ffbd40.c:
     complete
     .text       start:0x01ffbd40 end:0x01ffbdc0
