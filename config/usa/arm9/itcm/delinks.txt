@@ -5,6 +5,10 @@ src/auto/func_01ff84a8.c:
     complete
     .text       start:0x01ff84a8 end:0x01ff84bc
 
+src/auto/func_01ff8874.cpp:
+    complete
+    .text       start:0x01ff8874 end:0x01ff8abc
+
 src/auto/func_01ff90a8.c:
     complete
     .text       start:0x01ff90a8 end:0x01ff90f8
