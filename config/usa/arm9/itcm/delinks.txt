@@ -109,6 +109,10 @@ src/auto/func_01ffbf00.c:
     complete
     .text       start:0x01ffbf00 end:0x01ffc368
 
+src/auto/NNS_G3dGeFlushBuffer.c:
+    complete
+    .text       start:0x01ffc3d8 end:0x01ffc438
+
 src/auto/func_01ffc450.c:
     complete
     .text       start:0x01ffc450 end:0x01ffc45c
