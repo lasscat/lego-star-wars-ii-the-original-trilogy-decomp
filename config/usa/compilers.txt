@@ -306,3 +306,4 @@ src/auto/func_020ae63c.c 2.0/sp1p5 -O2
 src/auto/func_020affbc.c 2.0/sp1p5 -O2
 src/auto/func_020bd534.c 2.0/sp1p5 -O2
 src/auto/NNSi_G3dAnmCalcNsBca.c 2.0/sp1p5 -O4,p -lang c99 -ipa file -inline on,noauto
+src/auto/NNSi_G3dGetJointScaleBasic.c 2.0/sp1p5 -O4,p -lang c99 -ipa file -inline on,noauto
