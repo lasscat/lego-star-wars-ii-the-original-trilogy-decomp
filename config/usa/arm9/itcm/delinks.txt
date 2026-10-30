@@ -113,6 +113,10 @@ src/auto/func_01ffbf00.c:
     complete
     .text       start:0x01ffbf00 end:0x01ffc368
 
+src/auto/NNSi_G3dFuncSbc_POSSCALE.c:
+    complete
+    .text       start:0x01ffc368 end:0x01ffc3d8
+
 src/auto/NNS_G3dGeFlushBuffer.c:
     complete
     .text       start:0x01ffc3d8 end:0x01ffc438
