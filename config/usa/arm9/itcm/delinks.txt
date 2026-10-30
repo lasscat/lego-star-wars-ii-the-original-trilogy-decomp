@@ -33,6 +33,10 @@ src/auto/NNSi_G3dFuncSbc_SHP_InternalDefault.c:
     complete
     .text       start:0x01ffbdc0 end:0x01ffbe94
 
+src/auto/func_01ffbe94.c:
+    complete
+    .text       start:0x01ffbe94 end:0x01ffbf00
+
 src/auto/func_01ffc450.c:
     complete
     .text       start:0x01ffc450 end:0x01ffc45c
