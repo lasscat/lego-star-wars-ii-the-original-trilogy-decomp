@@ -12161,6 +12161,10 @@ src/auto/MBi_CheckWmErrcode.c:
     complete
     .text       start:0x020dce78 end:0x020dceb0
 
+src/auto/func_02024130.cpp:
+    complete
+    .text       start:0x02024130 end:0x02024394
+
 src/auto/func_02024394.c:
     complete
     .text       start:0x02024394 end:0x020243cc
