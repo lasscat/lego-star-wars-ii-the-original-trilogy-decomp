@@ -3266,6 +3266,10 @@ src/auto/func_0205a3a0.c:
     complete
     .text       start:0x0205a3a0 end:0x0205a3b0
 
+src/auto/func_0205a3e8.c:
+    complete
+    .text       start:0x0205a3e8 end:0x0205a63c
+
 src/auto/func_0205a63c.c:
     complete
     .text       start:0x0205a63c end:0x0205a660
