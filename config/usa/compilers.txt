@@ -318,3 +318,4 @@ src/auto/NNSi_G3dGetJointScaleMaya.c 2.0/sp1p5 -O4,p -lang c99 -ipa file -inline
 src/auto/getMdlRot_.c 2.0/sp1p5 -O4,p -lang c99 -ipa file -inline on,noauto
 src/auto/getTransData_.c 2.0/sp1p5 -O4,p -lang c99 -ipa file -inline on,noauto
 src/auto/getRotDataByIdx_.c 2.0/sp1p5 -O4,p -lang c99 -ipa file -inline on,noauto
+src/auto/G3d_InitRenderState.c 2.0/sp1p5 -O4,p -lang c99 -ipa file -inline on,noauto
