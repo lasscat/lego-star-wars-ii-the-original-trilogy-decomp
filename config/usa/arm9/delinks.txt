@@ -5278,6 +5278,10 @@ src/auto/func_0207e050.c:
     complete
     .text       start:0x0207e050 end:0x0207e108
 
+src/auto/func_0207e108.cpp:
+    complete
+    .text       start:0x0207e108 end:0x0207e460
+
 src/auto/func_0207e460.c:
     complete
     .text       start:0x0207e460 end:0x0207e590
