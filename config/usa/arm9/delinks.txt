@@ -6510,6 +6510,10 @@ src/auto/func_0209ded4.c:
     complete
     .text       start:0x0209ded4 end:0x0209df00
 
+src/auto/func_0209e338.c:
+    complete
+    .text       start:0x0209e338 end:0x0209e6f4
+
 src/auto/func_0209ea20.c:
     complete
     .text       start:0x0209ea20 end:0x0209eadc
