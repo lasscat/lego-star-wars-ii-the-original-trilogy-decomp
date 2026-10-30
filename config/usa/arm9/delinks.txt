@@ -15298,6 +15298,10 @@ src/auto/NNSi_GfdFreeLnkVram.c:
 src/auto/FSi_FindPath.c:
     complete
     .text       start:0x020d28c0 end:0x020d2a04
+src/auto/func_02034c68.c:
+    complete
+    .text       start:0x02034c68 end:0x02034e24
+
 src/auto/func_02034e24.c:
     complete
     .text       start:0x02034e24 end:0x02034f88
