@@ -37,6 +37,10 @@ src/auto/func_01ffa430.c:
     complete
     .text       start:0x01ffa430 end:0x01ffa478
 
+src/auto/func_01ffa478.c:
+    complete
+    .text       start:0x01ffa478 end:0x01ffa494
+
 src/auto/func_01ffa494.c:
     complete
     .text       start:0x01ffa494 end:0x01ffa520
