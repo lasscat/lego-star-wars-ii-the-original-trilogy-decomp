@@ -1974,6 +1974,10 @@ src/auto/func_0203b698.c:
     complete
     .text       start:0x0203b698 end:0x0203b71c
 
+src/auto/func_0203b71c.cpp:
+    complete
+    .text       start:0x0203b71c end:0x0203ba98
+
 src/auto/func_0203ba98.c:
     complete
     .text       start:0x0203ba98 end:0x0203babc
