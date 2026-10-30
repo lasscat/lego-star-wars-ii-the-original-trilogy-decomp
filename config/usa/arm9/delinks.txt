@@ -10569,6 +10569,10 @@ src/auto/__str2dec.c:
     complete
     .text       start:0x020e1660 end:0x020e16fc
 
+src/auto/func_020e1a80.c:
+    complete
+    .text       start:0x020e1a80 end:0x020e1c00
+
 src/auto/__num2dec.c:
     complete
     .text       start:0x020e1c00 end:0x020e1ca8
