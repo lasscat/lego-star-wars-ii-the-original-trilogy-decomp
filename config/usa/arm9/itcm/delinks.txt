@@ -145,9 +145,17 @@ src/auto/NNSi_G3dAnmCalcNsBca.c:
     complete
     .text       start:0x01ffc534 end:0x01ffc570
 
+src/auto/getJntSRTAnmResult_.c:
+    complete
+    .text       start:0x01ffc570 end:0x01ffc924
+
 src/auto/getTransData_.c:
     complete
     .text       start:0x01ffc924 end:0x01ffca84
+
+src/auto/getRotData_.c:
+    complete
+    .text       start:0x01ffca84 end:0x01ffce8c
 
 src/auto/getRotDataByIdx_.c:
     complete

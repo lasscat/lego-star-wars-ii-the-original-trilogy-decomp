@@ -8154,6 +8154,10 @@ src/auto/func_020c47d4.c:
     complete
     .text       start:0x020c47d4 end:0x020c4824
 
+src/auto/NNSi_G3dFuncSbc_NODEMIX.c:
+    complete
+    .text       start:0x020c4f00 end:0x020c565c
+
 src/auto/func_020c565c.c:
     complete
     .text       start:0x020c565c end:0x020c5738
@@ -10220,6 +10224,14 @@ src/auto/FSi_SeekDirCommand.c:
 src/auto/FSi_ReadDirCommand.c:
     complete
     .text       start:0x020d1870 end:0x020d199c
+
+src/auto/FSi_FindPathCommand.c:
+    complete
+    .text       start:0x020d199c end:0x020d1b80
+
+src/auto/FSi_GetPathCommand.c:
+    complete
+    .text       start:0x020d1b80 end:0x020d1f2c
 
 src/auto/FSi_OpenFileFastCommand.c:
     complete
@@ -15608,6 +15620,10 @@ src/auto/PXI_SendWordByFifo.c:
 src/auto/func_02053398.c:
     complete
     .text       start:0x02053398 end:0x020534e0
+src/auto/getRotDataEx_.c:
+    complete
+    .text       start:0x020c6e2c end:0x020c7160
+
 src/auto/GetMatColAnmValue_.c:
     complete
     .text       start:0x020c7160 end:0x020c72c8

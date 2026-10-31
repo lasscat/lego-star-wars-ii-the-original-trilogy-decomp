@@ -321,3 +321,9 @@ src/auto/getRotDataByIdx_.c 2.0/sp1p5 -O4,p -lang c99 -ipa file -inline on,noaut
 src/auto/G3d_InitRenderState.c 2.0/sp1p5 -O4,p -lang c99 -ipa file -inline on,noauto
 src/auto/NNSi_G3dFuncSbc_NODE.c 2.0/sp1p5 -O4,p -lang c99 -ipa file -inline on,noauto
 src/auto/MB_DisconnectChild.c 2.0/sp1p5 -O4,p -lang c99 -ipa file -inline on,noauto
+src/auto/FSi_FindPathCommand.c 2.0/sp1p5 -O4,p -lang c99 -ipa file -inline on,noauto
+src/auto/getRotData_.c 2.0/sp1p5 -O4,p -lang c99 -ipa file -inline on,noauto
+src/auto/getJntSRTAnmResult_.c 2.0/sp1p5 -O4,p -lang c99 -ipa file -inline on,noauto
+src/auto/getRotDataEx_.c 2.0/sp1p5 -O4,p -lang c99 -ipa file -inline on,noauto
+src/auto/NNSi_G3dFuncSbc_NODEMIX.c 2.0/sp1p5 -O4,p -lang c99 -ipa file -inline on,noauto
+src/auto/FSi_GetPathCommand.c 2.0/sp1p5 -O4,p -lang c99 -ipa file -inline on,noauto
