@@ -18,13 +18,13 @@ See [matching exceptions](docs/exceptions.md) before using assembly, `volatile` 
 ## Progress
 
 <!-- progress:start -->
-`█████████████░░░░░░░` **66.70%** of the code matched · data 93.10% · 4350/4764 functions
+`█████████████░░░░░░░` **67.23%** of the code matched · data 100.00% · 4359/4764 functions
 
 | Part of the code | Files | Functions | Share of all code |
 |---|---|---|---|
-| Auto-matched (raw m2c output, to clean up) | 4339 | 4338/4339 | 66.21% |
-| Reused from other decompilations, not merged into files yet | 12 | 12/12 | 0.49% |
-| Game code: `src/data/` | 1366 | 0/0 | 0.00% |
+| Auto-matched (raw m2c output, to clean up) | 4339 | 4339/4339 | 66.06% |
+| Reused from other decompilations, not merged into files yet | 20 | 20/20 | 1.17% |
+| Game code: `src/data/` | 1462 | 0/0 | 0.00% |
 
 *Updated 2026-11-01 by `python tools/match.py progress` ([DS Decomp Studio](https://github.com/liolu/ds-decomp-studio)). A function counts only when it compiles to the exact same bytes and the ROM still rebuilds byte for byte.*
 <!-- progress:end -->
