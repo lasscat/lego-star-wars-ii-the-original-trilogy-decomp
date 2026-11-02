@@ -4626,6 +4626,10 @@ src/auto/func_02069ee0.c:
     complete
     .text       start:0x02069ee0 end:0x02069f00
 
+src/auto/func_0206a1f4.cpp:
+    complete
+    .text       start:0x0206a1f4 end:0x0206a928
+
 src/auto/func_0206a928.c:
     complete
     .text       start:0x0206a928 end:0x0206a96c
