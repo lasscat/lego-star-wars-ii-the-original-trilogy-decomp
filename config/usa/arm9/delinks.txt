@@ -15806,6 +15806,10 @@ src/auto/MBi_SendMP.c:
 src/auto/GetTexSRTAnm_.c:
     complete
     .text       start:0x020c7724 end:0x020c7808
+src/auto/func_020e3378.c:
+    complete
+    .text       start:0x020e3378 end:0x020e3700
+
 src/auto/func_020e3fb0.c:
     complete
     .text       start:0x020e3fb0 end:0x020e4104
