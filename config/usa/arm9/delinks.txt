@@ -10741,6 +10741,10 @@ src/auto/__must_round.c:
     complete
     .text       start:0x020e1314 end:0x020e1380
 
+src/auto/__ull2dec.c:
+    complete
+    .text       start:0x020e1410 end:0x020e14dc
+
 src/auto/__timesdec.c:
     complete
     .text       start:0x020e14dc end:0x020e1660
