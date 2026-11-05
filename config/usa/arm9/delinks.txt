@@ -15066,6 +15066,10 @@ src/auto/func_0200ce88.cpp:
     complete
     .text       start:0x0200ce88 end:0x0200cef4
 
+src/auto/func_0200dafc.c:
+    complete
+    .text       start:0x0200dafc end:0x0200e1c4
+
 src/auto/func_0200e1c4.cpp:
     complete
     .text       start:0x0200e1c4 end:0x0200e4ec
