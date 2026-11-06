@@ -3554,6 +3554,10 @@ src/auto/func_0205b644.c:
     complete
     .text       start:0x0205b644 end:0x0205b850
 
+src/auto/func_0205b850.c:
+    complete
+    .text       start:0x0205b850 end:0x0205bcbc
+
 src/auto/func_0205bcbc.c:
     complete
     .text       start:0x0205bcbc end:0x0205bd38
