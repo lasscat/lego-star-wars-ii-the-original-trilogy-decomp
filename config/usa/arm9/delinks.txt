@@ -16610,6 +16610,10 @@ src/auto/func_02018010.c:
 src/auto/func_02076d2c.c:
     complete
     .text       start:0x02076d2c end:0x02077014
+src/auto/func_02099344.c:
+    complete
+    .text       start:0x02099344 end:0x02099914
+
 src/auto/func_02099914.c:
     complete
     .text       start:0x02099914 end:0x02099ba0
