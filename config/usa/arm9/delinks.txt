@@ -16817,6 +16817,10 @@ src/auto/func_020b1248.cpp:
     complete
     .text       start:0x020b1248 end:0x020b2f80
 
+src/auto/func_020b2f80.c:
+    complete
+    .text       start:0x020b2f80 end:0x020b3280
+
 src/auto/func_020b3280.c:
     complete
     .text       start:0x020b3280 end:0x020b33b4
