@@ -6630,6 +6630,10 @@ src/auto/func_0209aa78.c:
     complete
     .text       start:0x0209aa78 end:0x0209aaa4
 
+src/auto/func_0209b27c.c:
+    complete
+    .text       start:0x0209b27c end:0x0209b61c
+
 src/auto/func_0209b61c.c:
     complete
     .text       start:0x0209b61c end:0x0209b6d4
