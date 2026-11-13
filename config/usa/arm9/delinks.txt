@@ -18230,6 +18230,10 @@ src/data/main_rodata_020fc9c8.c:
     complete
     .rodata     start:0x020fc9c8 end:0x020fc9d8
 
+src/auto/func_0204c180.c:
+    complete
+    .text       start:0x0204c180 end:0x0204c408
+
 src/auto/func_0204c408.c:
     complete
     .text       start:0x0204c408 end:0x0204c4a4
