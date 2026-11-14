@@ -8010,6 +8010,10 @@ src/auto/func_020c0fb8.c:
     complete
     .text       start:0x020c0fb8 end:0x020c0fd0
 
+src/auto/func_020c1090.c:
+    complete
+    .text       start:0x020c1090 end:0x020c1598
+
 src/auto/NNS_FndInitList.c:
     complete
     .text       start:0x020c204c end:0x020c2064
