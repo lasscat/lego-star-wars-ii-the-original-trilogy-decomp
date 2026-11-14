@@ -16060,6 +16060,10 @@ src/auto/func_0201b614.c:
     complete
     .text       start:0x0201b614 end:0x0201bb68
 
+src/auto/func_0201bd78.c:
+    complete
+    .text       start:0x0201bd78 end:0x0201c0ac
+
 src/auto/IC_InvalidateRange.c:
     complete
     .text       start:0x0201c0ac end:0x0201c1e4
