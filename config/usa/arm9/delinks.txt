@@ -1038,6 +1038,10 @@ src/auto/func_02020ec8.c:
     complete
     .text       start:0x02020ec8 end:0x02020f04
 
+src/auto/func_02020f04.cpp:
+    complete
+    .text       start:0x02020f04 end:0x02021098
+
 src/auto/func_02021098.c:
     complete
     .text       start:0x02021098 end:0x020210d0
