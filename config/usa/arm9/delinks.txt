@@ -4010,6 +4010,10 @@ src/auto/func_020602ec.c:
     complete
     .text       start:0x020602ec end:0x02060328
 
+src/auto/func_02060328.c:
+    complete
+    .text       start:0x02060328 end:0x02060618
+
 src/auto/func_02060618.c:
     complete
     .text       start:0x02060618 end:0x02060694
