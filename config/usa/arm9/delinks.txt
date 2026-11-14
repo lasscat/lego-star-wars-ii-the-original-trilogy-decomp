@@ -13469,6 +13469,10 @@ src/auto/func_02020a00.c:
     complete
     .text       start:0x02020a00 end:0x02020a9c
 
+src/auto/func_0202dcfc.c:
+    complete
+    .text       start:0x0202dcfc end:0x0202e088
+
 src/auto/func_0202e088.c:
     complete
     .text       start:0x0202e088 end:0x0202e434
