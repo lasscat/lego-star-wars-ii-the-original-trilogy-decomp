@@ -78,6 +78,10 @@ src/auto/func_02001b08.c:
     complete
     .text       start:0x02001b08 end:0x02001b28
 
+src/auto/func_02001b28.c:
+    complete
+    .text       start:0x02001b28 end:0x02001ce8
+
 src/auto/func_02001ce8.c:
     complete
     .text       start:0x02001ce8 end:0x02001cf0
