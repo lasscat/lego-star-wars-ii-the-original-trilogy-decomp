@@ -12685,6 +12685,10 @@ src/auto/MBi_ChildPortCallback.c:
     complete
     .text       start:0x020dbb68 end:0x020dbbd8
 
+src/auto/func_020a1450.c:
+    complete
+    .text       start:0x020a1450 end:0x020a15b8
+
 src/auto/func_020a15b8.c:
     complete
     .text       start:0x020a15b8 end:0x020a1664
