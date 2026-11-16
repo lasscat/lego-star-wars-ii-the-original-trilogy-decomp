@@ -8030,6 +8030,10 @@ src/auto/func_020bdfa8.c:
     complete
     .text       start:0x020bdfa8 end:0x020bdfcc
 
+src/auto/func_020bdfcc.cpp:
+    complete
+    .text       start:0x020bdfcc end:0x020be374
+
 src/auto/func_020be374.c:
     complete
     .text       start:0x020be374 end:0x020be378
