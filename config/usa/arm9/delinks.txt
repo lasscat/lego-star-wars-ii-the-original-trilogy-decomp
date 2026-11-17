@@ -13553,6 +13553,10 @@ src/auto/func_020a5af8.c:
     complete
     .text       start:0x020a5af8 end:0x020a5c68
 
+src/auto/func_020a5c68.c:
+    complete
+    .text       start:0x020a5c68 end:0x020a5d88
+
 src/auto/func_020a6a18.c:
     complete
     .text       start:0x020a6a18 end:0x020a6a9c
