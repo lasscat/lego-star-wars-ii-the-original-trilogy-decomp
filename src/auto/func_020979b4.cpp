@@ -54,19 +54,36 @@ extern "C" void *func_020363f4(void *self, void *owner, s8 arg); // constructor
 extern "C" void func_0202c1a8(void *list, void *node);
 extern "C" void func_020b04f0(void *tag, s32 id, void *data, u32 size);
 
-static inline s16 Atan(Fx x, Fx z) {
-    Fx t = x; // FAKE: local copy of x; makes z's by-value copy store first, x in the lower slot
-    return func_020985d8(t.v, z.v);
+static inline s16 atan_raw(Fx x, s32 z) {
+    return func_020985d8(x.v, z);
+}
+
+static inline s16 Atan(const Fx &x, Fx z) {
+    return atan_raw(x, z.v);
+}
+
+static inline void vec_sub(V3 *r, const V3 *a, const V3 *b) {
+    s32 z = a->z.v;
+    z -= b->z.v;
+    s32 y = a->y.v;
+    y -= b->y.v;
+    s32 x = a->x.v;
+    x -= b->x.v;
+    r->x.v = x;
+    r->y.v = y;
+    r->z.v = z;
 }
 
 // Yaw from `from` to `to` on the x/z plane.
 static inline s16 Yaw(const V3 &to, const V3 &from) {
     V3 d;
-    d.z.v = to.z.v - from.z.v;
-    d.y.v = to.y.v - from.y.v;
-    d.x.v = to.x.v - from.x.v;
-    d     = d; // FAKE: self-copy; keeps the z,y,x computation order but re-stores d as x,y,z
+    vec_sub(&d, &to, &from);
     return Atan(d.x, d.z);
+}
+
+// Yaw from obj b to the position of a.
+static inline s16 YawTo(const u8 *a, const u8 *b) {
+    return Yaw(*(const V3 *) (a + 4), *(const V3 *) (b + 0xb0));
 }
 
 static inline void SetAng(u8 *o, A16 a) {
@@ -76,14 +93,30 @@ static inline void SetAng(u8 *o, A16 a) {
     }
 }
 
+enum {
+    FLAG_40 = 0x40
+};
+enum {
+    MSG_ID_6B = 0x6b
+};
+enum {
+    NET_MSG_10 = 0x10
+};
+enum {
+    NET_SIZE_FF = 0xff
+};
+
+/* When bit 0x40 of data_027e02a8 is clear: fills message m (id 0x6b), turns arg1 to face arg0 (yaw at +0xca,
+ * changed flag at +0xd0) and appends two newly constructed nodes to the list at arg1+0x5e0. Otherwise sends
+ * {slot 0x08 result, arg0's s8 at +0x3b, yaw} through func_020b04f0 as message 0x10. */
 // Plain-name ROM calls for the original `new` + constructor sequences (the binary shows C++: operator new
 // func_0205e80c followed by constructors that store base and derived vptrs).
 extern "C" void func_020979b4(u8 *arg0, u8 *arg1) {
     Entity979B4 *o = (Entity979B4 *) arg1;
-    if ((data_027e02a8 & 64) == 0) {
+    if ((data_027e02a8 & FLAG_40) == 0) {
         Msg m;
         func_020370ec(&m);
-        m.id  = 107;
+        m.id  = MSG_ID_6B;
         m.f10 = 1;
         SetAng(arg1, A16(Yaw(*(V3 *) (arg0 + 4), *(V3 *) (arg1 + 0xb0))));
         void *n = func_0205e80c(0x28, 1, 4);
@@ -99,8 +132,8 @@ extern "C" void func_020979b4(u8 *arg0, u8 *arg1) {
     } else {
         Payload p;
         p.f0 = o->unknown08();
-        p.f6 = Yaw(*(V3 *) (arg0 + 4), *(V3 *) (arg1 + 0xb0));
+        p.f6 = YawTo(arg0, arg1);
         p.f4 = M2C_FIELD(arg0, s8 *, 0x3b);
-        func_020b04f0(data_0210794c, 16, &p, 255);
+        func_020b04f0(data_0210794c, NET_MSG_10, &p, NET_SIZE_FF);
     }
 }
