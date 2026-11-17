@@ -13253,6 +13253,10 @@ src/auto/func_0207f6b8.c:
     complete
     .text       start:0x0207f6b8 end:0x0207f70c
 
+src/auto/func_02085948.cpp:
+    complete
+    .text       start:0x02085948 end:0x02085cb0
+
 src/auto/func_02085cb0.c:
     complete
     .text       start:0x02085cb0 end:0x02085d20
