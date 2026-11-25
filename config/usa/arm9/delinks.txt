@@ -214,6 +214,10 @@ src/auto/func_0200a34c.c:
     complete
     .text       start:0x0200a34c end:0x0200a3fc
 
+src/auto/func_0200a6c4.c:
+    complete
+    .text       start:0x0200a6c4 end:0x0200ad5c
+
 src/auto/func_0200ad5c.c:
     complete
     .text       start:0x0200ad5c end:0x0200ad80
