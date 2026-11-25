@@ -8018,6 +8018,10 @@ src/auto/func_020bbe04.c:
     complete
     .text       start:0x020bbe04 end:0x020bbe10
 
+src/auto/func_020bca64.cpp:
+    complete
+    .text       start:0x020bca64 end:0x020bd520
+
 src/auto/func_020bd520.c:
     complete
     .text       start:0x020bd520 end:0x020bd534
