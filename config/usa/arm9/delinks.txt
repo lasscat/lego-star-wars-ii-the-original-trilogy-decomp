@@ -14357,6 +14357,10 @@ src/auto/func_02066434.c:
     complete
     .text       start:0x02066434 end:0x02066470
 
+src/auto/func_020a0ec4.c:
+    complete
+    .text       start:0x020a0ec4 end:0x020a1434
+
 src/auto/func_020a1434.c:
     complete
     .text       start:0x020a1434 end:0x020a1450
