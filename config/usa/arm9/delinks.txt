@@ -14205,6 +14205,10 @@ src/auto/func_020a8214.c:
     complete
     .text       start:0x020a8214 end:0x020a827c
 
+src/auto/func_020a827c.cpp:
+    complete
+    .text       start:0x020a827c end:0x020a9158
+
 src/auto/func_020a9158.c:
     complete
     .text       start:0x020a9158 end:0x020a9308
