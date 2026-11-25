@@ -1430,6 +1430,10 @@ src/auto/func_0202ae34.c:
     complete
     .text       start:0x0202ae34 end:0x0202b4ec
 
+src/auto/func_0202b4ec.cpp:
+    complete
+    .text       start:0x0202b4ec end:0x0202bd60
+
 src/auto/func_0202bd60.c:
     complete
     .text       start:0x0202bd60 end:0x0202bd80
