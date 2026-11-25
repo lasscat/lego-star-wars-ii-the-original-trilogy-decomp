@@ -7906,6 +7906,10 @@ src/auto/func_020bbe04.c:
     complete
     .text       start:0x020bbe04 end:0x020bbe10
 
+src/auto/func_020bc568.cpp:
+    complete
+    .text       start:0x020bc568 end:0x020bca64
+
 src/auto/func_020bd520.c:
     complete
     .text       start:0x020bd520 end:0x020bd534
