@@ -6638,6 +6638,10 @@ src/auto/func_02097bcc.c:
     complete
     .text       start:0x02097bcc end:0x02097bfc
 
+src/auto/func_02097cb8.cpp:
+    complete
+    .text       start:0x02097cb8 end:0x020981ac
+
 src/auto/func_020981ac.c:
     complete
     .text       start:0x020981ac end:0x020981dc
